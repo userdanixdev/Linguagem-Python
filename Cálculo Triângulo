@@ -1,0 +1,16 @@
+
+Calculo Triângulo
+
+ '''co = float(input('Comprimento do cateto oposto: '))
+ca = float(input('Comprimento do cateto adjacente: '))
+hi = (co ** 2 + ca ** 2) **(1/2)
+print('A hipotenusa vai medir: {:.2f}'.format(hi))'''
+'''catop = float(input('Digite o Cateto Oposto:' ))
+catadj = float(input('Digite o Cateto Adjacente: '))
+hi = (catop **2) + (catadj**2)
+print (f'A hipotenusa é: {hi**(1/2):.2f}')'''
+from math import hypot
+co = float(input('Comprimento do cateto oposto: '))
+ca = float(input('Comprimento do cateto adjacente: '))
+hi = hypot(co,ca)
+print('A hipotenusa vai medir : {:.2f}'.format(hi))
