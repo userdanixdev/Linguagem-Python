@@ -1,4 +1,4 @@
-# PrimeirosCodigos
+# Códigos em Python
 # Operadores Aritméticos em PYTHON.
  
  
