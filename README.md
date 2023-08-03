@@ -19,13 +19,13 @@ Para início é recomendado o IDLE.
 ***
 ### Características da Linguagem:
 
-A linguagem de programação Python possui códigos mais enxutos e menos verbal, ou seja, menos sintaxes complexas e mais estruturas de código simples.
+A linguagem de programação Python possui códigos mais enxutos e menos verbal, ou seja, menos sintaxes complexas e mais estruturas de código simples;
 
-É totalmente orientada a objetos
+É totalmente orientada a objetos;
 
-Possui muitos módulos de extensão
+Possui muitos módulos de extensão;
 
-Muitas instituições de ensino nacional e internacional usam a linguagem para aprendizado.
+Muitas instituições de ensino nacional e internacional usam a linguagem para aprendizado;
 
 É mas das linguagens mais populares e usadas atualmente.
 ***
