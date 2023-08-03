@@ -58,6 +58,10 @@ Arquivos | File | Text=open (‘eggs’,’r’).read{}
 None | None| Vazio  (null)
 
 
+`Verificação do tipo de objeto : >>> x = 10, >>> type(x), <class 'int'>`
+
+> Variável `x` recebe tipo de classe inteira `10`.
+
     Ordem de precedência matemática:
     1. ()- Parênteses
     2. ** - Potência (Exponênciação)
