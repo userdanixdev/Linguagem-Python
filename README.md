@@ -29,6 +29,14 @@
 
 * Possui muitos módulos de extensão;
 
+>  Qualidade: legibilidade, fácil de manter, suporte à reutilização de código;
+> 
+> Produtividade do desenvolvedor: tamanho reduzido do código em relação às 
+>linguagens Java e C++, por exemplo;
+> 
+>  Linguagem interpretada, eliminando a etapa 
+>de compilação e vinculação com outras ferramentas.
+
 * Muitas instituições de ensino nacional e internacional usam a linguagem para aprendizado;
 
 * É mas das linguagens mais populares e usadas atualmente.
