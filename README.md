@@ -60,7 +60,10 @@ None | None| Vazio  (null)
 
 `Verificação do tipo de objeto : >>> x = 10, >>> type(x), <class 'int'>`
 
-> Variável `x` recebe tipo de classe inteira `10`.
+> A Constante `x` recebe tipo de classe inteira `10`.
+> 
+> A atribuição de um valor, `10` define a 
+variável e seu tipo.
 
 *** 
 
