@@ -1,0 +1,20 @@
+### A função PRINT é saída de dados para a tela, sendo assim, possui entre seus parênteses diversas funções. ####
+*** Diferente do INPUT que é a entrada de dados pelo teclado. ***
+======================================================================================================================
+n1 = int(input('Digite um valor: '))
+n2 = int(input('Digite outro valor: '))
+soma = n1 + n2
+multiplicacao = n1 * n2
+divisao = n1 / n2
+divisao_quociente_inteiro = n1 // n2
+exponenciacao = n1 ** n2
+print(' A soma é {}, o produto é {} e a divisão é {}'.format(soma, multiplicacao, divisao))
+print('Divisão inteira {} e potência {}'.format(divisao_quociente_inteiro,exponenciacao))
+
+Resultado:
+
+Digite um valor: 5
+Digite um valor: 5
+ A soma é 10, o produto é 25 e a divisão é 1.0
+Divisão inteira 1 e potência 3125
+================================================================================================================
