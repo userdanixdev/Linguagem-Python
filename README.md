@@ -62,6 +62,8 @@ None | None| Vazio  (null)
 
 > Variável `x` recebe tipo de classe inteira `10`.
 
+*** 
+
     Ordem de precedência matemática:
     1. ()- Parênteses
     2. ** - Potência (Exponênciação)
