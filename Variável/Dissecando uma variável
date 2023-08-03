@@ -6,7 +6,8 @@ Digite algo: 5
 O tipo primitivo desse valor é:  <class 'str'>
 
 ============================================================================================
-# Todo INPUT retorna tipo primitivo STRING
+# Todo INPUT retorna tipo primitivo STRING  *** Para mudar o tipo primitivo padrão de INPUT (dados de entrada) é nomear antes da entrada:
+                                                                                              a = float(input('Digite algo:' )
 ========================================================================================
 print('Só tem espaços? ', a.isspace())
 Digite algo:   #Espaços do teclado
