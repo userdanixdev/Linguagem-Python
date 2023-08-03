@@ -75,7 +75,7 @@ Float | 4.5 / 0.075 /  -15.1545 / 7.0
 Booleanos (bool)| True / False
 Str (STRING) | Palavras entre aspas '' 
 >
->Obs: Números entre aspas são strings também
+>_Obs: Números entre aspas são strings também_
 ***
 
 
