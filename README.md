@@ -75,7 +75,7 @@ Float | 4.5 / 0.075 /  -15.1545 / 7.0
 Booleanos (bool)| True / False
 Str (STRING) | Palavras entre aspas '' 
 >
->_Obs: Números entre aspas são strings também_
+>_Obs: Para o interpretador Python tudo que estiver entre aspas `''` são do tipo primitivo strings_
 ***
 
 
