@@ -1,0 +1,5 @@
+
+estatura = float(input('Digite sua altura em metros: '))
+#estatura_cm = estatura * 100
+print('Sua altura em centímetros é {} cm'.format(estatura, estatura_cm = estatura * 100))
+
