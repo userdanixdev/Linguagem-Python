@@ -64,8 +64,20 @@ None | None| Vazio  (null)
 > 
 > A atribuição de um valor: `10` define a 
 variável e seu tipo.
-
 *** 
+
+### Tipos primitivos
+
+Tipo | Exemplos:
+|---|---
+Inteiros | 7 / -4 / 0 / 9875
+Float | 4.5 / 0.075 /  -15.1545 / 7.0
+Booleanos (bool)| True / False
+Str (STRING) | Palavras entre aspas '' 
+>
+>Obs: Números entre aspas são strings também
+***
+
 
     Ordem de precedência matemática:
     1. ()- Parênteses
