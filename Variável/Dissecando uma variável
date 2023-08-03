@@ -5,8 +5,9 @@ print('O tipo primitivo desse valor é: ', type(a))
 Digite algo: 5
 O tipo primitivo desse valor é:  <class 'str'>
 
+============================================================================================
 # Todo INPUT retorna tipo primitivo STRING
-
+========================================================================================
 print('Só tem espaços? ', a.isspace())
 Digite algo:   #Espaços do teclado
 O tipo primitivo desse valor é:  <class 'str'>
