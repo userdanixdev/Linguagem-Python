@@ -1,0 +1,15 @@
+x = int( input ('Digite um número para cálculo: '))
+antecessor = x - 1
+sucessor = x + 1
+print (f'O número {x} tem seu antecessor {antecessor} e sucessor {sucessor}.')
+
+                      OU
+
+x = int(input('Digite um número para cálculo: '))
+print(f'O número {x} tem seu antecessor {x-1} e sucessor {x+2}.')
+
+
+
+                      
+
+                      
