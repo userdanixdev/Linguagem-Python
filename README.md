@@ -62,7 +62,7 @@ None | None| Vazio  (null)
 
 > A Constante `x` recebe tipo de classe inteira `10`.
 > 
-> A atribuição de um valor, `10` define a 
+> A atribuição de um valor: `10` define a 
 variável e seu tipo.
 
 *** 
