@@ -26,9 +26,6 @@
 * Uma linguagem de alto nível que possui um nível de abstração elevado;
 
 * É totalmente orientada a objetos;
-
-* Possui muitos módulos de extensão;
-
 >  Qualidade: legibilidade, fácil de manter, suporte à reutilização de código;
 > 
 > Produtividade do desenvolvedor: tamanho reduzido do código em relação às 
@@ -36,6 +33,13 @@
 > 
 >  Linguagem interpretada, eliminando a etapa 
 >de compilação e vinculação com outras ferramentas.
+
+* Possui muitos módulos de extensão;
+>
+> Integração de componentes: pode ser usada como uma ferramenta e extensão de 
+produto, podendo se chamar bibliotecas C e C++, assim como ser chamado por 
+essas linguagens. Pode ser integrado com componentes Java e comunicar-se por 
+meio de COM, COrba e .NET, além de interagir como SOAP e XML-RPC.
 
 * Muitas instituições de ensino nacional e internacional usam a linguagem para aprendizado;
 
