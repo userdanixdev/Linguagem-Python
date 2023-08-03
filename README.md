@@ -69,7 +69,7 @@ variável e seu tipo.
 ### Tipos primitivos
 
 Tipo | Exemplos:
-|---|---
+| ---| ---
 Inteiros | 7 / -4 / 0 / 9875
 Float | 4.5 / 0.075 /  -15.1545 / 7.0
 Booleanos (bool)| True / False
@@ -82,15 +82,16 @@ dic | Conjunto de elementos por chave
 ***
 ### Operadores Aritméticos
 
-Operador | Descrição | Exemplo
-|---|---| --- | ---
- |+ | Adição | print(4+2) = 6 |
- |- | Subtração | print(4-2) = 2
- |* | Multiplicação | print(4*2) = 8 _asterisco_
- |/ | Divisão_comum_ | print(4/3) = 1.33333
- |// | Quociente inteiro da divisão | print (4//3) = 1
- |% | Resto divisão inteiro | print(4 % 2) = 0
- |** | Potenciação | print(4**2) = 16
+Descrição | Operador | Exemplo
+| ---| --- | ---
+Adição  | + | print(4+2) = 6 
+Subtração | - | print(4-2) = 2
+Multiplicação | * | print(4*2) = 8 _asterisco_
+Divisão (_comum_)  | / | print(4/3) = 1.33333
+Quociente Inteiro da div | // | print (4 // 3) = 1
+Resto divisão inteira | % | print(4 % 2) = 0
+Potenciação | ´**` | print(4**2) = 16
+
 
 > `A potenciação ** `pode ser substituida pela função `pow(base, exp)`. _Exemplo: 4**2 ou pow(4, 2)_
 > 
