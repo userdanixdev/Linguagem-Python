@@ -74,6 +74,9 @@ Inteiros | 7 / -4 / 0 / 9875
 Float | 4.5 / 0.075 /  -15.1545 / 7.0
 Booleanos (bool)| True / False
 Str (STRING) | Palavras entre aspas '' 
+Complex | 999L, 3.1415, 3+4j
+List | Conjunto de elementos por índice
+dic | Conjunto de elementos por chave
 >
 >_Obs: Para o interpretador Python tudo que estiver entre aspas `''` são do tipo primitivo strings_
 ***
