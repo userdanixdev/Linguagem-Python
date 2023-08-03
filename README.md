@@ -1,4 +1,4 @@
-# **Códigos em Python**
+# **Linguagem de programação Python**
 ### _Fundamentials_
 
 
