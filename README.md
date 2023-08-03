@@ -21,6 +21,10 @@ Para início é recomendado o IDLE.
 
 A linguagem de programação Python possui códigos mais enxutos e menos verbal, ou seja, menos sintaxes complexas e mais estruturas de código simples;
 
+A linguagem Python é interpretada, multiplataforma e livre, o que a torna de fácil acesso;
+
+Uma linguagem de alto nível que possui um nível de abstração elevado;
+
 É totalmente orientada a objetos;
 
 Possui muitos módulos de extensão;
