@@ -3,3 +3,7 @@ estatura = float(input('Digite sua altura em metros: '))
 #estatura_cm = estatura * 100
 print('Sua altura em centímetros é {} cm'.format(estatura, estatura_cm = estatura * 100))
 
+Resultado:
+Digite sua altura em metros: 1.75
+Sua altura em centímetros é 1.75 cm
+
