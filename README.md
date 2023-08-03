@@ -48,7 +48,7 @@ meio de COM, COrba e .NET, além de interagir como SOAP e XML-RPC.
 ### Tipos de objetos
 
 Tipo de objeto | Formatos | Exemplo
-| ---| --- | --- |
+| ---| --- | --- 
 Números | int, long, float, complex | 1234, 999L, 3.1415, 3+4j
 Strings | str e Unicode |‘spam’, “guido´s”
 Booleanos | bool (true, false) | [1, [2, ‘three’], 4]
@@ -80,6 +80,20 @@ dic | Conjunto de elementos por chave
 >
 >_Obs: Para o interpretador Python tudo que estiver entre aspas `''` são do tipo primitivo strings_
 ***
+### Operadores Aritméticos
+
+Operador | Descrição | Exemplo
+|---|---| --- | ---
+ |+ | Adição | print(4+2) = 6 |
+ |- | Subtração | print(4-2) = 2
+ |* | Multiplicação | print(4*2) = 8 _asterisco_
+ |/ | Divisão_comum_ | print(4/3) = 1.33333
+ |// | Quociente inteiro da divisão | print (4//3) = 1
+ |% | Resto divisão inteiro | print(4 % 2) = 0
+ |** | Potenciação | print(4**2) = 16
+
+> `A potenciação ** `pode ser substituida pela função `pow(base, exp)`. _Exemplo: 4**2 ou pow(4, 2)_
+> 
 
 
     Ordem de precedência matemática:
