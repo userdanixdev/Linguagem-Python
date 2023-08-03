@@ -45,6 +45,17 @@ meio de COM, COrba e .NET, além de interagir como SOAP e XML-RPC.
 
 * É mas das linguagens mais populares e usadas atualmente.
 ***
+### Tipos de objetos
+
+Tipo de objeto | Formatos | Exemplo
+| ---| --- | --- |
+Números | int, long, float, complex | 1234, 999L, 3.1415, 3+4j
+Strings | str e Unicode |‘spam’, “guido´s”
+Booleanos | bool (true, false) | [1, [2, ‘three’], 4]
+Dicionários | Dict |{‘food’ : ‘spam’, ‘taste’: ‘yum’}
+Tuplas/Listas | list, tuple |{1, ‘spam’, 4, ‘U’}
+Arquivos | File | Text=open (‘eggs’,’r’).read{}
+None | None| Vazio  (null)
 
 
     Ordem de precedência matemática:
