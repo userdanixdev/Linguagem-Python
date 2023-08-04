@@ -1,1 +1,16 @@
+#SEGUNDO MODO DE FORMATAÇÃO STRING TIPO FORMAT() 
++++Obs: as variáveis ficam dentro da função print de saída+++
+#Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada.
 
+n = int(input('Digite um número: '))
+#dobro = n*2
+#triplo = n*3
+#raiz_quadrada = n ** (1/2)
+print('O dobro de {} vale {}.\nO triplo de {} vale {}\n E a Raiz Quadrada é {}'.format(n,(n*2),n,(n*3),(n**(1/2))))
+
+Results:
+Digite um número: 128
+O dobro de 128 vale 256.
+O triplo de 128 vale 384
+ E a Raiz Quadrada é 11.313708498984761
+==================================================================================================================
