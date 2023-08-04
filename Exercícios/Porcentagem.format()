@@ -1,0 +1,9 @@
+#Faça um algoritmo que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.
+
+
+print('''Olá! Seja bem vindo ao pequeno programa de folha de pagamento.
+Leia o que se pede abaixo''')
+sal_func = float(input('Informe o salário do funcionário: R$ '))
+aum_sal = sal_func * 0.15
+print('O novo salário do funcionário com o aumento de 15% será agora de R$ {} reais.'.format(aum_sal + sal_func))
+print('Obrigado e tenha um ótimo dia')
