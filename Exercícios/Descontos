@@ -1,0 +1,8 @@
+#Faça um algoritmo que leia o preço de um produto e
+#mostre seu novo preço, com 5% de desconto.
+
+produto = float(input('Forneça o preço do produto: '))
+desc = produto * 0.05
+#produto - desc
+print('Seu preço novo com desconto de 5% é: {} reais.\nFoi descontado {} reais do valor de {} reais do produto'.format(produto - desc,desc,produto))                
+
