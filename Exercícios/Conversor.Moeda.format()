@@ -1,0 +1,6 @@
+#Crie um programa que leia quanto dinheiro uma pessoa tem na carteira e mostre quantos dólares ela pode comprar.
+
+c_real=float(input('Quanto dinheiro você tem na carteira? '))
+dolar = c_real / 5.75
+print('Com R${:.2f} reais você pode comprar em dólares, US${:.2f}'.format(c_real,dolar))
+
