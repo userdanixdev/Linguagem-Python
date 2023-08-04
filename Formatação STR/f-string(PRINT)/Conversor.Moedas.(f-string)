@@ -1,0 +1,12 @@
+#Crie um programa que leia quanto dinheiro uma pessoa tem na carteira e mostre quantos dólares ela pode comprar.
+## Com a nova sintaxa ##
+
+print('Bem vindo ao conversor de moedas em Python!')
+print('='*50)
+dólar = float(input('Primeiramente qual é a atual cotação do dólar? '))
+print('Beleza...')
+reais = float(input('Agora, com quantos reais você deseja converter? '))
+cot = reais/dólar
+print(f'Você conseguirá comprar com R$ {reais:.2f} reais cerca de US$ {cot:.2f} dólares')
+print('Obrigado e até mais!')
+print('='*50)
