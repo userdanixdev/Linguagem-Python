@@ -1,0 +1,13 @@
+#Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média.
+# Com sintaxe nova.
+
+nota01 = float(input('Digite a primeira nota do aluno: '))
+nota02 = float(input('Digite a segunda nota do aluno: '))
+#calc_media = (nota01 + nota02) / 2   #Não terá necessidade de declarar variável nesse programa
+print(f'A sua nota {nota01} e a sua segunda nota {nota02} gerou uma média de {(nota01+nota02)/2}')
+
+Resultado será o mesmo com as mesmas notas, assim:
+
+Digite a primeira nota do aluno: 5.5
+Digite a segunda nota do aluno: 2
+A sua nota5.5 e a sua segunda nota 2.0 gerou uma média de 3.75
