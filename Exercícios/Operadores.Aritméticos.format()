@@ -1,1 +1,29 @@
 
+#Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada.
+
+n = int(input('Digite um número: '))
+dobro = n*2
+triplo = n*3
+raiz_quadrada = n ** (1/2)
+print('O dobro de {} vale {}.'.format(n, dobro))
+
+Results:
+Digite um número: 4
+O dobro de 4 vale 8.
+==================================================================
+
+n = int(input('Digite um número: '))
+dobro = n*2
+triplo = n*3
+raiz_quadrada = n ** (1/2)
+print('O dobro de {} vale {}.'.format(n, dobro))
+print('O triplo de {} vale {}. \nA raiz quadrada de {} é igual {:.2f}'.format(n,triplo,n,raiz_quadrada))
+                              Contra-barra N para indexar e formatar o BLOCO.
+                              ATENÇÃO! formatar dentro das chaves: :.2f para números extensos  
+Results:
+Digite um número: 18
+O dobro de 18 vale 36.
+O triplo de 18 vale 54. 
+A raiz quadrada de 18 é igual 4.242640687119285
+A raiz quadrada formata na chave ficaria: 4.24 somente.
+======================================================================
