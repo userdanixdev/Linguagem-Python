@@ -1,0 +1,10 @@
+#Escreva um programa que converta uma temperatura digitando em graus Celsius e converta para graus Fahrenheit.
+
+celsius = float(input('Digite a temperatura em graus Celsius: '))
+fahrenheit = 32 + (celsius * 1.8)
+print('A temperatura fornecida em Celsius (ºC) para a escala de Fahrenheit é {} ºF.'.format(fahrenheit))   
+
+Results:
+Digite a temperatura em graus Celsius: 40
+A temperatura fornecida em Celsius (ºC) para a escala de Fahrenheit é 104.0 ºF.
+====================================================================================================
