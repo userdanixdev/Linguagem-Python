@@ -1,0 +1,13 @@
+#Implemente um programa que converta o valor de uma velocidade média em km/h para m/s. Para isso, o usuário deve informar o valor da velocidade média.
+#Sabe-se que o fator utilizado para essa conversão é 3.6.
+  
+vel_media_km_h = float(input('Informe o valor da velocidade média em km/h: '))
+vel_convertida = vel_media_km_h / 3.6
+print(f'O valor da velocidade por m/s é: {vel_convertida:.2f}')
+
+  result:
+
+Informe o valor da velocidade média em km/h: 600
+O valor da velocidade por m/s é: 166.67
+  =========================================================
+                       
