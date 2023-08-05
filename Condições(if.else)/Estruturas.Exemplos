@@ -76,6 +76,20 @@ else:
     print('Seu nome não é o mesmo que o meu...')
     print(f'Boa noite {nome}.')
 =================================================================
+
+EXEMPLO 05:
+
+valor = int(input('numero: '))
+if valor % 2 == 0:
+            print('O valor é par')
+else:
+    print('O valor é impar')
+
+#### Para todo número par o, quando dividido por 02, o resto da sua divisão é zero.  ELSE = caso contrário, é ímpar. ###
+
+===========================================================================================================================
+
+
    
 
 
