@@ -1,6 +1,7 @@
 # Construa um programa que leia 2 números reais informados pelo usuário. Ao fim, o programa deve calcular e imprimir.
 # a) A soma dos dois valores
 # b) O produto entre eles
+==================================================================================================
 
 num1 = float(input('Me informe o primeiro número real: '))
 num2 = float(input('Me informe o segundo número real: '))
