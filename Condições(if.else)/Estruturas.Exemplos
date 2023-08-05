@@ -44,6 +44,29 @@ Exemplo 03:
 
 #Programa de empréstimo bancário#
 
+print('''Bem vindo ao exemplo de uma solicitação de empréstimo bancário em Python.
+                  Responda zero(0) para Não ou um(1) para SIM''')
+
+nome_negativo = int(input('Possui nome negativo? '))
+if nome_negativo ==1:
+    print('Não pode realizar empréstimo.')
+    exit('FIM')
+else:
+     carteira_assinada = int(input('Trabalha com carteira assinada? '))
+if carteira_assinada ==0:
+    print('Não pode realizar empréstimo.')
+    exit('fim')
+else:
+     casa_propria = int(input('Possui casa própria? '))
+if casa_propria ==0:
+   print('Não pode realizar empréstimo.')
+   exit('fim')
+else:
+    print('Conceder empréstimo')
+
+======================================================================
+   
+
 
 
 
