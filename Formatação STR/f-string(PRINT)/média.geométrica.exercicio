@@ -1,0 +1,17 @@
+# Construa um programa que solicite que o usuário informe 2 números inteiros positivos.
+# O programa deve calcular: A) O cubo do segundo número.
+#                           B) A média geométrica entre o primeiro e o segundo número.    
+
+
+from math import sqrt
+print('='*50)
+print('''Aqui este programa irá calcular o cubo de um número e a média geométrica
+      entre dois números em python!''')
+num1=int(input('Informe um número: '))
+num2=int(input('Informe o número 2: '))
+cubo = pow(num2, 3)
+med_geo=sqrt(num1*num2)
+print(f'O cubo do segundo número é {cubo}.')
+print(f'A média geométrica entre o primeiro e o segundo número é:{med_geo:.2f}.')
+print('Fim do programa')
+
