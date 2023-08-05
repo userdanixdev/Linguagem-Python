@@ -1,0 +1,44 @@
+#Construa um programa que tem como dados de entrada dois pontos quaisquer no plano cartesiano: P1 e P2. Considere que P1 é definido pelas coordenadas :
+# x1 e y1 e enquanto P2 por x2 e y2.
+# Faça um programa que calcule e escreva a distância entre os ponto P1 e P2. A fórmula que calcula a distância entre os dois pontos é:
+### d = sqrt(x2-x1)² + (y1-y2)²
+
+from math import sqrt
+
+print('='*50)
+print('Bem vindo ao Plano Cartesiano em Python!')
+print('='*50)
+print('''Temos que descobrir a distância entre dois pontos do plano,
+para isso nos informe os dados do primeiro ponto.
+Digite os dados do primeiro ponto 1 logo abaixo:''')
+print('No plano P1 precisamos obter dois pontos no plano cartesiano, o x1 e o y1...')
+x1 = float(input('Digite o valor do ponto da linha x1: '))
+y1 = float(input('Digite o valor do ponto da linha y1: '))
+print('Certo, agora precisamos dos dados do PONTO 2 para calcularmos a distância.')
+x2 = float(input('Sendo assim, digite o valor do plano x2 de P2: '))
+y2 = float(input('Digite o valor do ponto da linha y2 de P2: '))
+print('Aguarde para calculo da distância...')
+d = sqrt(pow((x2 - x1), 2) + pow((y2 - y1),2))
+print(f'A distância entre o PONTO 1 e PONTO 2 é {d:.2f}')
+print('Obrigado e fim da operação')
+print('='*50)
+
+Result:
+
+==================================================
+Bem vindo ao Plano Cartesiano em Python!
+==================================================
+Temos que descobrir a distância entre dois pontos do plano,
+para isso nos informe os dados do primeiro ponto.
+Digite os dados do primeiro ponto 1 logo abaixo:
+No plano P1 precisamos obter dois pontos no plano cartesiano, o x1 e o y1...
+Digite o valor do ponto da linha x1: 1.0
+Digite o valor do ponto da linha y1: 1.5
+Certo, agora precisamos dos dados do PONTO 2 para calcularmos a distância
+Sendo assim, digite o valor do plano x2 de P2: -2.5
+Digite o valor do ponto da linha y2 de P2: 5.0
+Aguarde para calculo da distância...
+A distância entre o PONTO 1 e PONTO 2 é 4.95
+Obrigado e fim da operação
+==================================================
+
