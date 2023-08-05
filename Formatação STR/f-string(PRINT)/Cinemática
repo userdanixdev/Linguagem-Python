@@ -1,0 +1,13 @@
+#Construa um programa que receba do usuário a variação do deslocamento de um objeto (em metros) e a variação do tempo percorrido(em segundo). 
+#Ao fim, o programa deve calcular a velocidade média, em m/s, do objeto.
+
+#Em física, para cálculos de deslocamento em cinemática é: Vm = Variação de deslocamento(DeltaS) sobre (/) variação do tempo(deltaT).
+
+delta_s=float(input('Digite o deslocamento em metros: '))
+delta_t=float('input('Digite o tempo em segundos: '))
+velocidade_media = delta_s / delta_t
+print('A velocidada média foi {}'.format(velocidade_media))
+                        Sintaxe nova (f-string) abaixo:
+print(f'A velocidade média foi {velocidade_media} m/s.')
+
+
