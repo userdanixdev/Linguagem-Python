@@ -65,6 +65,17 @@ else:
     print('Conceder empréstimo')
 
 ======================================================================
+
+EXEMPLO 04:
+
+nome = input('Digite algum nome: ')
+if nome == 'Daniel':
+    print('Seu nome é o mesmo que o meu!')
+    print(f'Boa noite {nome}.')
+else:
+    print('Seu nome não é o mesmo que o meu...')
+    print(f'Boa noite {nome}.')
+=================================================================
    
 
 
