@@ -1,0 +1,25 @@
+#Uma IMOBILIÁRIA paga aos seus corretores um salário base de R$ 1.500,00. Além disso, uma comissão de R$ 200,00 por cada imóvel vendido e 5% do valor de venda.
+#Construa um programa que solicite o nome do corretor, a quantidade de imóveis vendidos e o valor total de suas vendas. Ao fim, o programa deve calcular a quantidade
+#de imóveis vendidos e o valor total de suas vendas. No fim, o programa deve calcular e escrever o salário final do corretor de imóveis.
+
+nome=input('Informe o nome do corretor: ')
+quant_imovel=float(input('Quantos imóveis vendidos: '))
+vendas_total=float(input('Informe o valor total das vendas: '))
+salario_base = 1500
+comissao_por_imovel = 200
+adicional_venda = 0.05
+
+valor_vendas_imovel = quant_imovel * comissao_por_imovel
+total_vendas = vendas_total * adicional_venda
+salario_vendedor = valor_vendas_imovel + total_vendas + salario_base
+print(f'O salário final do corretor {nome} foi de R$ {salario_vendedor} reais. ')
+
+Result:
+
+Informe o nome do corretor: daniel
+Quantos imóveis vendidos: 5
+Informe o valor total das vendas: 50000
+O salário final do corretor daniel foi de R$ 5000.0 reais. 
+=====================================================================================
+
+
