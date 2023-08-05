@@ -1,0 +1,21 @@
+# Construa um programa que leia 2 números reais informados pelo usuário. Ao fim, o programa deve calcular e imprimir.
+# a) A soma dos dois valores
+# b) O produto entre eles
+
+num1 = float(input('Me informe o primeiro número real: '))
+num2 = float(input('Me informe o segundo número real: '))
+soma = num1 + num2
+produto = num1 * num2
+print(f'''A soma dos dois valores reais é: {soma}.
+O produto entre os números informados é:{produto}.
+Obrigado e tenha um ótimo dia!
+''')
+
+results:
+
+Me informe o primeiro número real: 50
+Me informe o segundo número real: 5.75
+A soma dos dois valores reais é: 55.75.
+O produto entre os números informados é:287.5.
+Obrigado e tenha um ótimo dia!
+=======================================================================
