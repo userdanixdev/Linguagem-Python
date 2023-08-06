@@ -1,0 +1,51 @@
+#Problema02
+#Uma empresa necessita de um programa de que auxilie os seus eletricistas no cálculo das principais grandezas da Eletricidae:
+# Tensão que é representada pro 'U'em 'Volts'
+# Resistência quem OHM,de Ômega,representada por 'R'
+# E 'i' de corrente representada pela letra 'A'.
+ # A fórmula para cálculo é: U=Ri
+ 
+ #Construa um programa que apresente um MENU
+ #Que pergunte qual grandeza deseja calcular...
+ #a)Tensão, o programa deve solicitar que ele informe os valores da Resistência e da Corrente.
+ # b)Resistência, o programa deve solicitar que ele informe os valores de Tensão e da Corrente.
+ # c)Corrente, o programa deve solicitar que ele informe os valores de Tensão e Resistência.
+ # O programa deve calcular e apresentar o valor encontrado.
+ 
+ # VAMOS AOS CÓDIGOS: #
+
+print('='*60)
+print(f"{'*'*20}{'Grandezas Elétricas'}{'*'*20}")
+print('='*60)
+print(f'''                    1. Tensão (em volt)
+                    2. Resistência (em Ohm)
+                    3. Corrente (em Ampére)
+{'='*60}
+{'*'*60}
+''')
+operacao = int(input('Qual grandeza deseja calcular? '))
+if operacao < 1 or operacao > 3:
+    print('Opção Inválida para as operações de grandezas...')
+elif operacao == 1:
+    r=float(input('Digite o valor da resistência (em Ohm): '))
+    i=float(input('Digite o valor da corrente (em Ampére): '))
+    u = r*i
+    print(f"O valor da tensão, em Volts, é U:{u}")
+elif operacao == 2:
+    u=float(input('Digite o valor da tensão, em volts, U: '))
+    i=float(input('Digite o valor da corrente, em Ampéres, A: '))
+    r = u/i
+    print(f"O valor da resistência,em Ohms, 'R' é: {r}")
+else:
+    u = float(input('Digite o valor da tensão, em volts: '))
+    r = float(input('Digite o valor da resistência, em Ohms: '))
+    i = u/r
+    print(f" O valor da corrente, em Ampéres, é: {i}")
+    exit()
+ Results:
+
+ Qual grandeza deseja calcular? 2
+Digite o valor da tensão, em volts, U: 220
+Digite o valor da corrente, em Ampéres, A: 0.8
+O valor da resistência,em Ohms, 'R' é: 275.0
+========================================================================================
