@@ -27,3 +27,20 @@ Digite um número real qualquer para mostrar sua porção inteira: 3.1415
 O valor digitado foi 3.1415 e sua porção inteira é: 3
 
 *** ATENÇÃO: Obtivemos o mesmo resultado. ****
+============================================================================================================
+
+Exemplificações aplicadas na nova sintaxe 'f-strings':
+
+Exemplo01:
+
+import math
+numero=float(input('Digite um número real qualquer para mostrar sua porção inteira: '))
+print(f'O valor digitado foi {numero} e sua porção inteira é:{math.trunc(numero)}')
+
+Exemplo02:  #com importação de trunc diretamente da biblioteca 'math'
+
+from math import trunc
+numero=float(input('Digite um número real qualquer para mostrar sua porção inteira: '))
+print(f'O valor digitado foi {numero} e sua porção inteira é:{trunc(numero)}')
+
+=====================================================================================================
