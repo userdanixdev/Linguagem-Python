@@ -38,6 +38,22 @@ print(f'O ângulo de {angulo} tem a TANGENTE de {tangente}.')
 Resultado será o mesmo.
 ================================================================================================================
 
+Exemplo 03 com os módulos importados da biblioteca 'math' logo abaixo:
+
+from math import radians, sin, cos, tan
+angulo = float(input('Digite o ângulo que você deseja: '))
+seno = sin(math.radians(angulo))
+print(f'O ângulo de {angulo} tem o SENO em RADIANO de {seno}.')
+cosseno = cos(radians(angulo))
+print(f'O ângulo de {angulo} tem o COSSENO em RADIANO de {cosseno}.')
+tangente = tan(radians(angulo))
+print(f'O ângulo de {angulo} tem a TANGENTE de {tangente}.')
+
+** Sendo assim, o bloco fica menor, ocupa menos espaço na memória e facilita na visualização
+** Obs: o resultado será o mesmo.
+======================================================================================================================================
+
+
 
 
 
