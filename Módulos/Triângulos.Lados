@@ -29,3 +29,13 @@ Digite o comprimento do cateto oposto: 2
 Digite o comprimento do cateto adjacente: 2.5
 A hipotenusa vai medir 3.20
 ========================================================
+
+Exemplo 03 com a sintaxe nova: 'f-string' o resultado será o mesmo.
+
+from math import hypot
+cat_op = float(input('Digite o comprimento do cateto oposto: '))
+cat_adj = float(input('Digite o comprimento do cateto adjacente: '))
+hipotenusa = hypot(cat_op,cat_adj)
+print(f'A hipotenusa vai medir: {hipotenusa:.2f}')
+
+
