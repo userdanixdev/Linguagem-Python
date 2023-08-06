@@ -1,0 +1,32 @@
+#PROBLEMA PROPOSTO:
+#Uma loja de roupas esta vendendo camisas básicas com descontos.
+#Seu TANAKA, dono da loja, precisa de um programa para calcular o preço
+#final a partir do número de camisas. Seu Tanaka definiu as regras do desconto:
+# a) Até 5 camisas, desconto de 3%.
+# b) Acima de 5 camisas e até 10 camisas. desconto de 5%
+# c) Acima de 10 camisas, desconto de 7%
+
+print('Bem vindo ao sistema de desconto de camisas da loja do seu tanaka.')
+num_camisas = float(input('Informe o número de camisas: '))
+preco_camisa = 25
+preco_total_cinco_camisas = num_camisas * preco_camisa
+valor_cinco_camisas_com_desconto = preco_total_cinco_camisas * 3/100
+valor_agregado_zero = preco_total_cinco_camisas - valor_cinco_camisas_com_desconto
+if num_camisas <= 5 :
+    print(f'O valor de 5 camisas com desconto na promoção seu preço será de R${preco_total_cinco_camisas} por R$ {valor_agregado_zero} reais.')
+   
+if num_camisas >5 or num_camisas ==10 :
+            preco_total_dez_camisas = num_camisas * preco_camisa
+            valor_dez_camisas_com_desconto = preco_total_dez_camisas * 5/100
+            valor_agregado = preco_total_dez_camisas - valor_dez_camisas_com_desconto
+            print(f'O valor de até 10 camisas seu desconto ficará maior, as {num_camisas} camisas escolhidas de R$ {preco_total_dez_camisas} reais por R$ {valor_agregado} reais.')
+else:num_camisas >10
+preco_total_acima_de_dez_camisas = num_camisas * preco_camisa
+valor_acima_de_dez_camisas_com_desconto = preco_total_acima_de_dez_camisas * 7/100
+valor_agregado_um = preco_total_acima_de_dez_camisas - valor_acima_de_dez_camisas_com_desconto
+print(f'O valor com mais de 10 camisas seu desconto ficará maior, as {num_camisas} camisas escolhidas de R$ {preco_total_acima_de_dez_camisas} reais por R$ {valor_agregado_um} reais.')
+
+    
+
+
+
