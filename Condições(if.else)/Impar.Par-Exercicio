@@ -1,0 +1,23 @@
+#Faça um programa que receba um número inteiro positivo.
+# a)Caso ele seja PAR, deve-se calcular o seu quadrado.
+# b)Caso ele seja ÍMPAR, deve ser calculado o seu cubo.
+# Imprimir o valor calculado
+
+print('Olá, seja bem vindo aos cálculos em Python.')
+numero=int(input('Digite um valor inteiro positivo: '))
+if numero % 2 == 0 :
+        quadrado = numero **2
+        print(f'Esse número é par e seu quadrado é: {quadrado},blz?')
+else:
+    cubo = numero ** 3 
+    print(f'Esse número é ímpar e seu cubo é: {cubo}, ok? ')
+
+Result:
+
+Olá, seja bem vindo aos cálculos em Python.
+Digite um valor inteiro positivo: 15
+Esse número é ímpar e seu cubo é: 3375, ok? 
+======================================================================
+    
+    
+
