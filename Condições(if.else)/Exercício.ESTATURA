@@ -1,0 +1,37 @@
+#Escreva um programa que solicite ao usuário a estatura de 3 pessoas.
+#Ao fim o programa deve imprimir as estaturas em ordem decrescente.
+
+
+print('Olá! Preciso da estatura de três pessoas.')
+alt01 = float(input('Digite a altura da primeira pessoa: '))
+alt02 = float(input('Digite a altura da segunda pessoa: '))
+alt03 = float(input('Digite a altura da terceira pessoa: '))
+
+mais_alto= alt01
+esta_mediana= alt01
+mais_baixo= alt01
+if alt01>alt02 and alt01>alt03:
+    mais_alto = alt01
+    if alt02>alt03:
+      esta_mediana=alt02
+      mais_baixo=alt03
+    else:
+        esta_mediana = alt03
+        mais_baixo = alt02
+elif alt02>alt01 and alt02> alt03:
+    mais_alto=alt02
+    if alt01>alt03:
+        esta_mediana=alt01
+        mais_baixo=alt03
+    else:
+        esta_mediana=alt03
+        mais_baixo=alt01
+else:
+    mais_alto = alt03
+    if alt01>alt02:
+        esta_mediana=alt01
+        mais_baixo=alt02
+    else:
+        esta_mediana=alt02
+        mais_baixo=alt01
+print(f'{mais_alto},{esta_mediana} e {mais_baixo}.')
