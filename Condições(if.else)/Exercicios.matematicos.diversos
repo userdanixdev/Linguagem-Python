@@ -1,0 +1,49 @@
+#Faça um programa que que solicite dois números positivos:
+# Logo, deve apresentar um menu com opções:
+# 1. Média ponderada, com pesos 2 e 3
+# 2. Quadrado da soma dos 2 números
+# 3. Cubo do menor número
+# Escolha uma opção:
+#Se a opção for inválida, a mensagem deverá aparecer e deverá ser encerrada.
+
+print('Olá, seja bem vindo ao MENU de cálculos em Python')
+numero=float(input('Digite um valor inteiro positivo: '))
+numero2=float(input('Digite um segundo valor inteiro positivo: '))
+print('''
+          1.Média ponderada,com pesos 2 e 3, respectivamente.
+          2. Quadrado da soma dos 2 números
+          3. Cubo do menor número
+          Escolha uma opção:
+          ''')
+op=int(input('Escolha uma opção: '))
+if op<1 or op>3:
+       print('Opção inválida.')
+elif op == 1:
+    media=(numero* 2 + numero2*3)/5
+    print(f'Média ponderada calculada:{media}.')
+elif op == 2:
+    quadrado = (numero + numero2)**2
+    print(f'Quadrado da soma dos 2 números: {quadrado}.')
+else:
+    if numero<numero2:
+        cubo =  numero **3
+        print(f'{numero} é o menor número sendo assim seu cubo será {cubo}.')
+        
+    else:
+        cubo = numero2 ** 3
+        print('f{numero2} é o menor número , então seu cubo será {cubo}. ')
+
+result:
+
+Olá, seja bem vindo ao MENU de cálculos em Python
+Digite um valor inteiro positivo: 10
+Digite um segundo valor inteiro positivo: 15
+
+          1.Média ponderada,com pesos 2 e 3, respectivamente.
+          2. Quadrado da soma dos 2 números
+          3. Cubo do menor número
+          Escolha uma opção:
+          
+Escolha uma opção: 3
+10.0 é o menor número sendo assim seu cubo será 1000.0.
+====================================================================================
