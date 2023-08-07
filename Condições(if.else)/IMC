@@ -30,4 +30,59 @@ elif 35 < imc < 40:
      print(f'Você já é considerado OBESO de GRAU 02{imc}.')
 else:
     print(f'Você já é considerado OBESO de GRAU 03,{imc} cara.')
+========================================================================================================================================
+
+Exemplo 02:  *** QUE EU GOSTO DE REPRESENTAR ***
+
+#IMC (Índice de Massa Corporal)
+#Faça um programa no qual um usuárop informe seu peso e sua altura
+#com o IMC calculado e a situação do indivíduo.
+
+
+print('Bem vindo ao medidor de massa muscular em Python!')
+print('''
+
+                   Segue abaixo a tabela de IMC:
+                   
+        Acima de 18.5 e menor que 25 ------- Peso normal
+        A partir de 25 e menor que 30 ------ Sobrepeso
+        Acima de 30 e menor que 35 --------- Obesidade grau 1
+        Acima de 35 e menor que 40 --------- Obesidade grau 2
+        Acima de 40 -------------------------Obesidade grau 3
+''')
+peso=float(input('Informe o seu peso: '))
+altura=float(input('Informe a sua altura: '))
+imc= peso/altura**2
+
+if imc<18:
+    print('Você está abaixo do peso,MAGRO.')
+elif imc ==18.5 or imc < 25: #18.5>imc<25
+     print('Seu índice de massa corporal está normal')
+elif imc ==25 or imc<30:     #25 < imc <30:
+     print('Seu IMC é considerado SOBREPESO,otário.')
+elif imc>30 or imc<35:             #30 < imc < 35:
+     print('Você já é considerado OBESO de grau 1.')
+elif imc>35 or imc<40:            #35 < imc < 40:
+     print('Você já é considerado OBESO de GRAU 02.')
+else:
+    print('Você já é considerado OBESO de GRAU 03, cara.')
+
+Result:
+
+Bem vindo ao medidor de massa muscular em Python!
+
+
+                   Segue abaixo a tabela de IMC:
+                   
+        Acima de 18.5 e menor que 25 ------- Peso normal
+        A partir de 25 e menor que 30 ------ Sobrepeso
+        Acima de 30 e menor que 35 --------- Obesidade grau 1
+        Acima de 35 e menor que 40 --------- Obesidade grau 2
+        Acima de 40 -------------------------Obesidade grau 3
+
+Informe o seu peso: 80
+Informe a sua altura: 1.75
+Seu IMC é considerado SOBREPESO,otário.
+===================================================================================================================
+    
     
