@@ -17,3 +17,11 @@ while True:
     print(f'{n1}/{n2} = {(n1/n2)}.')
 print('**** Fim da operação de divisão ****')
 
+Results:
+
+*** Operação de divisão ***
+Informe o primeiro número: 1
+Informe o segundo número: 5
+1/5 = 0.2.
+Informe o primeiro número: 
+
