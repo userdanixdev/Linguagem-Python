@@ -1,6 +1,8 @@
 #             Conceito básico:
 
 #   Enquanto uma condição for verdadeira(ou conjunto delas)for VERDADEIRA, a instrução dentro do laço 'WHILE' deverá ser executada.###
+# O 'while' é como se fosse um 'else'
+
 Exemplo:
 while True:
   print('Execução de um loop infinito.')
@@ -14,17 +16,13 @@ A sintaxe em Python seria assim:
 
 soma = 0  #para acumular valores a partir do 0. A varável 'soma ' pode acumular valores a partir de quantos números quizer.
 termo=1  # termo é criado para gerar a Progressão Aritmética. # Utilizada para controlar a quantidade de termos gerados
-while termo <= 10:   # As condições de que o 'termo' irá se repetir até o laço ser acabar na décima vez #
-
-
-
-
+while termo <= 10:   # As condições de que o 'termo' irá se repetir até o laço se acabar na décima vez #
 
 
 
 
   
-Exemplo02:
+Exemplo03:
 
 print('*** Operação de divisão ***')
 while True:
