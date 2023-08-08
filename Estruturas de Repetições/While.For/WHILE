@@ -2,6 +2,8 @@
 
 #   Enquanto uma condição for verdadeira(ou conjunto delas)for VERDADEIRA, a instrução dentro do laço 'WHILE' deverá ser executada.###
 # O 'while' é como se fosse um 'else'
+# A quantidade de iterações é definida, usa-se o 'FOR', mais indicado.
+# Quando a quantidade de iterações é indeterminado, a estrutura 'while' é uma boa alternativa.
 
 Exemplo:
 while True:
