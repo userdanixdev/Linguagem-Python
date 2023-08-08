@@ -1,0 +1,19 @@
+#             Conceito básico:
+
+#   Enquanto uma condição for verdadeira(ou conjunto delas)for VERDADEIRA, a instrução dentro do laço 'WHILE' deverá ser executada.###
+Exemplo:
+while True:
+  print('Execução de um loop infinito.')
+  
+Exemplo02:
+
+print('*** Operação de divisão ***')
+while True:
+    n1=int(input('Informe o primeiro número: '))
+    n2=int(input('Informe o segundo número: '))
+    if n2 ==0:
+        print('Divisor nâo pode ser 0. Programa será encerrado.')
+        break
+    print(f'{n1}/{n2} = {(n1/n2)}.')
+print('**** Fim da operação de divisão ****')
+
