@@ -5,7 +5,7 @@
      if n % 2==0:
        print(n, end='')
 
-# redução
+# redução (modo reduzido)
 for n in range(0,51,2):
     print(n,end='')
 print('Acabou')
