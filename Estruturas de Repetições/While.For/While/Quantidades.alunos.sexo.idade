@@ -1,0 +1,19 @@
+# Fazer uma entrevista com alunos de uma turma. Na turma são informados o SEXO e IDADE dos alunos.
+# O usuário não sabe quantos alunos existem na turma.
+# O programa deve exibir a quantidade de homens acima de 18 e a quantidade de mulheres de qualquer idade.
+# Para encerrar o programa o usuário deve informar uma idade negativa.
+
+mulheres = 0
+homens_acima18=0
+while True:
+  idade = int(input('Idade: '))
+  if idade < 0:
+      break
+  sexo=input('Sexo: ')
+  if sexo == 'F' or sexo == 'f':
+      mulheres = mulheres + 1
+  elif sexo == 'm' or sexo == 'M':
+      if idade > 18:
+         homens_acima18 += 1
+print(f'Total de mulheres: {mulheres}.')
+print(F'Total de homens acima de 18 anos: {homens_acima18}')
