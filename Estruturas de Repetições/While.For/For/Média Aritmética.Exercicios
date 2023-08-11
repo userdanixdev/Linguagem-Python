@@ -1,0 +1,28 @@
+# Crie um programa no qual o usuário informe um número inteiro positivo N e armazene-o em uma variável.
+# Em seguida o usuário deve digitar N números.
+# Ao fim, o programa deve imprimir a média aritmética dos N números digitados.
+
+Obs: Se trata de um processo de repetição. O usuário informará N vezes um determinado número, considerando N um número inteiro e maior que zero, 0.
+O laço 'for' é o mais indicado.
+
+Código:
+
+n= int(input('Digite a quantidade de números a informar: '))
+soma=0
+for cont in range(n):
+  numero = float(input('Digite um número: '))
+  soma = soma + numero
+media = soma/n
+print(f'Média= (media:.2f)')
+
+Result:
+Digite a quantidade de números a informar: 4
+Digite um número: 9
+Digite um número: 8
+Digite um número: 8
+Digite um número: 9
+Média = 8.50
+
+===================================================================================
+
+
