@@ -1,0 +1,32 @@
+#Crie um programa no qual o usuário informe a idade de um número indeterminado
+#de alunos.
+#Para encerrar a leitura dos dados, o usuário deve informar uma idade negativa.
+#No final, o programa deve mostrar a média aritmética entre a maior e a menor
+#idade.
+
+idade=int(input('Idade: '))
+mais_novo=idade
+mais_velho=idade
+while True:
+    idade = int(input('Idade: '))
+    if idade<0:
+        break
+    if idade<mais_novo:
+        mais_novo=idade
+    elif idade>mais_velho:
+        mais_velho=idade
+print(f'Menor idade: {mais_novo}. ')
+print(f'Maior idade:{mais_velho}.')
+media=(mais_novo + mais_velho)/2
+print(f'Média das duas idades={media}.')
+
+Result:
+
+Idade: 60
+Idade: 50
+Idade: -5
+Menor idade: 50. 
+Maior idade:60.
+Média das duas idades=55.0.
+================================
+
