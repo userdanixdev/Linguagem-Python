@@ -1,0 +1,40 @@
+#Crie um programa no qual o usuário informe 2 números inteiros: a e b
+#O programa deve verificar se a<b, se sim, calcule a soma dos números inteiros no intervalo [a,b]
+# Caso não, informe uma mensagem de erro.
+
+a=int(input('Informe o primeiro número: '))
+b=int(input('Informe o segundo número: '))
+if a<b:
+   soma = 0
+   for x in range(a,b +1):
+       soma =  soma + x
+       print(f'Soma dos inteiros no intervalo [{a},{b}] é {soma}.')
+else:
+       print('ERRO: ´a´ deve ser maior que ´b´.')
+
+Exemplo results:
+
+Informe o primeiro número: 10
+Informe o segundo número: 11
+Soma dos inteiros no intervalo [10,11] é 10.
+Soma dos inteiros no intervalo [10,11] é 21.
+
+=================================================================
+
+Outro resultado com os número informados: 10 para 'a' e 20 para 'b'
+
+Informe o primeiro número: 10
+Informe o segundo número: 20
+Soma dos inteiros no intervalo [10,20] é 10.
+Soma dos inteiros no intervalo [10,20] é 21.
+Soma dos inteiros no intervalo [10,20] é 33.
+Soma dos inteiros no intervalo [10,20] é 46.
+Soma dos inteiros no intervalo [10,20] é 60.
+Soma dos inteiros no intervalo [10,20] é 75.
+Soma dos inteiros no intervalo [10,20] é 91.
+Soma dos inteiros no intervalo [10,20] é 108.
+Soma dos inteiros no intervalo [10,20] é 126.
+Soma dos inteiros no intervalo [10,20] é 145.
+Soma dos inteiros no intervalo [10,20] é 165.
+============================================================
+       
