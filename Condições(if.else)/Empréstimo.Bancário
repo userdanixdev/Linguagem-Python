@@ -18,3 +18,28 @@ if prestacao_mensal>=salario_30:
             print('Sendo assim, seu empréstimo será negado.')
 else:
         print('Empréstimo concedido.')
+
+Results:
+
+Aprovador de empréstimos em Python.
+Me informe o valor da casa: 120000
+Me informe o seu salário: 5000
+Quantos anos de pagamento? 10
+
+Com o valor da casa de R$120000.0 reais em 10 anos
+a prestação será de R$1000.00 reais.
+      
+Empréstimo concedido.
+
+Result 02 com emprestimo NEGADO:
+
+Aprovador de empréstimos em Python.
+Me informe o valor da casa: 120000
+Me informe o seu salário: 1000
+Quantos anos de pagamento? 10
+
+Com o valor da casa de R$120000.0 reais em 10 anos
+a prestação será de R$1000.00 reais.
+      
+Sendo assim, seu empréstimo será negado.
+=========================================================
