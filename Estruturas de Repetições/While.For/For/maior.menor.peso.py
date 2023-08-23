@@ -27,4 +27,26 @@ Peso da 5ª pessoa: 110.5
         O maior peso lido foi de 110.5 KG.
         O menor peso lido foi de 45.9KG.  
 =============================================================
+            EXEMPLO 02:
+
+#Faça um programa que leia o peso de cinco pessoas.
+#No final, mostre qual foi o maior e o menor peso lidos.
+lista=[]  #lista vazia
+for c in range(1,6):
+    peso=float(input(f'Peso da {c}ªpessoa: '))
+    lista = lista +[peso] #adc valor da variável peso na lista
+print(f'O maior peso foi:',max(lista)) # função max adc
+print(f'O menor peso foi:',min(lista)) # função min adc')
+
+Results:
+Peso da 1ªpessoa: 110
+Peso da 2ªpessoa: 112
+Peso da 3ªpessoa: 115
+Peso da 4ªpessoa: 120
+Peso da 5ªpessoa: 100
+O maior peso foi: 120.0
+O menor peso foi: 100.0
+======================================================================
+
+
             
