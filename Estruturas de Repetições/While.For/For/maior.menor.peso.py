@@ -53,9 +53,9 @@ Exemplo 03:
 #Faça um programa que leia o peso de cinco pessoas.
 #No final, mostre qual foi o maior e o menor peso lidos.
 
-pesos=[float(input(f'Peso da {x}ªpessoa: '))for x in range(1,6)]
-print(f'O maior peso foi de {max(pesos)}KG.')
-print(f'O menor foi de {min(pesos)}KG.')
+pesos=[float(input(f'Peso da {x}ªpessoa: '))for x in range(1,6)] # O comando de entrada e funções tudo dentro da lista #
+print(f'O maior peso foi de {max(pesos)}KG.') # Uso de agregação contagem máxima
+print(f'O menor foi de {min(pesos)}KG.') # Uso de função de agregação de contagem mínima
 
 Result:
 Peso da 1ªpessoa: 50
