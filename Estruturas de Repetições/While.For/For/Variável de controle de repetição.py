@@ -28,7 +28,7 @@ Digite um valor: 5
 Digite um valor: 4
 Digite um valor: 3
 FIM
-
+# O comando se repetirá 3x ou quantas quiser,basta alterar dentro dos parênteses)
 
 
 
