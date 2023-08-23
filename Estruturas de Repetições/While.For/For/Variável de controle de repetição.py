@@ -15,3 +15,20 @@ Digite o passo: 3
 8
 FIM
 ==============================================================================
+#agora se inserirmos os comandos de entrada abaixo da estrutura inicial de repetição controlada temos:
+
+#variável de controle de repetição:
+for c in range(0,3):
+    n=int(input('Digite um valor: '))
+    print(c)
+print('FIM')
+
+Result:
+Digite um valor: 5
+Digite um valor: 4
+Digite um valor: 3
+FIM
+
+
+
+
