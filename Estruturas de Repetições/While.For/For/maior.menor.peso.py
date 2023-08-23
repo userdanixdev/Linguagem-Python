@@ -48,6 +48,8 @@ O maior peso foi: 120.0
 O menor peso foi: 100.0
 ======================================================================
 
+Exemplo 03:
+
 #Faça um programa que leia o peso de cinco pessoas.
 #No final, mostre qual foi o maior e o menor peso lidos.
 
