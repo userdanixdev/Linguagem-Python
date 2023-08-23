@@ -48,5 +48,21 @@ O maior peso foi: 120.0
 O menor peso foi: 100.0
 ======================================================================
 
+#Faça um programa que leia o peso de cinco pessoas.
+#No final, mostre qual foi o maior e o menor peso lidos.
+
+pesos=[float(input(f'Peso da {x}ªpessoa: '))for x in range(1,6)]
+print(f'O maior peso foi de {max(pesos)}KG.')
+print(f'O menor foi de {min(pesos)}KG.')
+
+Result:
+Peso da 1ªpessoa: 50
+Peso da 2ªpessoa: 51
+Peso da 3ªpessoa: 45
+Peso da 4ªpessoa: 100
+Peso da 5ªpessoa: 99
+O maior peso foi de 100.0KG.
+O menor foi de 45.0KG.
+=======================================================================
 
             
