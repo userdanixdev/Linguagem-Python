@@ -5,3 +5,6 @@ sexo=input('Digite o sexo - M ou F: ').strip().upper()[0] #STRIP para formatar a
 while sexo not in 'MmFf':
     sexo = input('Dados inválidos. Por favor, informe seu sexo: ').strip().upper()[0]
 print(f'Sexo {sexo} registrado com sucesso.')
+
+OBs: Enquanto não digitar MmFf o laço será realizado.
+==============================================================
