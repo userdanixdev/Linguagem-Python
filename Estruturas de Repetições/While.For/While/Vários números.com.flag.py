@@ -23,3 +23,19 @@ Digite um valor (999 para parar): 564
 Digite um valor (999 para parar): 999
 A soma dos 6 valores foi 695.
 ==============================================================
+
+   
+#SEM USO DO BREAK
+
+num=soma=0 #Primeiro deve-se colocar um valor para a variável,necessário para o comando 'while'
+while num!=999:
+    num=int(input('Digite um valor(999 para parar): '))
+    soma = soma + num
+soma = soma - 999 #fora da estrutura while   
+print(f'A soma dos valor foi {soma}.')    
+
+#O resultado é o mesmo...
+
+
+
+    
