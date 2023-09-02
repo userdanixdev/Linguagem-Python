@@ -51,7 +51,7 @@ Digite um valor: 4
 Digite um valor: 0
 Você digitou 2 números pares e 3 números ímpares.
 
-  ++++ A execução do laço somente então irá acabar quando o resultado digitardo 
+  ++++ A execução do laço somente então irá acabar quando o resultado digitado 
   for 0, enquanto não for , o programa irá sempre perguntar e contar os números
                      pares E impares.
 =================================================================================
