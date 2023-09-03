@@ -4,6 +4,8 @@
 #OBS:considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1.
 
 #Versão02:
+#Simplificada 
+#Muito cuidado com a INDENTAÇÃO, DEVE ESTAR NA FORMA CORRETA#
 
 saque=int(input('Digite o valor que deseja sacar: R$ '))
 n50 = n20 = n10 = n5 = n1 = 0
