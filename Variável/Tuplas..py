@@ -85,6 +85,29 @@ Resultado:
 
 #__________________________________________________________    
 
+# Função index:
+a =(2,5,4)
+b = (5,8,1,2)
+c = b + a
+print(c)
+print(c.index(5)) # Mostra onde está localizado o dado dentro da tupla.
+Resultado:
+(5, 8, 1, 2, 2, 5, 4)
+5
+
+# Tuplas são semelhantes ao vetores porém em Python qualquer tipo de dado é aceito.
+pessoa= ('Gustavo',39,'m',99.8)
+print(pessoa)
+
+Resultado:
+
+('Gustavo', 39, 'm', 99.8)
+
+
+
+
+
+
         
 
 
