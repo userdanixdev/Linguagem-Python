@@ -49,3 +49,69 @@ while True:
         break
     else:
         print('O seu time não está na lista.')
+
+O resultado desse código deverá ser este:
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Tabela do campeonato brasileiro de futebol.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Corinthians
+Palmeiras
+Santos
+Grêmio
+Cruzeiro
+Flamengo
+Vasco
+Chapecoense
+Atlético-MG
+Botafogo
+Atlético-PR
+Bahia
+São Paulo
+Fluminense
+Sport
+Vitória
+Coritiba
+Avaí
+Ponte Preta
+Atlético-GO
+
+Os 5 primeiros colocados: 
+1ºCorinthians.
+2ºPalmeiras.
+3ºSantos.
+4ºGrêmio.
+5ºCruzeiro.
++++++++++++++++
+
+Os 4 últimos colocados: 
+Coritiba.
+Avaí.
+Ponte Preta.
+Atlético-GO.
+Corinthians.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Lista com os times em ordem alfabética: 
+Atlético-GO
+Atlético-MG
+Atlético-PR
+Avaí
+Bahia
+Botafogo
+Chapecoense
+Corinthians
+Coritiba
+Cruzeiro
+Flamengo
+Fluminense
+Grêmio
+Palmeiras
+Ponte Preta
+Santos
+Sport
+São Paulo
+Vasco
+Vitória
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Digite o nome do seu time: Flamengo
+O Flamengo está na posição 6º
