@@ -42,3 +42,69 @@ while True:
     else:
         print('Seu time não está na lista.')
 
+Resultado:
+
+==================================================
+             Tabela do Brasileirão              =
+==================================================
+A tabela completa: 
+1°Corinthians
+2°Palmeiras
+3°Santos
+4°Grêmio
+5°Cruzeiro
+6°Flamengo
+7°Vasco
+8°Chapecoense
+9°Atlético-MG
+10°Botafogo
+11°Atlético-PR
+12°Bahia
+13°São Paulo
+14°Fluminense
+15°Sport
+16°Vitória
+17°Coritiba
+18°Avaí
+19°Ponte Preta
+20°Atlético-GO
+==================================================
+
+Os 5 primeiros são: 
+1°Corinthians
+2°Palmeiras
+3°Santos
+4°Grêmio
+5°Cruzeiro
+==================================================
+Os 4 últimos são: 
+17° Coritiba
+18° Avaí
+19° Ponte Preta
+20° Atlético-GO
+==================================================
+Times em ordem alfabética: 
+20°Atlético-GO
+9°Atlético-MG
+11°Atlético-PR
+18°Avaí
+12°Bahia
+10°Botafogo
+8°Chapecoense
+1°Corinthians
+17°Coritiba
+5°Cruzeiro
+6°Flamengo
+14°Fluminense
+4°Grêmio
+2°Palmeiras
+19°Ponte Preta
+3°Santos
+15°Sport
+13°São Paulo
+7°Vasco
+16°Vitória
+++++++++++++++++++++++++++++++++++++++++++++++++++
+Digite o nome do seu time: Flamengo
+O Flamengo está na posição 6°
+
