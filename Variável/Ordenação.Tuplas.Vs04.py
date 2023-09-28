@@ -39,6 +39,8 @@ print('Encerrando...')
 sleep(1.2)
 print('Obrigado! Cadastre-se e fique ligado nas novidades do Brasileirão!!')
 
+Obs: ** Ordenação do conteúdo da tupla na versão 4 diferente da versão 05 **
+
 
 
 
