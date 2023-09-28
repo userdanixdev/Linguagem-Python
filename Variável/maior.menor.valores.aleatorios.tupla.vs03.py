@@ -13,3 +13,10 @@ for i in range(0,5):
        if(i==0 or tupla[i]<menor):
            menor=tupla[i]
 print(f'{tupla}\n Maior número:{maior}\n O menor é:{menor}')       
+
+Resultado:
+
+(6, 5, 8, 4, 5)
+ Maior número:8
+ O menor é:4
+
