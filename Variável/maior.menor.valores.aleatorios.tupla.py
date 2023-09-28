@@ -12,4 +12,10 @@ for n in numeros:
 print(f'\nO maior valor sorteado foi: {max(numeros)}')
 print(f'O menor valor sorteado foi: {min(numeros)}')
 
+Resultado:
+
+Os valores sorteados foram:4 2 9 1 2 
+O maior valor sorteado foi: 9
+O menor valor sorteado foi: 1
+
 
