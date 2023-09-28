@@ -67,6 +67,87 @@ print('Encerrando...')
 sleep(1)
 print('Obrigado por tudo e fique ligado nas novidades do Camp.Brasileiro.')
 
+               Resultados:
+
+==================================================
+             Tabela do Brasileirão              =
+==================================================
+A tabela completa: 
+1°Corinthians
+2°Palmeiras
+3°Santos
+4°Grêmio
+5°Cruzeiro
+6°Flamengo
+7°Vasco
+8°Chapecoense
+9°Atlético-MG
+10°Botafogo
+11°Atlético-PR
+12°Bahia
+13°São Paulo
+14°Fluminense
+15°Sport
+16°Vitória
+17°Coritiba
+18°Avaí
+19°Ponte Preta
+20°Atlético-GO
+==================================================
+
+Escolha uma das opções abaixo:
+[1] - Somente os 5 Primeiros colocados da tabela
+[2] - Somente os 4 últimos colocados da tabela
+[3] - Lista com os times em ordem alfabética
+[4] - Posição do seu time de coração 
+3
+==================================================
+==================================================
+==================================================
+Times em ordem alfabética: 
+20°Atlético-GO
+9°Atlético-MG
+11°Atlético-PR
+18°Avaí
+12°Bahia
+10°Botafogo
+8°Chapecoense
+1°Corinthians
+17°Coritiba
+5°Cruzeiro
+6°Flamengo
+14°Fluminense
+4°Grêmio
+2°Palmeiras
+19°Ponte Preta
+3°Santos
+15°Sport
+13°São Paulo
+7°Vasco
+16°Vitória
+++++++++++++++++++++++++++++++++++++++++++++++++++
+Deseja continuar? [S/N]: s
+
+Escolha uma das opções abaixo:
+[1] - Somente os 5 Primeiros colocados da tabela
+[2] - Somente os 4 últimos colocados da tabela
+[3] - Lista com os times em ordem alfabética
+[4] - Posição do seu time de coração 
+2
+==================================================
+==================================================
+Os 4 últimos são: 
+17° Coritiba
+18° Avaí
+19° Ponte Preta
+20° Atlético-GO
+==================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++
+Deseja continuar? [S/N]: n
+Encerrando...
+Obrigado por tudo e fique ligado nas novidades do Camp.Brasileiro.
+
+
 
 
 
