@@ -12,4 +12,4 @@ for i in range(0,5):
            maior=tupla[i]
        if(i==0 or tupla[i]<menor):
            menor=tupla[i]
-print(f'{tupla},\n Maior número:{maior},\n O menor é:{menor}.')       
+print(f'{tupla}\n Maior número:{maior}\n O menor é:{menor}')       
