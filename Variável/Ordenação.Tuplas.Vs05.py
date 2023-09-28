@@ -3,7 +3,7 @@ do Campeonato Brasileiro de Futebol, na ordem de colocação. Depois mostre:
 a) Os 5 primeiros times.
 b) Os últimos 4 colocados.
 c) Times em ordem alfabética.
-d) Em que posição está o time da Chapecoense.'''
+d) Em que posição está o time de coração.'''
 
 from time import sleep
 times=('Corinthians','Palmeiras','Santos','Grêmio','Cruzeiro','Flamengo',
