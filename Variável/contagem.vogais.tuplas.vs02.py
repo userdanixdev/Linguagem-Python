@@ -12,3 +12,49 @@ for c in range(0,len(palavras)):
           if vogais[v] in palavras[c]:
               print(end=f'{vogais[v].upper()}')
           print('')
+
+Resultado:
+Na palavra "PASTEL", encontramos as vogais:A
+E
+
+
+
+Na palavra "SABONETE", encontramos as vogais:A
+E
+
+O
+
+Na palavra "PANELA", encontramos as vogais:A
+E
+
+
+
+Na palavra "PIADA", encontramos as vogais:A
+
+I
+
+
+Na palavra "PERNAMBUCO", encontramos as vogais:A
+E
+
+O
+U
+Na palavra "CACHORRO", encontramos as vogais:A
+
+
+O
+
+Na palavra "TABUADA", encontramos as vogais:A
+
+
+
+U
+Na palavra "PARAGUAI", encontramos as vogais:A
+
+I
+
+U
+Na palavra "ESQUECIDO", encontramos as vogais:
+E
+I
+O
