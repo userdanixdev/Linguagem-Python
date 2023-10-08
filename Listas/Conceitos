@@ -1,3 +1,5 @@
+As listas são variáveis compostas que permitem armazenar vários valores em uma mesma estrutura, acessíveis por chaves individuais.
+
 # As listas ficam entre colchetes.
 # As listas são mutáveis.
 # Exemplo:
