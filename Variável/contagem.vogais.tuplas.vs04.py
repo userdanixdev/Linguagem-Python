@@ -11,4 +11,9 @@ for c in x:
         if r in c:
             print(f'{r}',end='')
 
-
+Resultado:
+Na palavra ERICK temos as vogais: EI
+Na palavra STEFANY temos as vogais: AE
+Na palavra JUNIOR temos as vogais: IOU
+Na palavra CIDA temos as vogais: AI
+Na palavra ALINE temos as vogais: AEI
