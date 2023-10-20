@@ -49,6 +49,14 @@ else:
     print('Não achei o número 4')
 '''Resultado:     Não achei o número 4'''
 print('+'*15)
+
+# Listas em Python:
+
+valores=list(range(4,11))  # range pode criar uma estrutura de lista de repetição organizada:
+print(valores)
+'''Resultado:
+        [4, 5, 6, 7, 8, 9, 10]'''
+
 # Outro exemplo aplicado com laço 'for':
 valores=[]
 valores.append(5)
