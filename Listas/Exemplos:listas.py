@@ -27,7 +27,7 @@ print(f'Esse lista tem {len(num)} elementos.')
 '''Result: Essa lista tem 5 elementos.'''
 # Adicionar valores:
 print('+'*15)
-num.insert(2,0)
+num.insert(2,0)  # Seleciona em qual lugar o elemento deve estar , no exemplo a seguir o elemento '0' irá ficar na posição '2' da lista
 print(num)
 '''Resultado: [7, 5, 0, 3, 2, 1] '''
 print('='*15)
