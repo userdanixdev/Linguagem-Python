@@ -18,7 +18,7 @@ num.append(7) #---> Adicionar VALOR 7 AO ELEMENTO.
 print(num)
 Result: [1, 2, 3, 5, 7]
 print('='*15)
-num.sort(reverse=True)
+num.sort(reverse=True)  # Reposiciona os valores na ORDEM INVERSA
 print(num)
 print('='*15)
 Result: [7, 5, 3, 2, 1]
