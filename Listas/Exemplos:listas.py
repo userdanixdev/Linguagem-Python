@@ -31,8 +31,10 @@ num.insert(2,0)  # Seleciona em qual lugar o elemento deve estar , no exemplo a 
 print(num)
 '''Resultado: [7, 5, 0, 3, 2, 1] '''
 print('='*15)
+------------------------------------------------------------------
 # Para remoção de elementos:
-num.pop()  #'''---- Irá por padrão, eliminar o último elementos'''
+num.pop()  #'''---- Irá por padrão, eliminar o último elementos''' , TAMBÉM A POSSIBILIDADE DE ESCOLHER QUAL ELEMENTO COMO PARÂMETRO 
+                                                                        # ACRESCENTADO DA VÍRGULA
 print(num)
 '''Resultado: [7, 5, 0, 3, 2] '''
 print('='*15)
