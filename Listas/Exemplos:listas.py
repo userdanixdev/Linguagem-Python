@@ -57,7 +57,7 @@ print(valores)
 '''Resultado:
         [4, 5, 6, 7, 8, 9, 10]'''
 
-# Outro exemplo aplicado com laço 'for':
+# Exemplo aplicado com laço 'for':
 valores=[]
 valores.append(5)
 valores.append(9)
