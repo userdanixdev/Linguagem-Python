@@ -79,6 +79,12 @@ for cont in range(0,5):
 for c,v in enumerate(valores):
     print(f'Na posição {c} encontrei o valor {v}!')
    # print(valores.append)
+Result:
+Na posição 3 encontrei o valor 5!
+Na posição 4 encontrei o valor 8!
+Na posição 5 encontrei o valor 10!
+Na posição 6 encontrei o valor 11!
+Na posição 7 encontrei o valor 12!
    
     
 
