@@ -67,7 +67,7 @@ for v in valores: #---> Para cada valor 'v' em 'valores'
 '''resultado: 5...9...4...'''
 # Outra forma conceitual aplicada:
 print('-'*15)
-for c,v in enumerate(valores):
+for c,v in enumerate(valores):   # Tanto a chave 'c' quanto o valor 'v' são enumerados
     print(f'Na posição {c} encontrei o valor {v}!')
 '''Resultado:
 Na posição 0 encontrei o valor 5!
