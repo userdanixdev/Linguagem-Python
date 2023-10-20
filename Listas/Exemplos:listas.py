@@ -38,7 +38,7 @@ num.pop()  #'''---- Irá por padrão, eliminar o último elementos''' , TAMBÉM 
 print(num)
 '''Resultado: [7, 5, 0, 3, 2] '''
 print('='*15)
-num.remove(2) #----> Elimina da esquerda pra direita
+num.remove(2) #----> Elimina da esquerda pra direita. Elimina o primeiro elemento da lista.
 print(num)
 ''' Resultado: [7, 5, 0, 3] '''
 print('='*15)
