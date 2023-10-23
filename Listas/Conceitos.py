@@ -40,3 +40,4 @@ As listas são variáveis compostas que permitem armazenar vários valores em um
           # Ele vai ordenar todos os valores: 0,2,3,4,5,8,9
     # valores.sort(reverse=True)
         # resultado será: O valor ordenado inverso.
+============================================================================================    
