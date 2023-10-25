@@ -19,6 +19,8 @@ while True:
     if opcao == 'N':
         break
 print(f'Você digitou os valores {sorted(lista)}')    
+
+============================================================================
         
    
 
