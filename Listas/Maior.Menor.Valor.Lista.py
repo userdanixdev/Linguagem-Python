@@ -98,6 +98,7 @@ Digite um valor para a posição 4: 5
  Você digitou os valores [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
 O maior valor digitado foi 5 nas posições: 4°...9°...14°...
 O menor valor digitado foi 1 na posição: 0°...5°...10°...'''
+===================================================================
 
         
             
