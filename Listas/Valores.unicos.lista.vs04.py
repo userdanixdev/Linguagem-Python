@@ -17,6 +17,19 @@ while resp in 'S':
         break
 print(sorted(lista))
 
+Results:
+Digite um número inteiro: 55
+Deseja continuar? [S/N]s
+Digite um número inteiro: 25
+Deseja continuar? [S/N]s
+Digite um número inteiro: 25
+Esse número já existe!
+Deseja continuar? [S/N]s
+Digite um número inteiro: 10
+Deseja continuar? [S/N]n
+[10, 25, 55]
+=======================================
+
 
 
 
