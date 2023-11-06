@@ -21,6 +21,29 @@ print(f'Você digitou os valores {numeros}.')
 numeros.sort()
 print(f'Os valores na ordem crescente são: {numeros}.')
 
+Result:
+
+Digite um valor: 5
+Valor adicionado com sucesso.
+Quer continuar? [S/N] s
+Digite um valor: 23
+Valor adicionado com sucesso.
+Quer continuar? [S/N] s
+Digite um valor: 20
+Valor adicionado com sucesso.
+Quer continuar? [S/N] s
+Digite um valor: 1
+Valor adicionado com sucesso.
+Quer continuar? [S/N] s
+Digite um valor: 5
+Valor duplicado! Não vou adicionar...
+Quer continuar? [S/N] n
+++++++++++++++++++++++++++++++
+Você digitou os valores [5, 23, 20, 1].
+Os valores na ordem crescente são: [1, 5, 20, 23].
+==============================================================================
+
+
 
 
 
