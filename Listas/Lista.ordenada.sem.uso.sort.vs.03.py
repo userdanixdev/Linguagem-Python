@@ -14,4 +14,14 @@ for c in range(5):
             if n <= x:
                 lista.insert(pos,n)
                 break
-print(lista)            
+print(lista)    
+
+Result:
+
+Digite o número: 4
+Digite o número: 6
+Digite o número: 2
+Digite o número: 10
+Digite o número: 3
+[2, 3, 4, 6, 10]
+=================================================
