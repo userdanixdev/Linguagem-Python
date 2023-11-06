@@ -17,6 +17,19 @@ for menor in range (0,5):
     if valores[menor] == min(valores):
         print(f'{menor+1}°',end='')
 
+Result:
+
+Digite número: 5
+Digite número: 6
+Digite número: 10
+Digite número: 3
+Digite número: 33
+Os números digitados foram: [5, 6, 10, 3, 33]
+O maior número foi 33 na(s) posição(ões): 5°
+O menor número foi 3 na(s) posição(ões):4°
+
+========================================================
+
 
 
 
