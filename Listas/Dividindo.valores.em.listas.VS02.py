@@ -24,3 +24,21 @@ print(f'''
 Lista de valores digitados:{valores}
 Lista de valores pares:{pares}
 Lista de valores impares:{impar}''')
+===========================================================================
+Resultados:
+
+Digite um valor: 15
+Quer continuar? [S/N]: s
+Digite um valor: 15
+Quer continuar? [S/N]: x
+Digite um valor: 20
+Quer continuar? [S/N]: s
+Digite um valor: 25
+Quer continuar? [S/N]: n
+
+Lista de valores digitados:[15, 15, 20, 25]
+Lista de valores pares:[20]
+Lista de valores impares:[15, 15, 25]
+
+======================================================
+
