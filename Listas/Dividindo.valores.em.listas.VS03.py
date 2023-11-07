@@ -24,5 +24,24 @@ while True:
         break
 print(f'Essa é a lista de números pares: {l2}\nEssa é a lista de números Impares:{l1}.\nA lista completa é esta:{l}')
 
+Results:
+
+Digite o número: 20
+Quer continuar? [S/N]s
+Digite o número: 21
+Quer continuar? [S/N]s
+Digite o número: 22
+Quer continuar? [S/N]s
+Digite o número: 23
+Quer continuar? [S/N]s
+Digite o número: 24
+Quer continuar? [S/N]s
+Digite o número: 25
+Quer continuar? [S/N]n
+Essa é a lista de números pares: [20, 22, 24]
+Essa é a lista de números Impares:[21, 23, 25].
+A lista completa é esta:[20, 21, 22, 23, 24, 25]
+==============================================================
+
 
 
