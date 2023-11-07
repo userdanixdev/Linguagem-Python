@@ -27,5 +27,25 @@ print(f' A lista completa é: {num}.')
 print(f' A lista de pares é: {pares}.')
 print(f' A lista de ímpares é: {impares}.')
 
+Resultado:
+
+Digite um número: 10
+Quer continuar? [S/N]s
+Digite um número: 11
+Quer continuar? [S/N]s
+Digite um número: 9
+Quer continuar? [S/N]s
+Digite um número: 7
+Quer continuar? [S/N]s
+Digite um número: 2
+Quer continuar? [S/N]n
+[10, 11, 9, 7, 2]
+++++++++++++++++++++++++++++++
+ A lista completa é: [10, 11, 9, 7, 2].
+ A lista de pares é: [10, 2].
+ A lista de ímpares é: [11, 9, 7].
+
+==========================================================
+
         
 
