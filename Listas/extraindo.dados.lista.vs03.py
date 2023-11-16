@@ -12,7 +12,7 @@
 contador = 0
 resposta = 's'
 lista=[]
-while resposta.lower()=='s':
+while resposta.lower()=='s':   # Se for qualquer outro caracter que não seja 's', o programa irá fechar
     lista.append(int(input('Digite um valor: ')))
     resposta = input('Quer continuar? [S/N]').lower()
     contador =  contador + 1
