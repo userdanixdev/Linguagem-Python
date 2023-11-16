@@ -22,6 +22,19 @@ if 5 in valores:   # in faz pesquisa dentro de listas e tuplas, não precisa de 
 else:
     print('O valor 5 não foi encontrado na lista.')
 
+REsultado:
+Digite o núnmero: 15
+Quer continuar? [S/N] s
+Digite o núnmero: 2
+Quer continuar? [S/N] s
+Digite o núnmero: 30
+Quer continuar? [S/N] s
+Digite o núnmero: 22
+Quer continuar? [S/N] n
+Vc digitou 4 elementos.
+Os valores em ordem decrescente são [30, 22, 15, 2].
+O valor não foi encontrado na lista.
+
  
 
  
