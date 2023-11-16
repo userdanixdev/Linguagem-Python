@@ -23,4 +23,26 @@ if 5 not in valores:
     print('O valor 5 não faz parte da lista.')
 else:
     print('O valor 5 faz parte da lista.')
+
+Resultado:
+
+Digite um valor: 55
+Quer continuar?[S/N]s
+Digite um valor: 32
+Quer continuar?[S/N]y
+Resposta inválida. Quer continuar?[S/N]y
+Resposta inválida. Quer continuar?[S/N]l
+Resposta inválida. Quer continuar?[S/N]s
+Digite um valor: 2
+Quer continuar?[S/N]s
+Digite um valor: 5
+Quer continuar?[S/N]s
+Digite um valor: 15
+Quer continuar?[S/N]s
+Digite um valor: 25
+Quer continuar?[S/N]n
+Vc digitou 6 elementos.
+ Em ordem decrescente são [55, 32, 25, 15, 5, 2].
+O valor 5 faz parte da lista.
+ =======================================================
  
