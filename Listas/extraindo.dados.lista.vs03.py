@@ -22,5 +22,20 @@ if 5 in lista:
     print('O valor 5 está na lista.')
 else:
     print('O valor 5 não foi encontrado.')
+
+Resultado:
+
+Digite um valor: 5
+Quer continuar?[S/N]]s
+Digite um valor: 7
+Quer continuar?[S/N]]s
+Digite um valor: 6
+Quer continuar?[S/N]]S
+Digite um valor: 3
+Quer continuar?[S/N]]t
+Vc digitou 4 elementos.
+ E os valores na ordem descrescente sãO:[7, 6, 5, 3].
+O valor 5 está na lista.
+
                  
                  
