@@ -18,6 +18,20 @@ print('='*50)
 print(f'Os valores ímpares digitados foram:{num[1]}\n e os pares:{num[0]}.')
 print('*'*40)
 
+Resultado no terminal/console:
 
+Digite o 1° valor: 1               
+Digite o 2° valor: 2
+Digite o 3° valor: 3
+Digite o 4° valor: 4
+Digite o 5° valor: 5
+Digite o 6° valor: 6
+Digite o 7° valor: 7
+++++++++++++++++++++++++++++++++++++++++++++++++++
+Todos os valores: [[2, 4, 6], [1, 3, 5, 7]].
+==================================================
+Os valores ímpares digitados foram:[1, 3, 5, 7]
+ e os pares:[2, 4, 6].
 
+==============================================================
 
