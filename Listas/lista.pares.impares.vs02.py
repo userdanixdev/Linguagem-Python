@@ -23,5 +23,19 @@ for c in range(1,8):   # O 'c' dentro do laço for é o contador, limitado a 7.
 print(f'Valores pares digitados: {sorted(valores[0])}. ')
 print(f'Valores ímpares digitados: {sorted(valores[1])}. ')
 
+Resultado no console:
+
+Digite o valor 1°: 1
+Digite o valor 2°: 2
+Digite o valor 3°: 3
+Digite o valor 4°: 4
+Digite o valor 5°: 5
+Digite o valor 6°: 6
+Digite o valor 7°: 7778
+Valores pares digitados: [2, 4, 6, 7778]. 
+Valores ímpares digitados: [1, 3, 5]. 
+
+=================================
+
 
 
