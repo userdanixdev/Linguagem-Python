@@ -5,22 +5,33 @@
 
 # Cadastro Trabalhador:
 
-from datetime import datetime
+from datetime import date
 dados={}
-dados['Nome']= str(input('Nome: '))
-nasc= int(input("Ano de Nascimento: "))
-dados['Idade']= datetime.now().year - nasc
+dados['Nome']= str(input('Nome: ')).upper()
+dados['Ano de Nascimento']= int(input("Ano de Nascimento: "))
+#dados['Idade']= datetime.now().year - nasc
+data_atual=date.today().year
+idade=data_atual-dados['Ano de Nascimento']
 dados['CTPS']= int(input('Carteira de Trabalho (0 não tem): '))
-#print(dados)
-#REsultado no console:
-#Nome: Daniel
-#Ano de Nascimento: 1995
-#Carteira de Trabalho (0 não tem): 22346
-#{'Nome': 'Daniel', 'Idade': 28, 'CTPS': 22346}
 if dados['CTPS']!= 0:
     dados['Contratação']= int(input('Ano de contratação: '))
     dados['Salário']= float(input('Salário: R$ '))
-    dados['Aposentadoria']= dados['Idade']+(dados['Contratação']+35) - datetime.now().year
+    dados['Sexo']= str(input('Sexo:')).upper()
+    #dados['Aposentadoria']= dados['Idade']+(dados['Contratação']+35) - datetime.now().year
+    if dados['Sexo']=='M'or'm':
+        if idade>=61:
+            print('Você tem idade para se aposentar...')
+        else:
+            tempo_restante=61-idade
+            print(dados['Nome'],'faltam',tempo_restante,'anos para se aposentar.')
+elif dados['Sexo']=='F'or'f':
+    if idade>=56:
+        print(dados['Nome'],'Você já tem idade para se aposentar.')                        
+    else:
+        tempos_restante=56-idade
+        print(dados['Nome'],'faltam',tempo_restante, 'anos para se aposentar.')
+else:
+    print('Fim do programa')                
 print(dados)
 # Formatação:
 for k, v in dados.items():
