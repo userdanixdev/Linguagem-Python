@@ -105,3 +105,5 @@ Potenciação | ´**` | print(4**2) = 16
        //- Inteiro da divisão
        % - Resto da divisão
     4. + & - - Soma e subtração
+
+***    
