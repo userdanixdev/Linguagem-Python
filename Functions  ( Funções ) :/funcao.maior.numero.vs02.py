@@ -7,7 +7,7 @@
 from time import sleep
 
 def maior(*num): 
-    contador=maior=0
+    contador=0
     print('+'*30)
     print('Analisando os valores passados...')
     sleep(0.3)
