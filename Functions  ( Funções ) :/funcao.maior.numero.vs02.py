@@ -13,7 +13,7 @@ def maior(*num):
     sleep(0.3)
     for c in num:
         contador += 1
-        print(f'{c}', end=' ')   ### Para contar o índice
+        print(f'{c}', end=' ')   ### Para contar o índice dentro do laço com o sleep ##
         sleep(0.2)
     if contador > 0:
         maior = max(num)
