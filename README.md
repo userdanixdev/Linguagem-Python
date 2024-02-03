@@ -107,4 +107,4 @@ Potenciação | ´**` | print(4**2) = 16
     4. + & - - Soma e subtração
 
 ***    
---
+
