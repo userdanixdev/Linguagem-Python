@@ -51,3 +51,4 @@ jogadores_df #<- Sendo assim, outra forma de renomear a coluna é com o 'inplace
 jogadores_df.columns = ['NOME', 'IDADE', 'PESO','POSIÇÃO']    
 jogadores_df
 #####################################################################
+OK
