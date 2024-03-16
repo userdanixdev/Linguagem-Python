@@ -7,7 +7,7 @@
 ***
 ## Origem da linguagem Python:
 
-* A linguagem Python foi criada pelo matemático e programador Guido van Rossum em 1991. Em 2019 completou 50 anos de existência.
+* A linguagem Python foi criada pelo matemático e programador Guido van Rossum em 1991. 
 
 * O site oficial: www.python.org é possível instalar. 
 
