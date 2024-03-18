@@ -16,7 +16,7 @@ while True:
     numero=int(input('Número inválido. Digite um número entre 0 a 20, somente.')
   print(f'Você digitou o número {extensos[numero]}.')
   pergunta = input('Vc quer continuar? Digite S para SIM ou N para NÃO: ').strip().upper()[0]               
-  if pergunta == 'S' or pergunta == 'SIM:
+  if pergunta == 'S' or pergunta == 'SIM':
     continue
 else:
     break
