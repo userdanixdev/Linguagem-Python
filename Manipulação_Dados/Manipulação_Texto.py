@@ -39,10 +39,6 @@ f = open('C:/Users/jessi/Downloads/Current_Employee_Names__Salaries__and_Positio
 data = f.read()
 # Com a função split dividimos todas as linhas em uma única lista
 rows = data.split('\n')
-for colum
-# DIVIDINDO UMA ARQUIVO EM COLUNAS:
-full_data2 = []    
-first_row = full_data[0]
     for row in rows:
         split_row = row.split(',')
         full_data.append(split_row)
