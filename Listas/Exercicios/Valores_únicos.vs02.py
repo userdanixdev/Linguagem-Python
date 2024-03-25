@@ -16,7 +16,6 @@ while True:
           break
 print('='*30)
 print(f'Você digitou os valores {lista}.')
-lista.sort()
-print(f'Os valores em ordem crescente são {lista} ')
+print(f'Os valores em ordem crescente são {sorted(lista)} ')
 
 
