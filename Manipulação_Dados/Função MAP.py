@@ -24,3 +24,6 @@ print(numeros_ao_cubo)
 
 
 
+
+
+
