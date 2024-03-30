@@ -16,14 +16,11 @@ print('Terceira potência de cada elementos:', potencia(lista))
 =================//=====================//========================//
 ## Utilizando o método MAP:
 def potencia(x):
-  returnX**3
+  return x**3
 numeros=[1,2,3]
 numeros_ao_cubo=list(map(potencia,numeros))
 print(numeros_ao_cubo)
 =====================//==========================//============
-
-
-
 
 
 
