@@ -109,10 +109,10 @@ class Hangman:
                 rtn += '_'
             else:
                 rtn += letra
-        return trn                
+        return rtn                
 	# Método para checar o status do game e imprimir o board na tela
     def print_game_status(self):
-        print(board(len(self.letras_erradas)))
+        print(board[len(self.letras_erradas)])
         print('\nPalavra: ' + self.hide_palavra())
         print('\nLetras Erradas: ',)
         for letra in self.letras_erradas:
