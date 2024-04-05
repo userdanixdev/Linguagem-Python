@@ -119,7 +119,7 @@ class Hangman:
             print(letra,)
         print()
         print('Letras Corretas:',)
-        for letra in self.letras_escolhidas>
+        for letra in self.letras_escolhidas:
         print(letra,)
         print()
 
