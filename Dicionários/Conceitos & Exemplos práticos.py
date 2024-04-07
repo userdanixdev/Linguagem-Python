@@ -1,12 +1,13 @@
-ariáveis compostas ( Dicionários ) - Python - -  Curso em Vídeos - Gustavo Guanabara =
+Variáveis compostas ( Dicionários ) - Python - -  Curso em Vídeos - Gustavo Guanabara =
 	- Semelhantes as tuplas e listas - com o dicionário podemos ter índices literais, ou seja, não somente números. 
 		- Conseguimos personalizar os índices...
 		- Separados por chaves '{}' onde podemos acessar o item,valor e elementos ( keys ou chaves ).
 
-Ex: filme ={'título':'Star Wars','ano':1977, 'diretor':''George Lucas'}
-	print(filme.values()) - Irá retornar os valores - 'star wars', 1977
+Ex: filme ={'título':'Star Wars','ano':1977, 'diretor':'George Lucas'}
+	
+ 	print(filme.values()) - Irá retornar os valores - 'star wars', 1977
 	print(filme.keys()) - São os elementos - Ex: 'título','diretor','ano'
-	print(filmes.intems()) - Irá mostrar tanto os keys como os values, ou seja, tudo.
+	print(filmes.items()) - Irá mostrar tanto os keys como os values, ou seja, tudo.
 
 Usando repetição :
 
