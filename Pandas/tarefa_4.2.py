@@ -17,3 +17,4 @@ plt.title('Frequência de Idades')
 plt.xlabel('Idades')
 plt.ylabel('Frequência')
 plt.show()
+-------//----------------//-----------------//------------------//------------
