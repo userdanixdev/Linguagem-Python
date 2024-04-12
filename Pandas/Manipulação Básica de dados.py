@@ -64,3 +64,7 @@ dsa_df[['Segmento','Regiao','Valor_Venda']].groupby(['Segmento','Regiao']).mean(
 # Agregação múltipla de group by:
 dsa_df[['Segmento','Regiao','Valor_Venda']].groupby(['Segmento','Regiao']).agg(['mean','std','count']) <<-- Agregação de valores estatísticos para coluna 'valor_venda'
 
+######################################################################################################################
+## Toda alteração no dataframe, colocar parâmetro inplace = True , para alterar em definitivo o dataframe ##
+######################################################################################################################
+
