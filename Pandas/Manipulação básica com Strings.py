@@ -23,3 +23,8 @@ dsa_df[['Segmento','Regiao','Valor_Venda']].groupby(['Segmento','Regiao']).agg([
 # Outro exemplo:
 dsa_df[dsa_df.ID_Pedido.str.startswith('CA')].head()
 
+
+# Concatenar Strings:
+# 1°Passo: Criar um atribuição com uma nova coluna: 'Pedido_Segmento'
+dsa_df['Pedido_Segmento']=dsa_df['ID_Pedido'].str.cat(dsa_df['Segmento'],sep='-')
+
