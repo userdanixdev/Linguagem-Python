@@ -67,4 +67,5 @@ dsa_df[['Segmento','Regiao','Valor_Venda']].groupby(['Segmento','Regiao']).agg([
 ######################################################################################################################
 ## Toda alteração no dataframe, colocar parâmetro inplace = True , para alterar em definitivo o dataframe ##
 ######################################################################################################################
-
+## Função REPLACE em STRINGS para substituir strings:
+dsa_df['ID_Cliente']=dsa_df['ID_Cliente'].str.replace('CG','AX')
