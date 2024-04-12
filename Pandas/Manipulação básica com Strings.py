@@ -23,6 +23,8 @@ dsa_df[['Segmento','Regiao','Valor_Venda']].groupby(['Segmento','Regiao']).agg([
 # Outro exemplo:
 dsa_df[dsa_df.ID_Pedido.str.startswith('CA')].head()
 
+## Função REPLACE em STRINGS para substituir strings:
+dsa_df['ID_Cliente']=dsa_df['ID_Cliente'].str.replace('CG','AX')
 
 # Concatenar Strings:
 # 1°Passo: Criar um atribuição com uma nova coluna: 'Pedido_Segmento'
