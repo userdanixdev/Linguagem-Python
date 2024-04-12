@@ -59,4 +59,8 @@ dsa_df['Quantidade'].fillna(value=moda,inplace=True)
 dsa_df['Quantidade']
 # Conferir novamente com o comando anterior sobre os valores nulos:
 dsa_df.isna.sum()
+# Aplicação do group by:
+dsa_df[['Segmento','Regiao','Valor_Venda']].groupby(['Segmento','Regiao']).mean() <- Média de valor venda
+# Agregação múltipla de group by:
+dsa_df[['Segmento','Regiao','Valor_Venda']].groupby(['Segmento','Regiao']).agg(['mean','std','count']) <<-- Agregação de valores estatísticos para coluna 'valor_venda'
 
