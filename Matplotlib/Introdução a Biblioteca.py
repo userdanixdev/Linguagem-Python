@@ -15,4 +15,12 @@ plt.xlabel('Variável 1')
 plt.ylabel('Variável 2')
 plt.title('Teste Plot')
 -----------------//--------------------//------------------//----------
+# Outro exemplo:
+# Criar as variáveis com a massa de dados
+x2 = [5,7,9]
+y2 = [11,12,13]
+# Composição dos gráficos:
+plt.plot(x2,y2,label='Gráfico com Matplotlib')
+plt.legend()
+------------//---------------//-----------------//----------------//
 
