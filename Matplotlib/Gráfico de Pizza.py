@@ -9,4 +9,4 @@ plt.pie(fatias,
         colors=cores,
         startangle=90,
         shadow = True,   #<- Sombra no gráfico
-        explode = (0,0,0.4,0))
+        explode = (0,0,0.4,0))  # <- Separar os pedaçõs da pizza.
