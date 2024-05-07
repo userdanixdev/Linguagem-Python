@@ -68,3 +68,8 @@ while True:
     # Opção inválida:
     else:
         print('Operação inválida. Selecione novamente a operação correta.')
+    # Perguntar se o usuário deseja continuar operando
+    continuar = input("\nDeseja realizar outra operação? (s/n): ")
+    if continuar.lower() != 's':
+        print("Obrigado por utilizar nossos serviços. Volte sempre!")
+        break                                    
