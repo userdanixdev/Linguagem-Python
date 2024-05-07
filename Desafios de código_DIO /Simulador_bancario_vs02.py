@@ -2,10 +2,15 @@
 # Programa de Simulação de um Caixa Eletrônico:
 # 1° Opções do menu
 menu = """
-[D] Depositar
-[S] Sacar
-[E] Extrato
-[Q] Sair
+
+Simulador de Caixa Eletrônico:
+
+        [D] Depositar
+        [S] Sacar
+        [E] Extrato
+        [Q] Sair
+        
+    Selecione uma opção         
 """
 # Saldo incial e limites:
 saldo = 0           # Saldo atual
