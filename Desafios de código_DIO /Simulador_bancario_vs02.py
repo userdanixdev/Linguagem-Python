@@ -1,4 +1,3 @@
-
 # Programa de Simulação de um Caixa Eletrônico:
 # 1° Opções do menu
 menu = """
@@ -30,6 +29,7 @@ while True:
         if valor > 0:
             saldo = saldo + valor # Adicionar o valor do depósito ao saldo
             extrato = extrato + f'Depósito: R$ {valor:.2f}\n' # Adicionar transação de depósito ao extrato
+            print(f"Depósito de R$ {valor:.2f} realizado com sucesso.")
         else:
             print('Operação falhou. Valor informado inválido.')
     # Operação de saque:
@@ -43,12 +43,14 @@ while True:
             print('Operação inválida por saldo insuficiente.')
         elif excedeu_limite:
             print('Operação inválida pelo saque exceder o limite.')
+            print(f"Seu saldo disponível é de R$ {saldo:.2f} e seu limite de saque é de R$ {limite:.2f}.")
         elif excedeu_saques:
             print('Operação falha. Número máximo de saques excedido.')
         elif valor > 0:
             saldo = saldo - valor
             extrato = extrato + f'Saque:R$ {valor:.2f}\n' # Adicionar transação de saque ao histórico
             numero_saques = numero_saques +1
+            print(f"Saque de R$ {valor:.2f} realizado com sucesso.")            
         else:
             print('Operação inválida. O valor informado é inválido.')
     # Exibir histórico de transaçõs e saldo:
@@ -61,8 +63,8 @@ while True:
         print('+'*42)
     # sair do programa:
     elif opcao == 'Q' or 'q':
+        print("Obrigado por utilizar nossos serviços. Volte sempre!")
         break
     # Opção inválida:
     else:
         print('Operação inválida. Selecione novamente a operação correta.')
-              
