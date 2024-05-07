@@ -1,3 +1,4 @@
+from time import sleep
 import sys
 times=('Botafogo','Palmeiras','Atlético-MG','Grêmio','Flamengo','Fluminense',
        'Atlético-PR','São Paulo','Fortaleza','Cruzeiro','Bragantino','Santos',
