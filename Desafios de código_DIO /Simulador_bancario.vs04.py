@@ -154,7 +154,7 @@ def main():
     agencia = '0001' # Constante
     saldo = 0
     limite = 1000
-    extrato = ''
+    extrato = '' #Vazio
     numero_saques = 0
     usuarios = []
     contas = []
