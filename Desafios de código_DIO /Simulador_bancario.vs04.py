@@ -4,7 +4,38 @@ Created on Tue May  7 18:21:15 2024
 
 @author: US
 """
+# Objetivo Geral:
+    # Separar as funções existentes de saque, depósito e extrato em funções.
+        # Criar duas novas funções: cadastrar usuário (cliente) e cadastrar conta bancária.
 
+# Desafio:
+    # Deverá ser criada novas funções como criar usuário (cliente do banco)
+            # criar conta corrente ( vincular com o usuário )
+
+# Função de saque:
+    # A função de saque deve receber os argumentos apenas por nome.
+
+# Função de depósito:
+    # a função de depósito deve receber apenas argumentos por posição
+
+# Função de extrato:
+    # A função de extrato deve receber argumentos por posição e nome.
+
+# Novas funções:
+    # Precisamos criar duas novas funções: criar usuário e criar conta corrente.
+
+# Criar usuário (cliente):
+    # O programa deve armazenar os usuários em uma lista, um usuário é composto
+#           por: nome, data de nascimento, cpf e endereço.
+        # Endereço formato: logradouro,numero,bairro, cidade/sigla, estado.
+        # Não poderá cadastrar 2 usuários com o mesmo CPF.
+
+# Criar conta corrente:
+    # O programa deve armazenar contas em uma lista, a conta é composta por:
+    #    agência,número da conta e usuário.
+    # O número da conta é sequencial, iniciando em 1.
+    # O número da agência é fixo: '0001'.
+    # O usuário tem mais de uma conta, mas a conta deve pertencer somente a um usuário.
 import textwrap
 
 # A função textwrap é usada para formatar parágrafos de texto que se ajustam
@@ -117,10 +148,10 @@ def listar_contas(contas):
     #Titular:\t{conta['usuario']['nome']}
         print('='*40)
         print(textwrap.dedent(linha))
-# 9º Função:
+# 9º Função: PRINCIPAL :: Encontra-se todos as chamadas, variáveis
 def main():
-    limite_saques = 3
-    agencia = '0001'
+    limite_saques = 3  # Constante
+    agencia = '0001' # Constante
     saldo = 0
     limite = 1000
     extrato = ''
