@@ -14,6 +14,12 @@
 # Conheça mais sobre o Regex: https://docs.python.org/pt-br/3.8/howto/regex.html
 # Conheça mais sobre o 're' do python: https://docs.python.org/pt-br/3/library/re.html
 # Módulo 're' que fornece operações com expressões regulares.
+# Expressões regulares (chamadas REs, ou regexes ou padrões regex) são essencialmente uma mini linguagem de programação altamente especializada
+# e disponível através do módulo re.
+# Usando esta pequena linguagem, você especifica as regras para o conjunto de strings possíveis que você quer combinar;
+# esse conjunto pode conter sentenças em inglês, endereços de e-mail, ou comandos TeX ou qualquer coisa que você queira.
+# Você poderá então responder as perguntas como “Essa string se enquadra dentro do padrão?” ou “Existe alguma parte da string que se enquadra nesse padrão?”.
+# Você também pode usar as REs para modificar uma string ou dividi-la de diversas formas.
 import re
 # Criar uma função chamada que aceite um argumento 'phone_number':
 def validate_numero_telefone(phone_number):
