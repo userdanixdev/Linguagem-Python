@@ -19,6 +19,9 @@ import re
 def validate_numero_telefone(phone_number):
 # Defina um padrão de expressão regular (regex) para validar números de telefone no formato (XX) 9XXXX-XXXX:
     pattern = '^\(\d{2}\) 9\d{4}-\d{4}$'
+# '^' - Indica o início da string    (\d{2}\) -> Corresponde a dois digitos para código de área onde '\d' é um dígito e {2} indica que deve haver dois dígitos
+# '\) para fechar o código área. '9' corresponde ao prefixo indicando o número de celular. \d{4} - quatro dígitos para a primeira parte do número após o '9'.
+# '$' indica para finalizar a string.    
 # A função 're.match()' verifica se o padrão definido corresponde ao número de telefone fornecido.
 # O 're.match()' retorna um objeto 'match' se houver correspondência no início da string, caso contrário, retorna 'None'.
     if re.match(pattern,phone_number):
