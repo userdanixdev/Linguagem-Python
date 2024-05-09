@@ -1,5 +1,5 @@
-Os métodos de classes são como funções dentro de uma classe. Que realizam operações específicas em objetos criados a partir dessa classe.
-O método 'init' é um método especial que é chamado para inicializar os atributos de um objeto.
+#Os métodos de classes são como funções dentro de uma classe. Que realizam operações específicas em objetos criados a partir dessa classe.
+#O método 'init' é um método especial que é chamado para inicializar os atributos de um objeto.
 
   class Circulo():
     pi = 3.14   #<-Constante
