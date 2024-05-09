@@ -13,7 +13,8 @@ class conta:
         # Conceito de encapsulamento para criar um método de acessar o saldo.
     def mostrar_saldo(self):
         return self._saldo
-    
+
+
 conta = conta('0001',100)
 conta.depositar(100)
 print(conta._saldo) # Modo incorreto de ver o saldo. _saldo é uma variável privada.
@@ -21,6 +22,23 @@ print(conta._saldo) # Modo incorreto de ver o saldo. _saldo é uma variável pri
 print(conta.num_agencia)
 print(conta.mostrar_saldo())
 
+# Propriedades de encapsulaento
+class pessoa:
+    def __init__(self,nome,ano_nascimento):
+        self._nome = nome
+        self._ano_nascimento = ano_nascimento
+
+    @property
+    def nome(self):
+        return self._nome
+    @property
+    def idade(self):
+        _ano_atual = 2022
+        return _ano_atual - self._ano_nascimento
+
+pessoa = pessoa('Guilherme',1994)
+print(f'nome: {pessoa.nome}\tIdade: {pessoa.idade}')
+# O property irá transformar o método em atributo.
 
 
 
