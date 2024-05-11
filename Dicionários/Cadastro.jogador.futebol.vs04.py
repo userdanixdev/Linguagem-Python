@@ -37,6 +37,7 @@ for k,v in jogador.items():
     sleep(0.7)
 print(f'{'+'*30}\n{"Quantas partidas":^30}\n{"QTD GOLS":^30}\n{'+'*30}')
 sleep(3)
+# Dados gerais do jogador:
 for k, v in enumerate(gols):
     sleep(0.7)
     print(f'Na partida {k+1}, fez {v} gols') # Sendo k a chave com o nome de 'gols' e o valor do dicionário como 'v'
