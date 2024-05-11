@@ -23,8 +23,9 @@ for i in range(jogador['Partidas']):
     gols.append(n_gols) # O número de gols será colocado na variável lista gols.
     jogador['Gols']=gols # Cria-se a chave 'Gols' e coloca a variável lista gols com o n_gols
     jogador['Total']=sum(gols) # Chave 'Total' do dicionário jogador recebe a soma da variável lista gols com os gols computados pelo usuário]
+# Inserir média de gols:
 media_gols = jogador['Total']/jogador['Partidas'] # calculo para média de gols por partida
-# Inserir a chave 'Média por partida' dentro do dicionário
+# Inserir a chave 'Média por partida' dentro do dicionário com o valor 'media_gols'
 jogador['Média']=media_gols
 # Dados gerais do dicionário jogador :
 sleep(2)
