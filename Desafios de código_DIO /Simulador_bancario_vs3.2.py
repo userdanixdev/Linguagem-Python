@@ -12,7 +12,7 @@ def menu():
     => """
  return input(textwrap.dedent(menu)).upper()
 
-menu()
+
 def depositar(saldo,valor,extrato,/):
     if valor > 0:
         saldo += valor
