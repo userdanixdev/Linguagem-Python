@@ -14,6 +14,7 @@ def menu():
 # A linha de return solicita uma entrada para o usuário e aguarda a entrada do usuário.
 # A entrada é atribuida a variavel nomeada 
 # A função depositar recebe três parâmetros lembrando que o '/' indica que os 2 primeiros valores são posicionais e não são palavras-chaves;
+# Lembrando que argumentos posicionais são passados com base na ordem em que são definidos na assinatura da função.
 def depositar(saldo,valor,extrato,/):
     if valor > 0:
         saldo += valor
