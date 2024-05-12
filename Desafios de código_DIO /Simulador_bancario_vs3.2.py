@@ -11,8 +11,9 @@ def menu():
     [q]\tSair
     => """
  return input(textwrap.dedent(menu)).upper()
-
-
+# A linha de return solicita uma entrada para o usuário e aguarda a entrada do usuário.
+# A entrada é atribuida a variavel nomeada 
+# A função depositar recebe três parâmetros lembrando que o '/' indica que os 2 primeiros valores são posicionais e não são palavras-chaves;
 def depositar(saldo,valor,extrato,/):
     if valor > 0:
         saldo += valor
@@ -20,8 +21,8 @@ def depositar(saldo,valor,extrato,/):
         print('Depósito realizado com sucesso.')
     else:
         print('Operação falhou.')
-    return saldo, extrato
-
+    return saldo, extrato # A função retorna uma tupla contendo o saldo e extrato atualizado da conta
+# O asterisco na função 'sacar' indica que todos os argumentos após ele devem ser passados como palavra-chave ao chamar a função.
 def sacar(*,saldo,valor,extrato,limite,numero_saques,limite_saques):
     excedeu_saldo = valor > saldo
     excedeu_limite = valor > limite
@@ -40,7 +41,7 @@ def sacar(*,saldo,valor,extrato,limite,numero_saques,limite_saques):
     else:
         print('Operação falhou. Valor informado inválido.')
     return saldo, extrato
-
+# Parâmetros antes de '/' são posicionais; Após o '*'-asterisco- argumentos devem ser fornecidos como argumentos nomeados
 def exibir_extrato(saldo,/,*,extrato):
      print(f'{"="*50}\n{"Extrato":^48}\n{"="*50}')
      print('Não foram realizadas movimentações.'if not extrato else extrato)
