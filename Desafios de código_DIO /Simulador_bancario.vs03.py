@@ -57,7 +57,7 @@ Escolha uma das opções acima:''')).upper()
     # sair do programa:
     elif opcao == 'Q':
         print("Obrigado por utilizar nossos serviços. Volte sempre!")
-        sys.exit()
+        exit()
     # Opção inválida:
     else:
         print('Operação inválida. Selecione novamente a operação correta.')
@@ -66,5 +66,5 @@ Escolha uma das opções acima:''')).upper()
     continuar = input("\nDeseja realizar outra operação? (s/n): ")
     if continuar.lower() != 's':
         print("Obrigado por utilizar nossos serviços. Volte sempre!")
-        sys.exit()
+        exit()
 
