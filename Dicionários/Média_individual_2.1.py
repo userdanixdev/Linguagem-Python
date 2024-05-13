@@ -7,8 +7,7 @@
 from time import sleep
 
 print(f'{'+'*30}\n{"Situação do aluno":^30}\n{'+'*30}')
-aluno={}
-aluno['Nome']=input('Nome: ')
+aluno={'Nome':str(input('Nome: '))}
 aluno['Média']=float(input(f'Digite a média de {aluno["Nome"]}: '))
 aluno['Situação']='aprovado' if aluno['Média']>=7 else 'Reprovado' if aluno['Média']<6 else 'Recuperação'
 sleep(0.7)
