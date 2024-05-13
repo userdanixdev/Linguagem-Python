@@ -3,10 +3,8 @@
 
 #VERSÃO 02:
 
-aluno={'nome':str(input('Nome: '))}
-aluno['média']=float(input(f'Digite a média de {aluno["nome"]}: '))
-aluno['Situação']='aprovado' if aluno['média']>=7 else 'Reprovado' if aluno['média']<6 else 'Recuperação'
-for key,value in aluno.items():
-    print(f'{key}:', value)
-
-
+aluno={'Nome':str(input('Nome: '))} # Variável aluno recebe chave nomeada 'nome' e entrada do usuário dentro do dicionário
+aluno['Média']=float(input(f'Digite a média de {aluno["Nome"]}: '))
+aluno['Situação']='aprovado'if aluno['Média']>=7 else 'Reprovado' if aluno['Média']<6 else 'Recuperação'
+for key,value in aluno.items(): # Percorrer chaves e valores do dicionário
+    print(f'{key}:',value)
