@@ -10,7 +10,7 @@ if aluno['média']>=7:
 elif 5 <= aluno['média']< 7:
     aluno['situação']= 'Recuperação' # Se a média for maior ou igual a 7 o aluno recebe uma chave situação com valor 'aprovado'
 else:
-    aluno['situação']= 'Reprovado' # Se não satisfazer as condiçõs if e elif a chave situação recebe 'reprovado'.
+    aluno['situação']= 'Reprovado' # Se não satisfazer as condições if e elif a chave situação recebe 'reprovado'.
 print(aluno)
 # Com o print o resultado no console para o usuário ver sai:
 #Nome: Daniel
