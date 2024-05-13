@@ -7,8 +7,8 @@
 from time import sleep
 print(f'{'+'*30}\n{"Situação do aluno":^30}\n{'+'*30}')
 # Obs : A sintaxe para {chave:valor} sem fechar o parênteses irá fazer com que outros declarações de dicionario seja escritas por cima.
-# Ao listar um dicionário, a função items poderá percorrer as listas criadas dentro do dicionário
-# No entanto, não há necessidade de criar uma lista vazia
+# Ao listar um dicionário, a função items irá percorrer as listas criadas dentro do dicionário.
+# Sendo assim, não há necessidade de criar uma lista vazia, porém a função items não irá percorrer a primeira sintaxe: 'aluno={'Nome':str(input('Nome: '))}'
 aluno={'Nome':str(input('Nome: '))}
 aluno['Média']=float(input(f'Digite a média de {aluno["Nome"]}: '))
 aluno['Situação']='aprovado' if aluno['Média']>=7 else 'Reprovado' if aluno['Média']<6 else 'Recuperação'
