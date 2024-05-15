@@ -1,4 +1,4 @@
-# Herança:
+# Herança Simples:
 class Veiculo:
     def __init__(self,cor,placa,num_rodas):
         self.cor = cor
