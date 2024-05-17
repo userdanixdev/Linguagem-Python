@@ -1,4 +1,4 @@
-# Unindo dicionários e listas
+# Unindo dicionários e listas:
 
 # Crie um programa que leia nome, sexo e idade de várias pessoas,
 # guardando os dados de cada pessoa em um dicionário e todos os dicionários
