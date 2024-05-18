@@ -12,7 +12,7 @@ pessoa=dict()
 galera=list()
 soma= média = 0   # Preciso então de um contador iniciando do 0  ##B
 while True:
-    pessoa.clear()   
+    pessoa.clear()   # limpa os dados 'pessoa' para garantir que os dados da pessoa anterior não afetem a próxima iteração
     pessoa['Nome']=input('Nome: ')
     while True:     # Validação para somente 'Mm' ou Ff'
         pessoa['Sexo']=input('Sexo: [M/F] ').upper()[0]  # .upper pra jogar pra maiúsculo e [0] pra pegar a primeira letra.
