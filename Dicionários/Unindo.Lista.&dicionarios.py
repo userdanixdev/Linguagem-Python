@@ -21,13 +21,13 @@ while True:
         print('ERRO! Por favor, digite apenas M ou F.')
     pessoa['Idade']=int(input('Idade: '))
     soma += pessoa['Idade']  ## Receber a contagem do item B
-    galera.append(pessoa.copy())
-    while True:
+    galera.append(pessoa.copy())   # Adiciona uma cópia do dicionário 'pessoa' a lista 'galera'
+    while True: # Looping infinito sempre que verdade para uma variável de controle de saida
         resp=input('Quer continuar? [S/N] ').upper()[0]
-        if resp in 'SN':
+        if resp in 'SN':  # Verifica se a entrada é 'S' ou 'N':
             break
         print('ERRO! Responda apenas S ou N.')
-    if resp == 'N':
+    if resp == 'N':   # Sai do looping principal:
         break
 print('+'*30)
 print(f'Ao todo temos {len(galera)} pessoas cadastradas.')  # A
@@ -35,17 +35,18 @@ print(f'Ao todo temos {len(galera)} pessoas cadastradas.')  # A
 média= soma/len(galera)  # Esse é o cálculo da média
 print(f'A média de idade é de {média:5.2f} anos.')
 ##C = Lista com todas as mulheres:
-print('As mulheres cadastradas foram ', end='')
+print('As mulheres cadastradas foram: ', end='')
 for p in galera:
     if p['Sexo'] in 'Ff':
         print(f'{p["Nome"]} ',end='')
 print()
 #D:
 print(f' Lista das pessoas que estão acima da média: ', end='')
-for p in galera:
+for p in galera:   # Percorre a lista gelera e verifica se a idade da pessoa é maior ou igual à média.
     if p['Idade']>=média:
         print('    ', end='')
-        for k, v in p.items():
+        for k, v in p.items():  # Dentro do looping, usamos a variável de execução 'p' com a função 'items' para percorrer a lista galera e
+                                # verifica se a idade da pessoa, se for, imprime 'chave=valor'
             print(f'{k} = {v}; ',end='')
         print()
 print('+++ ENCERRADO +++')        
