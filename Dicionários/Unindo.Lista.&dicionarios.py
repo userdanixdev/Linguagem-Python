@@ -35,10 +35,10 @@ print(f'Ao todo temos {len(galera)} pessoas cadastradas.')  # A
 média= soma/len(galera)  # Esse é o cálculo da média
 print(f'A média de idade é de {média:5.2f} anos.')
 ##C = Lista com todas as mulheres:
-print('As mulheres cadastradas foram: ', end='')
+#print('As mulheres cadastradas foram: ', end='')  RETIREI ESSE PRINT E COLOQUEI DENTRO DO LAÇO
 for p in galera:
     if p['Sexo'] in 'Ff':
-        print(f'{p["Nome"]} ',end='')
+        print(f'As mulheres cadastradas foram:{p["Nome"]} ',end='')
 print()
 #D:
 print(f' Lista das pessoas que estão acima da média: ', end='')
