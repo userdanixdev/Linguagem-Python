@@ -44,7 +44,7 @@ media=soma/len(users)
 print(f' A média de idade é de {media:.0f} anos.')
 
 print(f' As mulheres cadastradas foram: ',end='')
-for p in users:  # Looping em que para cada chave 'p' em usuários imprime o valor do dicionário 'nome'
+for p in users:           # Looping em que para cada chave 'p' em usuários imprime o valor do dicionário 'nome'
     if p['sexo']== 'F':
         print(f'[{p["nome"]}]',end='')
 print()
