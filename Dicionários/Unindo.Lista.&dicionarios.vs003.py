@@ -16,10 +16,9 @@ dados=dict()
 users=list()
 
 #Coleta de dados para lista/dict
-soma=media=0
 while True:
-    dados['nome']=input('Nome do usuário: ')
-    dados['idade']=int(input('Idade do usuário: '))
+    dados['nome']=input('Nome do usuário: ')         # Dicionário dados recebe chave 'nome' e input com um valor
+    dados['idade']=int(input('Idade do usuário: '))  # Dicionário dados recebe chave 'idade' e input a ser inserido pelo usuário
     soma += dados['idade']
     dados['sexo']=input('Sexo do usuário[M/F]: ').upper().strip()
     while True:
@@ -28,33 +27,34 @@ while True:
             break
         else:
             print('ERROR.')
-            dados['sexo']=input('Digite um sexo válido[M/F]: ').upper().strip()
+            dados['sexo']=input('Digite um sexo válido [M/F]: ').upper().strip()
     users.append(dados.copy())
-    print('-'*10)
+    print('='*10)
     while True:
-        resp=input('Deseja continuar [S/N]?').upper().strip()
+        resp=input('Desejas continuar [S/N]?').upper().strip()
         if resp in 'SN':
             break
-            print('Error!')
+            print('ERROR')
     if resp == 'N':
-       break
+        break
 
-#Expor os dados
-print(f'> FOram cadastradas {len(users)} pessoas.')
+# Expor os dados:
+print(f' Foram cadastradas {len(users)} pessoas.')
 media=soma/len(users)
 print(f' A média de idade é de {media:.0f} anos.')
-print(f' As mulheres cadastradas foram:', end='')
-for p in users:
-    if p['sexo']=='F':
+
+print(f' As mulheres cadastradas foram: ',end='')
+for p in users:  # Looping em que para cada chave 'p' em usuários imprime o valor do dicionário 'nome'
+    if p['sexo']== 'F':
         print(f'[{p["nome"]}]',end='')
 print()
-print(f'>Os usuários acima da média são: ', end='')
-for p in users:
-    if p['idade']>media:
-        print(f'[{p["nome"]}]', end='')
-print()
-print('[*] Programa finalizado.')
+print(f' Os usuários acima da média são: ',end='')
+for p in users:           # Looping para cada chave como 'p' dentro do dicionários 'users'
+    if p['idade']>media:  # Se o valor da chave 'idade' for maior que a média irá mostrar o valor da chave 'nome'
+        print(f'[{p["nome"]}]',end='')  
 
+print()
+print('Programa finalizado')
 
 
 
