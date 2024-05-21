@@ -8,7 +8,7 @@
 # C) Uma lista com as mulheres
 # D) Uma lista de pessoas com idade acima da média
 
-# Versão 03:
+# Versão 04:
 # Dicionário para adicionar os dados com índice:
 dados=dict()
 # Essa é a lista a qual acessaremos todos os dicionários
