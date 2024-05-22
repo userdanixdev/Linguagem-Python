@@ -56,20 +56,6 @@ for p in users:           # Looping em que para cada chave 'p' em usuários impr
     if p['sexo']== 'F':
         print(f' As mulheres cadastradas foram: ',[{p["nome"]}])
 print()
-#print(f' Os usuários acima da média são: ',end='')
-# Está imprimindo 'nenhum usuário acima da média' dentro do loop para cada usuário que não atende a condição em que resulta
-# em múltiplas impressões indesejadas. É necessário usar uma flag e fazer a impressão fora do loop.
-#found=False
-#for p in users:           # Looping para cada chave como 'p' dentro do dicionários 'users'
- #   if p['idade']>media:  # Se o valor da chave 'idade' for maior que a média irá mostrar o valor da chave 'nome'
-  #      print(f'Os usuários acima da média são: [{p["nome"]}]')
-   #     found =  True     # A flag como True se encontrar algum usuário acima da média
-    
-#if not found:             # Verifica se a flag ainda é False após o loop
- #   print('Nenhum usuário acima da média.')
-
-#2°forma:
-    # criar uma lista vazia para armazenar usuários acima da média:
 usuarios_acima_da_media = []
 for p in users:              # Loop para cada chave como 'p' dentro do dicionário 'users'
     if p['idade'] > media:   # Se o valor da chave 'idade' for maior que a média
