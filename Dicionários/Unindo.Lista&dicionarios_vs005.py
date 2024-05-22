@@ -29,5 +29,15 @@ for p in users:    # Looping em que para cada chave 'p' em usuários imprime o v
   if p['sexo']=='F':
     print(f' As mulheres cadastradas foram: ',[{p["nome"]}])
 print()
+usuarios_acima_da_media = []
+for p in users:  # Loop para cada chave como 'p' dentro do dicionário 'users'
+  if p['idade'] > media:  # Se o valor da chave 'idade' for maior que a média
+    usuarios_acima_da_media.append(p['nome'])  # Adiciona o nome do usuário a lista
+# Verifica se a lista não está vazia:
+if usuarios_acima_da_media:
+  print('Os usuários acima da média são:', ', '.join(usuarios_acima_da_media))
+else:
+  print('Nenhum usuário acima da média.')
+  
 
 
