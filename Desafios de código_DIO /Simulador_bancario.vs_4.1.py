@@ -1,4 +1,4 @@
-# Versão Completa com a modelagem de classes e as funções:
+# Versão Completa 4.1 com a modelagem de classes e as funções:
 # 
 import textwrap
 from abc import ABC, abstractclassmethod, abstractproperty
