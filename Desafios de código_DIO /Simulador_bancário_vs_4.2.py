@@ -11,6 +11,7 @@ import textwrap
 from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
 
+# Classe atualizada para essa versão:
 class contas_iterador:
     def __init__(self,contas):
         self.contas = contas
