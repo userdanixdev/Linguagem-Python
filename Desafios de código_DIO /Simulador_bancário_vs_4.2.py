@@ -373,7 +373,7 @@ def main():
             numero_conta = len(contas) + 1
             criar_conta(numero_conta, clientes, contas)
         elif opcao == 'lc':
-            listas_contas(contas)
+            listar_contas(contas)
         elif opcao == 'q':
             break
         else:
