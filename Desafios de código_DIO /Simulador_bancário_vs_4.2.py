@@ -351,7 +351,7 @@ def criar_conta(numero_conta, clientes, contas):
     print('\nConta criada com sucesso.')
 
 def listar_contas(contas):
-    for conta in ContasIterador(contas):
+    for conta in contas_iterador(contas):
         print('+'*100)
         print(textwrap.dedent(str(conta)))
         
