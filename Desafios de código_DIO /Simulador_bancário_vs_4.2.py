@@ -113,7 +113,7 @@ class conta_corrente(Conta):
         self.limite = limite
         self.limite_saques = limite_saques
     @classmethod
-    def nova_conta(cls,cliente,numero,limite,limite_saques):
+    def nova_conta(cls,cliente,numero,limite=500,limite_saques=3):
         return cls(numero,cliente,limite,limite_saques)
 
     def sacar(self, valor):
