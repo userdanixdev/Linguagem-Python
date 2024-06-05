@@ -86,4 +86,23 @@ Comando 'graph' do pipenv irá listar todas as dependências e ainda poder exclu
 pipenv graph
 ## Para verificar todas as funcionalidades do gerenciador basta chama-lo:
 pipenv
+Commands:
+  check         Checks for PyUp Safety security vulnerabilities and against
+                PEP 508 markers provided in Pipfile.
+  clean         Uninstalls all packages not specified in Pipfile.lock.
+  graph         Displays currently-installed dependency graph information.
+  install       Installs provided packages and adds them to Pipfile, or (if no
+                packages are given), installs all packages from Pipfile.
+  lock          Generates Pipfile.lock.
+  open          View a given module in your editor.
+  requirements  Generate a requirements.txt from Pipfile.lock.
+  run           Spawns a command installed into the virtualenv.
+  scripts       Lists scripts in current environment config.
+  shell         Spawns a shell within the virtualenv.
+  sync          Installs all packages specified in Pipfile.lock.
+  uninstall     Uninstalls a provided package and removes it from Pipfile.
+  update        Runs lock, then sync.
+  upgrade       Resolves provided packages and adds them to Pipfile, or (if no
+                packages are given), merges results to Pipfile.lock
+  verify        Verify the hash in Pipfile.lock is up-to-date.
 
