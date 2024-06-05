@@ -74,6 +74,25 @@ django4django = "^0.0.2"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+## No terminal, ao listar a pasta Ambiente Virtual temos a pasta criada pyproject.toml:
+
+PS C:\Users\jessi\Manipulacao_arquivos\Ambiente_Virtual\.env> ls
+
+
+    Diretório: C:\Users\jessi\Manipulacao_arquivos\Ambiente_Virtual\.env
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        05/06/2024     16:04                Include
+d-----        05/06/2024     16:04                Lib
+d-----        05/06/2024     20:05                Scripts
+d-----        05/06/2024     18:27                src
+-a----        05/06/2024     18:55            139 Pipfile
+-a----        05/06/2024     18:56            454 Pipfile.lock
+-a----        05/06/2024     20:12            325 pyproject.toml
+-a----        05/06/2024     16:04            342 pyvenv.cfg
+
 
 
 
