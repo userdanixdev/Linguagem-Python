@@ -78,3 +78,12 @@ get-content Pipfile.lock
     },
     "develop": {}
 }
+## No arquivo acima, mostra a hash e as dependências e versão de cada programa no lock. Quando vc passa o projeto para outro programador esse arquivo vai também ##
+## O gerenciador de pacote pipenv é mais completo que o pip, sendo assim, tem a possibilidade de atualizar os pacotes com a função update do próprio gerenciador ##
+
+Comando 'graph' do pipenv irá listar todas as dependências e ainda poder exclui-las
+
+pipenv graph
+## Para verificar todas as funcionalidades do gerenciador basta chama-lo:
+pipenv
+
