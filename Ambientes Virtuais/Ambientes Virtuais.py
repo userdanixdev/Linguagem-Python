@@ -34,3 +34,7 @@ d-----        05/06/2024     16:04                Scripts
 
 ## Para ativar o ambiente virtual:
 nome_do_ambiente\Scripts\activate.bat
+
+## No vscode utilize o atalho Crtl + Shift + P e escolher Python Enviroment:
+
+
