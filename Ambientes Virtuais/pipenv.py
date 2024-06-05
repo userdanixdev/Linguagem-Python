@@ -106,3 +106,6 @@ Commands:
                 packages are given), merges results to Pipfile.lock
   verify        Verify the hash in Pipfile.lock is up-to-date.
 
+## Com o comando pipenv clean, o interpretador irá desistalar todos as dependências ##
+
+
