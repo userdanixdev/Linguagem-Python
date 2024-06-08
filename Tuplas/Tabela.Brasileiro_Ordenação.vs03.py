@@ -30,9 +30,9 @@ print(' '*20)
 sleep(1)
 print('Os 4 últimos colocados são: ')
 # a função enumerate irá retornar tanto o indice quanto o valor do elemento em uma sequencia
-for indice,valor in enumerate(clubes[16:]):
+for indice,valor in enumerate(clubes[16:],17):
     sleep(0.3)
-    indice = indice + 17 # Estamos começando a enumeração a partir do indice 16. adicionar 17 a cada iteração.
+    #indice = indice + 17 # Estamos começando a enumeração a partir do indice 16. adicionar 17 a cada iteração.
     print(f'{indice}º{valor}')
 print(' '*15)
 print('Times em ordem alfabética: \n')
