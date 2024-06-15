@@ -1,7 +1,5 @@
 # Somando valores: Versão 6 : POO
 
-# Somando valores: Versão 6 : POO
-
 class SomaValores:
     def __init__(self):
         self.n1 = None
