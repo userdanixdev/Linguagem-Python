@@ -13,20 +13,22 @@ IMPORTANTE: As funções "input" e "print" são acessíveis nativamente em Pytho
  - "print": função que imprime um texto enviado em seu parâmetro, a qual é essencial para a 
    impressão dos dados de saída. 
 '''
-N = int(input())
+n = int(input())
 
 while(n > 0):
   values =input().split()
-  aux=' '
+  aux=''
   for digit in values[0][::-1]:  #<- Inverte a primeira string de 'values'
     aux += digit # <- 'aux' recebe os valores invertidos
     # Verificação de encaixe:
-    if aux == values[1][::-1]  # Verifica se 'aux' é igual a string [1] a da direita.
+    if aux == values[1][::-1]:  # Verifica se 'aux' é igual a string [1] a da direita.
       print('encaixa')
       break
-  else:    
+   else:    
     print('não encaixa')
-n -=1    
+    
+   aux=''
+   n -=1    
     
     ''' 
     TODO  Verifique, para cada entrada A e B, se os dois valores são compatíveis e imprima se
