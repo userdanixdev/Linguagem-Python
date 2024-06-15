@@ -10,3 +10,4 @@ while True:
     num_2=int(num_2)
     soma = num_1 + num_2
     print(f'A soma entre o número:{num_1} + o número:{num_2} é:{soma}.')
+    break
