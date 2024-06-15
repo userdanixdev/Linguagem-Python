@@ -16,10 +16,10 @@ IMPORTANTE: As funções "input" e "print" são acessíveis nativamente em Pytho
 '''
 T = input().strip()  # Strip para remover os espaços
 # Verificação do comprimento da string:
-if len(T)<=140:
-  print('TWEET')
-else:
+if len(T) >=140:
   print('MUTE')
+else:
+  print('TWEET')
 
 # Esse código é simples e eficiente para resolver o problema proposto, verificando adequadamente o comprimento do texto de entrada e
   # retornando a resposta correta baseada no limite de 140 caracteres.
