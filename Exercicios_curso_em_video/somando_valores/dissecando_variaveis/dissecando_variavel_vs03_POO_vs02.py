@@ -24,7 +24,7 @@ class DissecandoVariavel:
     def ativador_loop():
         while True:
             texto  = input('Escreva algo:   \nDigite (-S-) para sair.')
-            analise= DissecandoVariavel(texto)
+            analise= DissecandoVariavel(texto) # Instânciando a Classe criada, com o 'init'dentro da Classe, ela é instânciada.
             analise.exibir_analise()
             if 'S' == texto.capitalize():
                 break
