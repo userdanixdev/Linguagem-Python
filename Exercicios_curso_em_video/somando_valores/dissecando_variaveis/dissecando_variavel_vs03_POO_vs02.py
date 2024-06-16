@@ -19,8 +19,8 @@ class DissecandoVariavel:
             É minúscula:    {self.texto.islower()}
             É capitalizada: {self.texto.istitle()}
             ''')
-
-    @staticmethod
+# Com a marcação, o método não recebe self, nem cls. Esse decorador não depende do estado da instância.
+    @staticmethod             
     def ativador_loop():
         while True:
             texto  = input('Escreva algo:   \nDigite (-S-) para sair.')
@@ -32,4 +32,9 @@ class DissecandoVariavel:
 if __name__ == "__main__":
      DissecandoVariavel.ativador_loop()
     
-  
+  # Obs: O staticmethod() :
+#    serve como função auxiliar sem precisar modificar a instância da classe.
+    # Pode servir para agrupamento lógico - Quando funções estão logicamente relacionadas a uma classe, mas não precisam
+        # de acesso a instâncias ou atributos da classe.
+# Realizar uma operação independente:
+    # Quando as operações realizadas pelo método não dependem do estado da instância da classe.
