@@ -5,7 +5,7 @@
 
 # POO:  Versão 03
 # Métodos aprimorados:
-  # Validações das letras, lsita embaralhada na tela
+  # Validações das letras, lista embaralhada na tela
 
 
 class Sorteio:
@@ -116,7 +116,7 @@ class Sorteio:
                     print('Entrada inválida.')
             if continuar == '2':
                 break
-        print(f'Fim.')            
+        print('Fim.')            
 
 if __name__ == '__main__':
     sorteio=Sorteio()
