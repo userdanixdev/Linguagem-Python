@@ -1,5 +1,5 @@
 # Pintando Paredes:
-## Versão 01:
+## Versão 01
 ### POO 
 
 class PintandoParede:
@@ -35,12 +35,10 @@ class PintandoParede:
         while True:
             parede = PintandoParede()
             parede.iniciar()
-            pergunta = input('Quer continuar? [S/N]')
-            if pergunta.capitalize() == 'N':
+            pergunta = input('Quer continuar? [1-Sim/Não-2]: ')
+            if pergunta.capitalize() == '2':
                 break
-        print('fim')
-            
+        print('Fim')
 
 if __name__=="__main__":
-    PintandoParede.pergunta_loop()
-        
+   PintandoParede.pergunta_loop()
