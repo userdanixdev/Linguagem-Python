@@ -1,8 +1,6 @@
 class Descontos:
     def __init__(self):
         self.preco = 0.0
-        self.novo_preco = 0
-        self.price = 0
         self.desconto_x = 0
         self.desconto = 0
         self.valor_final = 0.0
