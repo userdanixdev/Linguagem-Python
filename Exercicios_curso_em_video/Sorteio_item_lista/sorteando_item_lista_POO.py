@@ -1,4 +1,7 @@
-# Sorteando um item da lista: POO
+# Sorteando um item na lista:
+
+# Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome deles e escrevendo
+# o nome do escolhido.
 
 class Sorteio:
     def __init__(self):
@@ -13,25 +16,27 @@ class Sorteio:
         self.n2=input('Segundo aluno: ')
         self.n3=input('Terceiro aluno: ')
         self.n4=input('Quarto aluno: ')
-        lista=[n1,n2,n3,n4]
+        lista=[self.n1,self.n2,self.n3,self.n4]
         escolhido = random.choice(lista)
         print('O aluno escolhido foi, ',escolhido)
     def obter_valores_second(self):
+        import random
         self.nome=[input('Digite um nome: ')for i in range(4)]
         escolha=random.choice(self.nome)
         print('O nome sorteado foi: ',escolha)
 
     def obter_valores_third(self):
+        import random
         alunos=input('Nome dos alunos separados por vírgula: ').split(',')
-        print(f'O nome dos alunos foi: {random.choice(alunos)}')
+        print(f'O nome do aluno sorteado foi: {random.choice(alunos)}')
 
     def iniciar(self):
         while True:
-            obter_valores()
+            self.obter_valores()
             print()
-            obter_valores_second()
+            self.obter_valores_second()
             print()
-            obter_valores_third()
+            self.obter_valores_third()
             print()
             while True:
                 continuar = input('Deseja continuar [1-SIM / 2-NÃO]')
