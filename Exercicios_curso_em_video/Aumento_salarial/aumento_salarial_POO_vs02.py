@@ -15,9 +15,20 @@ class Salario:
                 break
             else:
                 print('Nome inválido. Digite apenas letras.')
-        self.salario=float(input('Qual o salário atual? '))
-        self.aumento = float(input('Quantos por cento? '))
-
+        while True:
+            try:
+                self.salario=float(input('Qual o salário atual? '))
+                break
+            except ValueError:
+                print('Entrada inválida. Por favor, insira um número.')
+        while True:
+            try:
+                self.aumento=float(input('Quantos por cento de aumento? '))
+                break
+            except ValueError:
+                print('Entrada inválida. Por favor, insira um número.')
+                
+        
     def calculo_novo_salario(self):
         self.novo_salario=self.salario*((100+self.aumento)/100)
 
