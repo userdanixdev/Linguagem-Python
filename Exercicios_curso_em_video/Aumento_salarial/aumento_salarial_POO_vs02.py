@@ -42,10 +42,11 @@ class Salario:
             self.calculo_novo_salario()
             self.mostrar_dados()
             self.continuar = input('Deseja continuar? [1-SIM & 2-NÃO]')
-            if self.continuar == '1':
-                continue
-            if self.continuar == '2':
-                break
+            if self.continuar in ['1', '2']:
+                    break
+            else:
+                print("Entrada inválida. Por favor, digite 1 para SIM ou 2 para NÃO.")
+        print('Fim')
 
 
 if __name__=='__main__':
