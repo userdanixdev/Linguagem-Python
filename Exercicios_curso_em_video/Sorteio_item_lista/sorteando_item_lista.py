@@ -14,12 +14,12 @@ escolhido = random.choice(lista)
 print(f'O aluno escolhido foi {escolhido}.')
 print()
 
-print('outra forma')
+print('outra forma: Versão 02')
 nome=[input('Digite um nome: ')for i in range(4)]
 escolha=random.choice(nome)
 print('O nome sorteado foi : ',escolha)
 print()
 
-print('Terceira forma')
+print('Terceira forma: Versão 03')
 alunos=input('Escreva o nome dos alunos separados por vírgula: ').split(',')
 print(f'O nome dos alunos foi: {random.choice(alunos)}')
