@@ -33,14 +33,14 @@ class PintandoParede:
     @staticmethod
     def pergunta_loop():
         while True:
+            parede = PintandoParede()
+            parede.iniciar()
             pergunta = input('Quer continuar? [S/N]')
-            if pergunta.capitalize() == 'S':
-                continue
             if pergunta.capitalize() == 'N':
                 break
-            print('fim')
+        print('fim')
+            
 
 if __name__=="__main__":
-    paredes=PintandoParede()
-    paredes.iniciar()
+    PintandoParede.pergunta_loop()
         
