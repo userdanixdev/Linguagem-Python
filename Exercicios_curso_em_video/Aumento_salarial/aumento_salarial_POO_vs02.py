@@ -11,7 +11,7 @@ class Salario:
     def obter_dados(self):
         while True:
             self.nome=input('Qual o nome do empregado: ')
-            if self.nome.replace(" ", "").isalpha():
+            if self.nome.replace(" ", "").isalpha(): # A função replace troca espaços por vazios.
                 break
             else:
                 print('Nome inválido. Digite apenas letras.')
