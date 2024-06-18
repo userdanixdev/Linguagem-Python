@@ -151,7 +151,6 @@ class Emprestimo_Casa:
         [q] Sair
         => '''
 
-
         while True:
             opcao = input(menu)
             if opcao == 'a':
