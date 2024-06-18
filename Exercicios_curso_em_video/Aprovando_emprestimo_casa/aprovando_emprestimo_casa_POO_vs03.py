@@ -1,3 +1,8 @@
+# Aprovando empréstimo bancário para financiamento
+
+# Versão 03: POO: Com menu interativo
+
+
 class Emprestimo_Casa:
     def __init__(self):
         self.casa = 0.0
