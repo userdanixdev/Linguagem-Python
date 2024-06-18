@@ -154,10 +154,13 @@ class Emprestimo_Casa:
         while True:
             opcao = input(menu)
             if opcao == 'a':
+               print(f'{"+"*50}\n{"Versão 01: Financiamento ":^49}\n{"+"*50}') 
                self.versao_1()
             elif opcao == 'b':
+               print(f'{"+"*50}\n{"Versão 02: Financiamento: Com juros ":^49}\n{"+"*50}')
                self.versao_2()
             elif opcao == 'c':
+               print(f'{"+"*50}\n{"Versão 03: Financiamento ":^49}\n{"+"*50}')
                self.versao_3()
             elif opcao == 'q':
                 break
