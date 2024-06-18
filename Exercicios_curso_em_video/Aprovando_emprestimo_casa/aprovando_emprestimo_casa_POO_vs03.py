@@ -145,6 +145,8 @@ class Emprestimo_Casa:
                     
     def menu(self):
         menu = '''
+        Programa Python: Aprovando empréstimos
+        
         [a] Versão_1: Financiamento
         [b] Versão_2: Financiamento : C/Juros
         [c] Versão_3: Financiamento
