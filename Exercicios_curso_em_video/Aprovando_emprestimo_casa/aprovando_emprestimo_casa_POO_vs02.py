@@ -1,5 +1,6 @@
 # Aprovando empréstimo bancário para financiamento
-# Versão 02 POO: Validações do dados inseridos pelo usuário, tratamento de erros, títulos para cada versão.
+
+# Versão 02 POO: Validações do dados inseridos pelo usuário, tratamento de erros, títulos para cada versão, loop saida.
 
 
 class Emprestimo_Casa:
@@ -125,13 +126,22 @@ class Emprestimo_Casa:
         print(f' A prestação será de R$ {prestacao_:.2f} reais.')
 
     def iniciar(self):
-        print(f'{"+"*50}\n{"Versão 01: Financiamento ":^49}\n{"+"*50}')
-        self.versao_1()
-        print(f'{"+"*50}\n{"Versão 02: Financiamento: Com juros ":^49}\n{"+"*50}')
-        self.versao_2()
-        print(f'{"+"*50}\n{"Versão 03: Financiamento ":^49}\n{"+"*50}')
-        self.versao_3()
-        print('fim')
+        while True:
+            print(f'{"+"*50}\n{"Versão 01: Financiamento ":^49}\n{"+"*50}')
+            self.versao_1()
+            print(f'{"+"*50}\n{"Versão 02: Financiamento: Com juros ":^49}\n{"+"*50}')
+            self.versao_2()
+            print(f'{"+"*50}\n{"Versão 03: Financiamento ":^49}\n{"+"*50}')
+            self.versao_3()
+           while True:
+               continuar=input('Deseja refazer as operações? [1-SIM / 2-NÃO].')
+               if continuar in ['1','2']:
+                   break
+               else:
+                   print('Entrada inválida. Somente 1 ou 2.')
+            if continuar == '2':
+                break
+        print('Fim')                
 
 
 if __name__=='__main__':
