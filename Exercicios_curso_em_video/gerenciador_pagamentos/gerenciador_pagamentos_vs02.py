@@ -27,7 +27,7 @@ while True:
     elif opcao == 4:
         total_parc = int(input('Quantas parcelas? '))
         if total_parc <= 2:
-            print('Selecione a opção 3 para parcelamento em até 2x sem juros.')
+            print('\nSelecione a opção 3 para parcelamento em até 2x sem juros.\n')
         else:
             total = preco + (preco*20/100)
             parcela = total/total_parc
