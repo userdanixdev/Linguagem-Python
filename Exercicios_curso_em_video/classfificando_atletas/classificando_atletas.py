@@ -1,5 +1,6 @@
 # Classificando Atletas: 
 # Versão  1
+
 from datatime import date
 atual = date.today().year
 nasc = int(input('Qual o ano do seu nascimento? '))
