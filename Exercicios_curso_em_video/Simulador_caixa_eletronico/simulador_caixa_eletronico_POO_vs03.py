@@ -46,13 +46,13 @@ class Simulador_Saque:
             print(f'Total de {self.total_cedulas} cedula(s) de R$ {self.cedula},00')
 
     def iniciar(self):
-        
+                print('Simulador - Versão 001-')
                 self.simulador_saque_1_input_usuario()
                 self.simulador_saque_1_condicionais()
-                print('Simulador - Versão 002')
+                print('\nSimulador - Versão 002')
                 self.simulador_saque_2_input()
                 self.simulador_saque_2_condicionais()
-                print('Simulador: Saque - Versão 003')
+                print('\nSimulador: Saque - Versão 003')
                 self.simulador_saque_3_input()
                 self.simulador_saque_3_condicionais()
                 self.simulador_saque_3_exibir_dados()
