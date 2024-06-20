@@ -6,7 +6,7 @@ from time import sleep
 times=('Palmeiras','Atlético-MG','Flamengo','Grêmio','Botafogo',
        'RB Bragantino','Fluminense','Athletico','São Paulo',
        'Cuiabá','Corinthians','Cruzeiro','Santos','Vasco','Bahia','Goiás',
-       'Coritiba','América-MG','Atlético-GO','Fortaleza','Sport')
+       'Coritiba','América-MG','Atlético-GO','Fortaleza')
 
 opcao = 0
 while opcao != 8:
