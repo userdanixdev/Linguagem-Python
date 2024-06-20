@@ -1,7 +1,5 @@
 # Tabela do Brasileiro 2023 :
-# Versão 04:
-
-
+# Versão 04: laço for com enumerate
 
 times=('Palmeiras','Atlético-MG','Flamengo','Grêmio','Botafogo',
        'RB Bragantino','Fluminense','Athletico','São Paulo',
