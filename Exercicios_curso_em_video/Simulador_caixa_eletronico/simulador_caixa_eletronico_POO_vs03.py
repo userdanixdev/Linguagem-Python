@@ -1,5 +1,5 @@
 # Simulador Caixa eletrônico: Saques
-# Versão : POO : Versão 3 : Com 3 programas com scripts diferentes
+# Versão : POO : Versão 3 : Com 3 programas com scripts diferentes; Acréscimo de cédula de 5 reais
 
 class Simulador_Saque:
     def __init__(self):
