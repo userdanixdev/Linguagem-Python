@@ -5,7 +5,7 @@
 times=('Palmeiras','Atlético-MG','Flamengo','Grêmio','Botafogo',
        'RB Bragantino','Fluminense','Athletico','São Paulo',
        'Cuiabá','Corinthians','Cruzeiro','Santos','Vasco','Bahia','Goiás',
-       'Coritiba','América-MG','Atlético-GO','Fortaleza','Sport')
+       'Coritiba','América-MG','Atlético-GO','Fortaleza')
 
 print(f'{"+"*40}\nA lista de times do Brasileirão 2023:\n{"+"*40}\n{times}.')
 print(f'Os primeiros 5 colocados foram:\n{times[0:5]}\n')
