@@ -3,12 +3,13 @@
 
 class Simulador_Saque:
     def __init__(self):
-        
+
+        # 1º e 2º programa:
         self.valor = 0
         self.total = self.valor
         self.cedula = 50
         self.total_cedulas = 0
-        #3ºPrograma:
+        # 3º Programa:
         self.ced_200 = 0
         self.ced_100 = 0
         self.ced_50 = 0
