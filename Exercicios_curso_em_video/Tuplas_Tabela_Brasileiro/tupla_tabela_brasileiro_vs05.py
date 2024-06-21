@@ -8,16 +8,16 @@ times=('Palmeiras','Atlético-MG','Flamengo','Grêmio','Botafogo',
 
 print('Campeonato Brasileiro 2023')
 print('Tabela completa:\n')
-for contagem in range(0,20):
+for contagem in range(0,len(times)):
     print(f'{contagem+1}º{times[contagem]}.')
 print('\nOs 5 primeiros colocados:\n')
 for contagem in range(0,5):
     print(f'{contagem+1}º{times[contagem]}.')
 print('\nOs 4 últimos colocados:\n')
-for contagem in range(16,20):
+for contagem in range(16,len(times)):
     print(f'{contagem+1}º{times[contagem]}')
 print('\nTabela em ordem alfabética:\n')
-for contagem in range(0,20):
+for contagem in range(0,len(times)):
     print(f'{contagem+1}-{sorted(times)[contagem]}.')
     
     
