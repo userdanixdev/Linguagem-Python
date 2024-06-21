@@ -35,8 +35,8 @@ while(n > 0):
     "encaixa" ou "não encaixa" para cada uma das relações N vezes.
     '''
 
-Explicação:
+'''Explicação:
 
 Para a primeira entrada 56789 6789, a segunda string 6789 é um sufixo da primeira string, então encaixa.
 Para a segunda entrada 12345 543, a segunda string 543 não é um sufixo da primeira string, então nao encaixa.
-O código usa [::-1] para inverter strings e, assim, facilita a verificação de sufixos de uma maneira incremental e comparativa.
+O código usa [::-1] para inverter strings e, assim, facilita a verificação de sufixos de uma maneira incremental e comparativa.'''
