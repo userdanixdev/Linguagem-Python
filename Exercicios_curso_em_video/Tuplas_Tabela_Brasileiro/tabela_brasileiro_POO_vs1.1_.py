@@ -1,3 +1,8 @@
+# Campeonato Brasileiro 2023
+# 4 versões estruturais encapsuladas:
+# Versão 1.1 : POO
+
+
 class CampeonatoBrasileiro:
     def __init__(self):
         
