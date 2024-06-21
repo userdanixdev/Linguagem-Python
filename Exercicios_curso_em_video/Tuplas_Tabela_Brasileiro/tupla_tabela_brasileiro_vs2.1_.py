@@ -63,7 +63,7 @@ while opcao != 8:
             else:
                 print('Ficou na Série A, porém, não participa de nenhuma outra competição.')
         else:
-             print('O {time} não participou do Brasileirão 2023.')
+             print(f'O {time} não participou do Brasileirão 2023.')
     elif opcao == 7:
         cont = 0
         print('Tabela do Brasileirão 2023.')
