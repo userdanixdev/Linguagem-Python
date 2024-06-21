@@ -72,13 +72,14 @@ class CampeonatoBrasileiro:
             [2] - Programa 2 - Tab. Camp Brasileiro(Sem format c/ informações adicionais)
             [3] - Programa 3 - Tab. Camp Brasileiro(Uso de laco for e range)
             [4] - Programa 4 - Tab. Camp Brasileiro(Menu de opções e uso do enumerate)
+            [5] - Rodar todos os programas 
             [0] - Sair dos programas
             
             Escolha: '''))
             except ValueError:
-                print('Entrada inválida. Por favor, digite somente os números de 0 a 4.')
+                print('Entrada inválida. Por favor, digite somente os números de 0 a 5.')
                 continue
-            if opcao in range(5):
+            if opcao in range(6):
                 if opcao == 1:
                     self.programa_1()
                 elif opcao == 2:
@@ -86,7 +87,9 @@ class CampeonatoBrasileiro:
                 elif opcao == 3:
                     self.programa_3()
                 elif opcao == 4:
-                    self.programa_4()                                
+                    self.programa_4()
+                elif opcao == 5:
+                    self.iniciar()
                 elif opcao == 0:
                     print('Saindo do programa...')
                     break
