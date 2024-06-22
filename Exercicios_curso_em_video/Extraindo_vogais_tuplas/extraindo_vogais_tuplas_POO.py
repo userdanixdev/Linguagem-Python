@@ -1,133 +1,136 @@
-# Extraindo vogais de uma tupla:
-# POO: Com tratamento de erros, loops e as versões
+# Crie um programa que vai gerar cinco números aleatórios e colocar em uma tupla.
+# Depois disso, mostre a listagem de números gerados e também indique o menor e o maior valor que estão na tupla.
 
-class Extraindo_vogais:
+# Versão : POO
+
+class Maior_Menor_Valores:
     def __init__(self):
-        self.palavras =('aprender','programar','linguagem','python','curso',
-                        'gratis','estudar','praticar','trabalhar','mercado',
-                        'programador','futuro')
-        self.vogais =  ('a','e','i','o','u')
+
+        self.numeros = 0
 
     def programa_1(self):
 
-        for p in self.palavras:
-            print(f'\nNa palavra {p.upper()} temos: ',end='')
-            for letra in p:
-                if letra.lower() in 'aeiou':
-                    print(letra,end='/')
+        from random import randint
+        self.numeros = (randint(1,10),randint(1,10),randint(1,10),randint(1,10),randint(1,10))
+        print('Os valores sorteados foram: ')
+        for n in self.numeros:
+            print(f'{n}',end='')
+        print(f'\nO maior valor sorteado foi {max(self.numeros)}.')
+        print(f'O menor valor sorteado foi {min(self.numeros)}.')
 
     def programa_2(self):
 
-        for p in range(0,len(self.palavras)):
-            for c in range(0,len(self.palavras[p])):
-                if c == 0:
-                    print(f'\nNa palavra {self.palavras[p].upper()} temos: ',end='/')
-                if self.palavras[p][c] in 'aeiou':
-                    print(f'{self.palavras[p][c]}',end='/')
+        from random import randint
+
+        a=tuple(randint(1,10) for i in range(5))
+        print()
+        print(a)
+        print(f'O maior valor da tupla: {max(a)}\ne o menor: {min(a)}.')
+        print('Com alcance maior..')
+        a = tuple(randint(1,10)for i in range(1,101))
+        print(a)
+        print('Escolhendo números aleatórios de 1 a 100 com alcance de 1 a 10...')
+        a = tuple(randint(1,100) for i in range(1,10))
+        print(a)
+        print(f'O valor máximo adquirido: {max(a)}\ne o valor mínimo: {min(a)}.')
+        print()
 
     def programa_3(self):
 
-        for palavra in self.palavras:
-            print(f'\nNa palavra {palavra.upper()} temos: ',end='/')
-            for letra in palavra:
-                if letra.lower() in self.vogais:
-                    print(letra,end='/')
+        import random
+        from random import randint
+
+        n = tuple(randint(1,10) for i in range(5))
+        print(f'Os números sorteados foram: {n}.')
+        contador = 0
+        maior = 0
+        menor = 5
+        while True:
+            for r in range(0,5):
+                if maior <= n[r]:
+                    maior = n[r]
+                if menor >= n[r]:
+                    menor = n[r]
+            contador += 1
+            if contador == 5:
+                break
+        print(f'O maior é {maior} e menor é {menor}.')
 
     def programa_4(self):
 
-        contagem = 0        # contador para númeral
-        vogais_find = ''    # contador de strings
-        for c in range(0,len(self.palavras)):
-            for d in range(0,len(self.palavras[c])):
-                if self.palavras[c][d] in self.vogais:
-                    contagem += 1
-                    vogais_find += self.palavras[c][d]
-            print(f'Na palavra: {self.palavras[c]} tem {contagem} vogais. São elas: {vogais_find}')
-            contagem = 0     # Sempre zerar a contagem para não somar as vogais
-            vogais_find = '' # Sempre zerar as strings para não somar
-            
+        from random import sample
 
-    def opcoes(self):
+        a=tuple(sample(range(10),5))
+        print(f'Os números sorteados foram: {a}\nO maior valor é {max(a)} e o menor é: {min(a)}.')
 
-        while True:
-                try:            
-                    opcao=int(input('''
 
-                            Extraindo vogais de uma tupla:
-                            
-                            [1] - Programa 1 -
-                            [2] - Programa 2 -
-                            [3] - Programa 3 - 
-                            [4] - Programa 4 -
-                            [5] - Executar tudo -
-                            [6] - Sair
-                            Digite a opção:
-                            '''))
+    def iniciar(self):
+            while True:
+                try:
+                    print('Programa 1')
+                    self.programa_1()
+                    print('Programa 2')
+                    self.programa_2()
+                    print('Programa 3')
+                    self.programa_3()
+                    print('Programa 4')
+                    self.programa_4()
 
-                    if opcao == 1:
-                              self.programa_1()
-                              self.repetir_operacoes_1()
-                    if opcao == 2:
-                              self.programa_2()
-                              self.repetir_operacoes_2()
-                    if opcao == 3:
-                              self.programa_3()
-                              self.repetir_operacoes_3()
-                    if opcao == 4:
-                              self.programa_4()
-                              self.repetir_operacoes_4()
-                    if opcao == 5:
-                              self.iniciar_all()                  
-                    if opcao == 6:
-                              self.sair()
+                    continuar = int(input('''
+
+                Repetir as operações ou voltar ao menu principal?
+
+                        [1] - Repetir
+                        [2] - Menu Principal
+                        '''))
+                    if continuar == 1:
+                        continue
+                    elif continuar == 2:
+                        self.menu()
                     else:
-                        print('Opção Inválida. Por favor, somente as opções de 1 a 6.')
+                        print('Entrada inválida. Somente números 1 ou 2.')
+                
                 except ValueError:
-                    print('Entrada inválida. Somentes os números de 1 a 6.')
+                    print('Entrada inválida. Somente números de 1 a 2.')
+                    
+    
+    def menu(self):
 
-    def sair(self):
+        opcoes = int(input('''
+            Maior e Menor valor de uma tupla de números aleatórios:
+
+            [1] - Programa 1
+            [2] - Programa 2
+            [3] - Programa 3
+            [4] - Programa 4
+            [5] - Executar todos
+            [6] - Sair
+
+            '''))
+
+        if opcoes == 1:
+            self.programa_1()
+            self.repetir_operacoes_1()
+        if opcoes == 2:
+            self.programa_2()
+            self.repetir_operacoes_2()
+        if opcoes == 3:
+            self.programa_3()
+            self.repetir_operacoes_3()
+        if opcoes == 4:
+            self.programa_4()
+            self.repetir_operacoes_4()
+        if opcoes == 5:
+            self.iniciar()
+        if opcoes == 6:
+            self.sair()
+
+    @staticmethod
+    def sair():
         import os
         exit()
 
-    def iniciar_all(self):
-
-        from time import sleep
-
-        while True:
-                
-                    print('\n\nPrograma 1.\n')
-                    sleep(1)
-                    self.programa_1()
-                    sleep(2)
-                    print('\n\nPrograma 2.\n')
-                    sleep(1)
-                    self.programa_2()
-                    sleep(1)
-                    print('\n\nPrograma 3.\n')
-                    self.programa_3()
-                    sleep(1)
-                    print('\n\nPrograma 4.\n')
-                    sleep(1)
-                    self.programa_4()
-                    print('\nFim.\n')
-                    while True:
-                        try:
-                            continuar = int(input('''Deseja repetir a operação ou voltar para o menu principal?
-
-                            [1] - Repetir a operação
-                            [2] - Menu Principal                              
-                            '''))
-
-                            if continuar == 1:
-                                break
-                            elif continuar == 2:
-                                self.opcoes()
-                                return
-                            else:
-                                print('Opção inválida. Somente 1 para repetir ou 2 para voltar ao menu principal.')
-                        except ValueError:
-                            print('Opção inválida. Somente 1 para repetir a operação ou 2 para voltar ao menu principal.')
-
+    
     def repetir_operacoes_1(self):
 
         while True:
@@ -138,16 +141,17 @@ class Extraindo_vogais:
                     [1] - Repetir                    
                     [2] - Sair
                     '''))
+                    
                     if continuar == 1:
                         self.programa_1()
                     elif continuar == 2:
-                        self.opcoes()
+                        self.menu()
                         break
                     else:
                         print('Opção inválida. Somente 1 para repetir ou 2 para sair.')
                 except ValueError:
                     print('Entrada inválida. Por favor, somente os números (1 e 2).')
-    
+
     def repetir_operacoes_2(self):
 
         while True:
@@ -158,68 +162,65 @@ class Extraindo_vogais:
                     [1] - Repetir                    
                     [2] - Sair
                     '''))
+                    
                     if continuar == 1:
                         self.programa_2()
                     elif continuar == 2:
-                        self.opcoes()
+                        self.menu()
                         break
                     else:
-                        print('Opção Inválida. Digite 1 para repetir ou 2 para sair.')
+                        print('Opção inválida. Somente 1 para repetir ou 2 para sair.')
                 except ValueError:
                     print('Entrada inválida. Por favor, somente os números (1 e 2).')
-    
+
     def repetir_operacoes_3(self):
 
         while True:
-            try:
-                continuar = int(input('''
+                try:
+                    continuar = int(input('''
 
-                    Repetir a operação ou sair?
-            [1] - Repetir                    
-            [2] - Sair
-            '''))
-                if continuar == 1:
-                    self.programa_3()
-                elif continuar == 2:
-                    self.opcoes()
-                    break
-                else:
-                    print('Opção Inválida. Digite 1 para repetir ou 2 para sair.')
-            except ValueError:
-                print('Entrada inválida. Por favor, somente os números (1 e 2).')
+                            Repetir a operação ou sair?
+                    [1] - Repetir                    
+                    [2] - Sair
+                    '''))
+                    
+                    if continuar == 1:
+                        self.programa_3()
+                    elif continuar == 2:
+                        self.menu()
+                        break
+                    else:
+                        print('Opção inválida. Somente 1 para repetir ou 2 para sair.')
+                except ValueError:
+                    print('Entrada inválida. Por favor, somente os números (1 e 2).')
 
     def repetir_operacoes_4(self):
 
         while True:
-            try:
-                continuar = int(input('''
+                try:
+                    continuar = int(input('''
 
-                    Repetir a operação ou sair?
-            [1] - Repetir                    
-            [2] - Sair
-            '''))
-                if continuar == 1:
-                    self.programa_4()
-                elif continuar == 2:
-                    self.opcoes()
-                    break
-                else:
-                    print('Opção inválida. Digite 1 para repetir ou 2 para sair.')
-            except ValueError:
-                print('Entrada inválida. Por favor, somente os números (1 e 2).')
-
-
-
-if __name__== "__main__":
-
-    extract=Extraindo_vogais()
-    extract.opcoes()
-    
-
-        
-
+                            Repetir a operação ou sair?
+                    [1] - Repetir                    
+                    [2] - Sair
+                    '''))
                     
-
-        
+                    if continuar == 1:
+                        self.programa_4()
+                    elif continuar == 2:
+                        self.menu()
+                        break
+                    else:
+                        print('Opção inválida. Somente 1 para repetir ou 2 para sair.')
+                except ValueError:
+                    print('Entrada inválida. Por favor, somente os números (1 e 2).')                    
+            
                     
+            
+                    
+            
+
+if __name__ == '__main__':
+    tuplas=Maior_Menor_Valores()
+    tuplas.menu()
         
