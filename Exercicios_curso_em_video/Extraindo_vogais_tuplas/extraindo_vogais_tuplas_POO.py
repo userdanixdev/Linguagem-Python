@@ -110,16 +110,16 @@ class Maior_Menor_Valores:
 
         if opcoes == 1:
             self.programa_1()
-            self.repetir_operacoes_1()
+            self.repetir_operacoes(self.programa_1)
         if opcoes == 2:
             self.programa_2()
-            self.repetir_operacoes_2()
+            self.repetir_operacoes(self.programa_2)
         if opcoes == 3:
             self.programa_3()
-            self.repetir_operacoes_3()
+            self.repetir_operacoes(self.programa_3)
         if opcoes == 4:
             self.programa_4()
-            self.repetir_operacoes_4()
+            self.repetir_operacoes(self.programa_4)
         if opcoes == 5:
             self.iniciar()
         if opcoes == 6:
@@ -215,7 +215,29 @@ class Maior_Menor_Valores:
                 except ValueError:
                     print('Entrada inválida. Por favor, somente os números (1 e 2).')                    
             
+
+    def repetir_operacoes(self,programa):
+
+        while True:
+                try:
+                    continuar = int(input('''
+
+                            Repetir a operação ou sair?
+                    [1] - Repetir                    
+                    [2] - Sair
+                    '''))
                     
+                    if continuar == 1:
+                         programa()
+                    elif continuar == 2:
+                        self.menu()
+                        break
+                    else:
+                        print('Opção inválida. Somente 1 para repetir ou 2 para sair.')
+                except ValueError:
+                    print('Entrada inválida. Por favor, somente os números (1 e 2).')                    
+            
+        
             
                     
             
