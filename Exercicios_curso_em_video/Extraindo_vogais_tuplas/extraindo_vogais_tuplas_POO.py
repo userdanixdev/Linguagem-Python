@@ -1,5 +1,5 @@
 # Extraindo vogais de uma tupla:
-# POO: Versão 01
+# POO:
 
 class Extraindo_vogais:
     def __init__(self):
@@ -48,7 +48,7 @@ class Extraindo_vogais:
             
 
     def opcoes(self):
-
+        
         opcao=int(input('''
 
                 Extraindo vogais de uma tupla:
@@ -64,20 +64,112 @@ class Extraindo_vogais:
 
         if opcao == 1:
                   self.programa_1()
+                  self.repetir_operacoes_1()
         if opcao == 2:
                   self.programa_2()
+                  self.repetir_operacoes_2()
         if opcao == 3:
                   self.programa_3()
+                  self.repetir_operacoes_3()
         if opcao == 4:
                   self.programa_4()
+                  self.repetir_operacoes_4()
         if opcao == 5:
-                  self.iniciar()
+                  self.iniciar_all()                  
         if opcao == 6:
-                  self.sair_programas()
-
-    
+                  self.sair()
 
 
+    def sair(self):
+        import os
+        exit()
+
+    def iniciar_all(self):
+
+        from time import sleep
+
+        while True:
+                    print('\n\nPrograma 1.\n')
+                    sleep(1)
+                    self.programa_1()
+                    sleep(2)
+                    print('\n\nPrograma 2.\n')
+                    sleep(1)
+                    self.programa_2()
+                    sleep(1)
+                    print('\n\nPrograma 3.\n')
+                    self.programa_3()
+                    sleep(1)
+                    print('\n\nPrograma 4.\n')
+                    sleep(1)
+                    self.programa_4()
+                    print('\nFim.\n')
+                    continuar = int(input('''Deseja repetir a operação ou voltar para o menu principal?
+
+                            [1] - Repetir a operação
+                            [2] - Menu Principal                              
+                            '''))
+
+                    if continuar == 1:
+                        self.iniciar_all()
+                    if continuar == 2:
+                        self.opcoes()
+
+    def repetir_operacoes_1(self):
+
+        while True:
+            continuar = int(input('''
+
+                    Repetir a operação ou sair?
+            [1] - Repetir                    
+            [2] - Sair
+            '''))
+            if continuar == 1:
+                self.programa_1()
+            if continuar == 2:
+                self.opcoes()
+
+    def repetir_operacoes_2(self):
+
+        while True:
+            continuar = int(input('''
+
+                    Repetir a operação ou sair?
+            [1] - Repetir                    
+            [2] - Sair
+            '''))
+            if continuar == 1:
+                self.programa_2()
+            if continuar == 2:
+                self.opcoes()                    
+
+    def repetir_operacoes_3(self):
+
+        while True:
+            continuar = int(input('''
+
+                    Repetir a operação ou sair?
+            [1] - Repetir                    
+            [2] - Sair
+            '''))
+            if continuar == 1:
+                self.programa_3()
+            if continuar == 2:
+                self.opcoes()                    
+
+    def repetir_operacoes_4(self):
+
+        while True:
+            continuar = int(input('''
+
+                    Repetir a operação ou sair?
+            [1] - Repetir                    
+            [2] - Sair
+            '''))
+            if continuar == 1:
+                self.programa_4()
+            if continuar == 2:
+                self.opcoes()            
 
 
 
