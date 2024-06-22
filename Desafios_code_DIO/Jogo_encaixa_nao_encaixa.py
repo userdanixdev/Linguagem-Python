@@ -24,11 +24,11 @@ while(n > 0):
     if aux == values[1][::-1]:  # Verifica se 'aux' é igual a string [1] a da direita.
       print('encaixa')
       break
-   else:    
-    print('não encaixa')
+    else:    
+     print('não encaixa')
     
-   aux=''
-   n -=1    
+aux=''
+n -=1    
     
     ''' 
     TODO  Verifique, para cada entrada A e B, se os dois valores são compatíveis e imprima se
