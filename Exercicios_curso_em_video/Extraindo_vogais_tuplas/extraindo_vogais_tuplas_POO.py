@@ -236,8 +236,20 @@ class Maior_Menor_Valores:
                         print('Opção inválida. Somente 1 para repetir ou 2 para sair.')
                 except ValueError:
                     print('Entrada inválida. Por favor, somente os números (1 e 2).')                    
-            
-        
+
+'''Explicação das Mudanças:
+
+Método repetir_operacoes:
+Criado para receber um método de programa como argumento e executar o loop de repetição.
+Utiliza o método passado como argumento (programa()) para repetir a operação ou sair conforme a escolha do usuário.
+
+Método menu:
+Chama repetir_operacoes com o método de programa apropriado como argumento, em vez de ter loops de repetição separados para cada programa.
+Inclui a verificação de entrada válida para assegurar que apenas números de 1 a 6 sejam aceitos.
+
+Método iniciar:
+Mantém a execução de todos os programas em sequência e a opção para repetir ou voltar ao menu principal.
+        '''
             
                     
             
