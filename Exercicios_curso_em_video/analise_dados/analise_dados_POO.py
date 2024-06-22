@@ -6,7 +6,7 @@
 # B) quantos homens foram cadastrados.
 # C) quantas mulheres tem menos de 20 anos.
 
-# Versão POO:
+# Versão POO: As 3 versões encapsuladas, loop único e menu.
 
 class Analise_Dados:
     def __init__(self):
