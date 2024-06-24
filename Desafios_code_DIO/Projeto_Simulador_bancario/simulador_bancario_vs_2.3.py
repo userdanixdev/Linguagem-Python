@@ -1,3 +1,16 @@
+# Nova funcionalidade: Listar dados do correntista:
+
+def listar_dados(cpf,contas):
+
+    conta=  verifica_conta(cpf,contas)
+    if conta and conta['transacoes'] > 0 and conta['saques'] > 0:
+        usuario = conta ['usuario']
+        print(f"\nNome: {usuario['nome']}\nCPF: {usuario['cpf']}\nData de Nascimento: {usuario['data_nascimento']}\n"
+              f"Cidade: {usuario['endereco']['cidade']} - {usuario['endereco']['estado']}\nBairro: {usuario['endereco']['bairro']}\n"
+              f"Rua: {usuario['endereco']['rua']}\nNúmero da casa: {usuario['endereco']['numero_casa']}\n"
+              f"Agência: {conta['agencia']}\nNúmero da Conta: {conta['numero_conta']}\n")
+    else:
+        print('Para listar os dados do correntista, é necessário realizar ao menos uma transação e um saque.')
 
 
 def filtrar_usuario(cpf,usuarios):
@@ -232,6 +245,11 @@ while True:
         agencia = '0001'
         numero_conta = f'{len(contas) + 1:06d}'
         criar_conta(agencia,numero_conta,usuarios,contas)
+
+    elif opcao == 'ld':
+
+        cpf= input('Informe o CPF: ')
+        listar_dados(cpf,contas)
 
     else:
         print('Operação inválida. Selecione a opção correta.')
