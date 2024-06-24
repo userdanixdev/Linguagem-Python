@@ -1,5 +1,3 @@
-# Com validação de entrada para nova conta, função de validação CPF.
-# Versão 2.2: Com filtro de usuário verificação
 
 def filtrar_usuario(cpf,usuarios):
 
@@ -11,7 +9,8 @@ def filtrar_usuario(cpf,usuarios):
     # Retorna o primeiro usuário na lista usuarios_filtrados se houver algum usuário na lista
     # (ou seja, se o CPF já estiver cadastrado), caso contrário, retorna None.
 
-
+# Com validação de entrada para nova conta, função de validação CPF.
+# Versão 2.2: Com filtro de usuário verificação e depósito para usuários cadastrados
 
 import re
 from datetime import datetime
@@ -78,9 +77,9 @@ def criar_usuario():
             cidade_estado = input('Informe a cidade e o estado: ')
             padrao_cidade_estado = r'^[A-Za-z\s]+ - [A-Z]{2}$'
             if re.match(padrao_cidade_estado, cidade_estado):
-                cidade, estado = cidade_estado.split(' - ')
+                cidade, estado = cidade_estado.split('-')
                 cidade = cidade.strip()
-                estado = estado.strip()
+                estado = estado.strip().upper()
                 break
             else:
                 print('Formato inválido. Informe no formato: cidade - Estado (ex: São Paulo - SP).')
@@ -128,18 +127,23 @@ while True:
     opcao = input(menu).strip().lower()
 
     if opcao == 'd':
-        while True:
-            try:
-                valor = float(input('Informe o valor do depósito: '))
-                if valor > 0:
-                    saldo += valor
-                    extrato += f'Depósito: R$ {valor:.2f}\n'
-                    print(f'Depósito de R$ {valor:.2f} realizado com sucesso.')
-                    break
-                else:
-                    print('Operação falhou. O valor informado inválido.')
-            except ValueError:
-                print('Operação falhou. O formato do valor inválido.')
+        cpf = input('Informe o CPF: ')
+        usuario = filtrar_usuario(cpf,usuarios)
+        if usuario:
+            while True:
+                try:
+                    valor = float(input('Informe o valor do depósito: '))
+                    if valor > 0:
+                        saldo += valor
+                        extrato += f'Depósito: R$ {valor:.2f}\n'
+                        print(f'Depósito de R$ {valor:.2f} realizado com sucesso.')
+                        break
+                    else:
+                       print('Operação falhou. O valor informado inválido.')
+                except ValueError:
+                    print('Operação falhou. O formato do valor inválido.')
+        else:
+            print('Usuário não encontrado. Somente usuários cadastrados podem realizar depósitos.')
         
     elif opcao == 's':
         while True:
