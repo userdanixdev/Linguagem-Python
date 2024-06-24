@@ -26,7 +26,7 @@ def validar_cpf(cpf):
     # Verifica se os dígitos verificadores estão corretos:
     return cpf[-2:] ==  f'{primeiro_digito_verificador}{segundo_digito_verificador}'
 
-while True:  # Looping infinito
+while True:  # Loopíng infinito
     print('1.Criar usuário.')
     print('2.Sair')
     opcao = input('Escolha uma opção: ')
@@ -67,7 +67,33 @@ while True:  # Looping infinito
                             print('Data Inválida. Informe a data válida.')
                     else:
                         print('Formato inválido. Informe o formato correto: d/m/a.')
-            endereco = input('Informe o endereço: ')
+            while True:                        
+                cidade_estado = input('Informe a cidade e o estado: ')
+                padrao_cidade_estado = r'^[A-Za-z\s]+ - [A-Z]{2}$'
+                if re.match(padrao_cidade_estado,cidade_estado):
+                    cidade,estado = cidade_estado.split('-')
+                    break
+                else:
+                    print('Formato inválido. Informe no formato: cidade - Estado (ex: São Paulo - SP).')
+            while True:
+                bairro = input('Informe o bairro: ')
+                if bairro.replace(' ','').isalpha():
+                    break
+                else:
+                    print('Bairro inválido. Informe apenas letras.')
+            while True:
+                rua = input('Informe a rua: ')
+                if rua.replace(' ','').isalpha():
+                    break
+                else:
+                    print('Rua inválida. Informe apenas letras.')
+            while True:
+                try:
+                    numero_casa = int(input('Informe o número da casa: '))
+                    break
+                except ValueError:
+                    print('Número da casa inválido. Informe um número valido.')
+            endereco = {'cidade':cidade,'estado':estado,'bairro':bairro,'rua':rua,'numero_casa':numero_casa}                    
             usuarios.append({'nome':nome,'data_nascimento':data_nascimento,'cpf':cpf,'endereco':endereco})
             print('Usuario criado com sucesso')
     elif opcao == '2':
@@ -77,6 +103,8 @@ while True:  # Looping infinito
         print('Opcao inválida. Tente novamente.')
 print('\nLista de Usuários: ')
 for usuario in usuarios:
-    print(f'\nNome: {usuario['nome']},\nCPF:{usuario['cpf']},\nData de Nascimento:{usuario['data_nascimento']},\nEndereço:{usuario['endereco']}')
+    print(f'\nNome: {usuario['nome']},\nCPF:{usuario['cpf']},\nData de Nascimento:{usuario['data_nascimento']},\nEndereço:{usuario['endereco']}\n'
+          f'\nCidade: {usuario['endereco']['cidade']} - {usuario['endereco']['estado']}\nBairro: {usuario['endereco']['bairro']}\n'
+          f'\nRua: {usuario['endereco']['rua']}\nNúmero da casa: {usuario['endereco']['numero_casa']}')
         
 
