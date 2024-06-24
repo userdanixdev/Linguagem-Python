@@ -30,6 +30,13 @@ def validar_cpf(cpf):
     segundo_digito_verificador = 0 if segundo_digito_verificador >= 10 else segundo_digito_verificador
     return cpf[-2:] == f'{primeiro_digito_verificador}{segundo_digito_verificador}'
 
+def exibir_extrato(saldo,/,*,extrato):
+
+    print(f'{"="*30}\n{"Extrato":^28}\n{"="*30}')
+    print('Não foram realizadas movimentações.'if not extrato else extrato)
+    print(f'\nSaldo:\t\tR$ {saldo:.2f}')
+    print("="*30)
+
 def realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES):
     while True:
         try:
@@ -177,10 +184,7 @@ while True:
     elif opcao == 's':
       realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES)
     elif opcao == 'e':
-        print(f'{"+"*50}\n{"Extrato":^48}\n{"+"*50}')
-        print('Não foram realizadas movimentações...' if not extrato else extrato)
-        print(f'\nSaldo: R$ {saldo:.2f}')
-        
+      exibir_extrato(saldo,/,*,extrato)
     elif opcao == 'q':
         print('Encerrando o programa.')
         break
