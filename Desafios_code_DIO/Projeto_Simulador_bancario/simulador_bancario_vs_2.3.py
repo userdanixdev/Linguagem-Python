@@ -65,6 +65,26 @@ def realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES):
 
 usuarios = []
 
+def verificar_conta(cpf,contas):
+    for conta in contas:
+        if conta ['usuario']['cpf'] == cpf
+            return conta
+    return None
+
+def criar_conta(agencia,numero_conta,usuarios,contas):
+    cpf = input('Informe o CPF do usuário: ')
+    usuario =  filtrar_usuario(cpf, usuarios)
+    if usuario:
+        cova_conta =  {'agencia':agencia,'numero_conta':numero_conta,'usuario':usuario}
+        contas.append(nova_conta)
+        print('Conta criada com sucesso.')
+        return nova_conta
+    else:
+        print('\nUsuário não encontrado , fluxo de criação encerrado.')
+        return None
+usuarios=[]
+conta = []
+
 def criar_usuario():
         while True:
             cpf = input('Informe o CPF: ')
@@ -150,6 +170,7 @@ menu = '''
 [s] Sacar
 [e] Extrato
 [nu] Novo Usuário
+[nc] Nova Conta
 [q] Sair
 => '''
 
@@ -182,7 +203,13 @@ while True:
             print('Usuário não encontrado. Somente usuários cadastrados podem realizar depósitos.')
         
     elif opcao == 's':
-      realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES)
+      #realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES)
+        cpf =  input('informe o cpf: ')
+        conta = verificar_conta(cpf,contas)
+        if conta:
+            saldo,extrato,numeros_saques = realizar_saque (saldo,limite,extrato,numero_saques,LIMITE_SAQUES)
+        else:
+            print('Nenhuma conta encontrada para o CPF informado. Por favor crie um conta primeiro.')
     elif opcao == 'e':
       exibir_extrato(saldo,extrato=extrato)
     elif opcao == 'q':
@@ -191,6 +218,9 @@ while True:
 
     elif opcao == 'nu':
         criar_usuario()
+    elif opcao == 'nc':
+        agencia = '0001'
+        numero_conta = f'{len(contas) + 1:06d}'
 
     else:
         print('Operação inválida. Selecione a opção correta.')
@@ -200,3 +230,7 @@ for usuario in usuarios:
     print(f"\nNome: {usuario['nome']}\nCPF: {usuario['cpf']}\nData de Nascimento: {usuario['data_nascimento']}\n"
           f"Cidade: {usuario['endereco']['cidade']} - {usuario['endereco']['estado']}\nBairro: {usuario['endereco']['bairro']}\n"
           f"Rua: {usuario['endereco']['rua']}\nNúmero da casa: {usuario['endereco']['numero_casa']}")    
+print('\nLista de Contas: ')
+for conta in contas:
+    print(f"\nAgência: {conta['agencia']}\nNúmero da Conta: {conta['numero_conta']}\n"
+          f"Titular: {conta['usuario']['nome']}\nCPF do Titular: {conta['usuario']['cpf']}")    
