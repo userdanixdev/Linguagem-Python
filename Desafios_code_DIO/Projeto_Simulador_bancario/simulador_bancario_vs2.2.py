@@ -29,6 +29,32 @@ def validar_cpf(cpf):
     segundo_digito_verificador = 0 if segundo_digito_verificador >= 10 else segundo_digito_verificador
     return cpf[-2:] == f'{primeiro_digito_verificador}{segundo_digito_verificador}'
 
+def realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES):
+    while True:
+        try:
+            valor = float(input('Informe o valor do saque: '))
+            if valor <= 0:
+                print('Somente números positivos.')
+                continue
+            excedeu_saldo = valor > saldo
+            excedeu_limite = valor > limite
+            excedeu_saque = numero_saques >= LIMITE_SAQUES
+            if excedeu_saldo:
+                print('Operação falhou. Você não tem saldo suficiente')
+            elif excedeu_limite:
+                print('Operação falhou. O valor do saque excede o limite.')
+            elif excedeu_saque:
+                print('Operação falhou. Número máximo de saques excedido.')
+            else:
+                saldo -= valor
+                extrato += f'Saque: R$ {valor:.2f}\n'
+                numero_saques += 1
+                print(f'Saque de R$ {valor:.2f} realizado com sucesso.')
+            break
+        except ValueError:
+            print('Informe valores positivos e numéricos.')
+    return saldo, extrato, numero_saques
+
 usuarios = []
 
 def criar_usuario():
@@ -108,6 +134,8 @@ def criar_usuario():
         endereco = {'cidade': cidade, 'estado': estado, 'bairro': bairro, 'rua': rua, 'numero_casa': numero_casa}
         usuarios.append({'nome': nome, 'data_nascimento': data_nascimento, 'cpf': cpf, 'endereco': endereco})
         print('Usuário criado com sucesso')
+
+
 
 menu = '''
 [d] Depositar
