@@ -1,6 +1,8 @@
 # Simulador Bancário:
 # Versão 2.1: Inserindo condicionais, validações de entrada, novas variáveis, novo usuario.
-
+import re
+from datetime import datetime
+usuarios = []
 menu = '''
         [d] Depositar
         [s] Sacar
@@ -29,7 +31,7 @@ while True:
                     break
                 else:
                     print('Operação falhou. O valor informado inválido.')
-            except ValuerError:
+            except ValueError:
                 print('Operação falhou. O formato do valor inválido.')
         
     elif opcao == 's':
@@ -77,32 +79,32 @@ while True:
         usuarios = []  # Variável vazia recebe lista vazia
         # Em python, as funções devem ser definidas antes de serem chamadas.
         def validar_cpf(cpf):
-        # remove caracteres não numéricos:
-        cpf = re.sub(r'\D', '',cpf)
-        # Verifica se o CPF tem 11 dígitos:
-        if len(cpf) != 11:
-        return False
-        # Verifica se todos os dígitos são iguais (caso especial de CPF inválido)
-        if cpf == cpf[0]*11:
-        return False
+            # remove caracteres não numéricos:
+             cpf = re.sub(r'\D', '',cpf)
+             # Verifica se o CPF tem 11 dígitos:
+             if len(cpf) != 11:
+              return False
+            # Verifica se todos os dígitos são iguais (caso especial de CPF inválido)
+             if cpf == cpf[0]*11:
+                return False
         # Cálculo do primeiro dígito verificador:
-        soma = sum(int(cpf[i])*(10-i)for i in range(9))
-        primeiro_digito_verificador = 11 - (soma%11)
-        primeiro_digito_verificador = 0 if primeiro_digito_verificador >= 10 else primeiro_digito_verificador
+             soma = sum(int(cpf[i])*(10-i)for i in range(9))
+             primeiro_digito_verificador = 11 - (soma%11)
+             primeiro_digito_verificador = 0 if primeiro_digito_verificador >= 10 else primeiro_digito_verificador
         # Cálculo do segundo digito verificador:
-        soma = sum(int(cpf[i])*(11-i)for i in range(10))
-        segundo_digito_verificador = 11 - (soma%11)
-        segundo_digito_verificador = 0 if segundo_digito_verificador >= 10 else segundo_digito_verificador
+             soma = sum(int(cpf[i])*(11-i)for i in range(10))
+             segundo_digito_verificador = 11 - (soma%11)
+             segundo_digito_verificador = 0 if segundo_digito_verificador >= 10 else segundo_digito_verificador
         # Verifica se os dígitos verificadores estão corretos:
-        return cpf[-2:] ==  f'{primeiro_digito_verificador}{segundo_digito_verificador}'
+             return cpf[-2:] ==  f'{primeiro_digito_verificador}{segundo_digito_verificador}'
         
         while True:  # Loopíng infinito
-        print('1.Criar usuário.')
-        print('2.Sair')
+         print('1.Criar usuário.')
+         print('2.Sair')
         opcao = input('Escolha uma opção: ')
         if opcao == '1':
-        while True:
-            cpf = input('Informe o CPF: ')
+            while True:
+                cpf = input('Informe o CPF: ')
             if validar_cpf(cpf):
                 print('CPF válido.')
                 break
@@ -179,7 +181,7 @@ for usuario in usuarios:
         
 
 
-    else:
+else:
         print('Operacao inválida. Selecione a opção correta.')
         
     
