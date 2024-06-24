@@ -184,7 +184,7 @@ while True:
     elif opcao == 's':
       realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES)
     elif opcao == 'e':
-      exibir_extrato(saldo,/,*,extrato)
+      exibir_extrato(saldo,extrato=extrato)
     elif opcao == 'q':
         print('Encerrando o programa.')
         break
