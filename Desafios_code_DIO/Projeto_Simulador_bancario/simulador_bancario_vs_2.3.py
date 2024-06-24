@@ -2,13 +2,17 @@
 
 def listar_dados(cpf,contas):
 
-    conta=  verifica_conta(cpf,contas)
+    conta= verificar_conta(cpf,contas)
     if conta and conta['transacoes'] > 0 and conta['saques'] > 0:
         usuario = conta ['usuario']
+        #print(f"\nNome: {usuario['nome']}\nCPF: {usuario['cpf']}\nData de Nascimento: {usuario['data_nascimento']}\n"
+         #     f"Cidade: {usuario['endereco']['cidade']} - {usuario['endereco']['estado']}\nBairro: {usuario['endereco']['bairro']}\n"
+          #    f"Rua: {usuario['endereco']['rua']}\nNúmero da casa: {usuario['endereco']['numero_casa']}\n"
+           #   f"Agência: {conta['agencia']}\nNúmero da Conta: {conta['numero_conta']}\n")
         print(f"\nNome: {usuario['nome']}\nCPF: {usuario['cpf']}\nData de Nascimento: {usuario['data_nascimento']}\n"
               f"Cidade: {usuario['endereco']['cidade']} - {usuario['endereco']['estado']}\nBairro: {usuario['endereco']['bairro']}\n"
               f"Rua: {usuario['endereco']['rua']}\nNúmero da casa: {usuario['endereco']['numero_casa']}\n"
-              f"Agência: {conta['agencia']}\nNúmero da Conta: {conta['numero_conta']}\n")
+              f"Agência: {conta['agencia']}\nNúmero da Conta: {conta['numero_conta']}\n")           
     else:
         print('Para listar os dados do correntista, é necessário realizar ao menos uma transação e um saque.')
 
@@ -46,11 +50,16 @@ def validar_cpf(cpf):
 def exibir_extrato(saldo,/,*,extrato):
 
     print(f'{"="*30}\n{"Extrato":^28}\n{"="*30}')
-    print('Não foram realizadas movimentações.'if not extrato else extrato)
-    print(f'\nSaldo:\t\tR$ {saldo:.2f}')
+    print('Não foram realizadas movimentações.'if not conta["extrato"] else conta["extrato"])
+    print(f'\nSaldo:\t\tR$ {conta["saldo"]:.2f}')
     print("="*30)
 
-def realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES):
+def realizar_saque(conta,limite,LIMITE_SAQUES):
+
+    saldo =conta['saldo']
+    extrato = conta['extrato']
+    numeros_saques = conta['numeros_saques']
+    saques = conta['saques']
     while True:
         try:
             valor = float(input('Informe o valor do saque: '))
@@ -67,28 +76,31 @@ def realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES):
             elif excedeu_saque:
                 print('Operação falhou. Número máximo de saques excedido.')
             else:
-                saldo -= valor
-                extrato += f'Saque: R$ {valor:.2f}\n'
-                numero_saques += 1
+                conta['saldo'] -= valor
+                conta['extrato'] += f'Saque: R$ {valor:.2f}\n'
+                conta['numeros_saques'] += 1
+                conta['transacoes'] += 1
+                conta['saques']+= 1
                 print(f'Saque de R$ {valor:.2f} realizado com sucesso.')
             break
         except ValueError:
             print('Informe valores positivos e numéricos.')
-    return saldo, extrato, numero_saques
+    #return saldo, extrato,numeros_saques
 
 usuarios = []
 
 def verificar_conta(cpf,contas):
     for conta in contas:
-        if conta ['usuario']['cpf'] == cpf:
+        #if conta ['usuario']['cpf'] == cpf:
+        if 'usuario' in conta and conta['usuario']['cpf']==cpf:
             return conta
     return None
 
 def criar_conta(agencia,numero_conta,usuarios,contas):
     cpf = input('Informe o CPF do usuário: ')
     usuario =  filtrar_usuario(cpf, usuarios)
-    if usuario:
-        nova_conta =  {'agencia':agencia,'numero_conta':numero_conta,'usuario':usuario}
+    if usuario:  # Adicionar inicializadores em na função criar conta saldo, extrato,numeros_saques, transacoes e saques
+        nova_conta =  {'agencia':agencia,'numero_conta':numero_conta,'usuario':usuario,'saldo':0,'extrato':'','numeros_saques':0,'transacoes':0,'saques':0}
         contas.append(nova_conta)
         print('Conta criada com sucesso.')
         return nova_conta
@@ -199,29 +211,31 @@ while True:
 
     if opcao == 'd':
         cpf = input('Informe o CPF: ')
-        usuario = filtrar_usuario(cpf,usuarios)
-        if usuario:
-            while True:
-                try:
-                    valor = float(input('Informe o valor do depósito: '))
-                    if valor > 0:
-                        saldo += valor
-                        extrato += f'Depósito: R$ {valor:.2f}\n'
-                        print(f'Depósito de R$ {valor:.2f} realizado com sucesso.')
-                        break
-                    else:
-                       print('Operação falhou. O valor informado inválido.')
-                except ValueError:
-                    print('Operação falhou. O formato do valor inválido.')
+        conta = verificar_conta(cpf,contas)
+        if conta:
+           while True:
+                    try:
+                        valor = float(input('Informe o valor do depósito: '))
+                        if valor > 0:
+                            conta['saldo'] += valor
+                            conta['extrato'] += f'Depósito: R$ {valor:.2f}\n'
+                            conta['transacoes'] += 1
+                            print(f'Depósito de R$ {valor:.2f} realizado com sucesso.')
+                            break
+                        else:
+                           print('Operação falhou. O valor informado inválido.')
+                    except ValueError:
+                        print('Operação falhou. O formato do valor inválido.')
         else:
-            print('Usuário não encontrado. Somente usuários cadastrados podem realizar depósitos.')
+              print('Conta não encontrada. Crie uma conta primeiro para realizar depósitos.')
         
     elif opcao == 's':
       #realizar_saque(saldo, limite, extrato, numero_saques, LIMITE_SAQUES)
         cpf =  input('informe o cpf: ')
         conta = verificar_conta(cpf,contas)
         if conta:
-            saldo,extrato,numeros_saques = realizar_saque (saldo,limite,extrato,numero_saques,LIMITE_SAQUES)
+            #saldo,extrato,numeros_saques = realizar_saque (saldo,limite,extrato,numero_saques,LIMITE_SAQUES)
+            realizar_saque(conta,limite,LIMITE_SAQUES)
         else:
             print('Nenhuma conta encontrada para o CPF informado. Por favor crie um conta primeiro.')
             
@@ -229,7 +243,8 @@ while True:
       cpf = input('Informe o CPF: ')
       conta = verificar_conta(cpf,contas)
       if conta:
-          exibir_extrato(saldo,extrato=extrato)
+          #exibir_extrato(saldo,extrato=extrato)
+          exibir_extrato(conta,extrato=extrato)
       else:
           print('Nenhuma conta encontrada para o CPF informado. \nPor favor crie uma conta e um usuário.')
           
@@ -255,12 +270,12 @@ while True:
     else:
         print('Operação inválida. Selecione a opção correta.')
 
-print('\nLista de Usuários: ')
-for usuario in usuarios:
-    print(f"\nNome: {usuario['nome']}\nCPF: {usuario['cpf']}\nData de Nascimento: {usuario['data_nascimento']}\n"
-          f"Cidade: {usuario['endereco']['cidade']} - {usuario['endereco']['estado']}\nBairro: {usuario['endereco']['bairro']}\n"
-          f"Rua: {usuario['endereco']['rua']}\nNúmero da casa: {usuario['endereco']['numero_casa']}")    
-print('\nLista de Contas: ')
-for conta in contas:
-    print(f"\nAgência: {conta['agencia']}\nNúmero da Conta: {conta['numero_conta']}\n"
-          f"Titular: {conta['usuario']['nome']}\nCPF do Titular: {conta['usuario']['cpf']}")    
+#print('\nLista de Usuários: ')
+#for usuario in usuarios:
+ #   print(f"\nNome: {usuario['nome']}\nCPF: {usuario['cpf']}\nData de Nascimento: {usuario['data_nascimento']}\n"
+  #        f"Cidade: {usuario['endereco']['cidade']} - {usuario['endereco']['estado']}\nBairro: {usuario['endereco']['bairro']}\n"
+   #       f"Rua: {usuario['endereco']['rua']}\nNúmero da casa: {usuario['endereco']['numero_casa']}")    
+#print('\nLista de Contas: ')
+#for conta in contas:
+ #   print(f"\nAgência: {conta['agencia']}\nNúmero da Conta: {conta['numero_conta']}\n"
+  #        f"Titular: {conta['usuario']['nome']}\nCPF do Titular: {conta['usuario']['cpf']}")    
