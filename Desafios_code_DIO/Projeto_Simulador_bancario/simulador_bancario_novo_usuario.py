@@ -1,5 +1,4 @@
-# Simulador Bancário: Inserindo novas opções: Criar usuário
-
+# Novas opções: Nova opção de usuários
 
 usuarios = []  # Variável vazia recebe lista vazia
 
@@ -25,4 +24,9 @@ while True:  # Loopíng infinito
         print('encerrando o programa')
         break
     else:
-        print('Opcao inválida. tente novamente.')
+        print('Opcao inválida. Tente novamente.')
+print('\nLista de Usuários: ')
+for usuario in usuarios:
+    print(f'Nome: {usuario['nome']},CPF:{usuario['cpf']},Data de Nascimento:{usuario['data_nascimento']},Endereço:{usuario['endereco']}')
+        
+        
