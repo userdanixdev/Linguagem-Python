@@ -67,7 +67,7 @@ usuarios = []
 
 def verificar_conta(cpf,contas):
     for conta in contas:
-        if conta ['usuario']['cpf'] == cpf
+        if conta ['usuario']['cpf'] == cpf:
             return conta
     return None
 
@@ -75,15 +75,15 @@ def criar_conta(agencia,numero_conta,usuarios,contas):
     cpf = input('Informe o CPF do usuário: ')
     usuario =  filtrar_usuario(cpf, usuarios)
     if usuario:
-        cova_conta =  {'agencia':agencia,'numero_conta':numero_conta,'usuario':usuario}
+        nova_conta =  {'agencia':agencia,'numero_conta':numero_conta,'usuario':usuario}
         contas.append(nova_conta)
         print('Conta criada com sucesso.')
         return nova_conta
     else:
-        print('\nUsuário não encontrado , fluxo de criação encerrado.')
+        print('\nUsuário não encontrado , fluxo de criação encerrado.\nCrie um novo usuário para criar uma conta.')
         return None
 usuarios=[]
-conta = []
+contas = []
 
 def criar_usuario():
         while True:
@@ -210,17 +210,28 @@ while True:
             saldo,extrato,numeros_saques = realizar_saque (saldo,limite,extrato,numero_saques,LIMITE_SAQUES)
         else:
             print('Nenhuma conta encontrada para o CPF informado. Por favor crie um conta primeiro.')
+            
     elif opcao == 'e':
-      exibir_extrato(saldo,extrato=extrato)
+      cpf = input('Informe o CPF: ')
+      conta = verificar_conta(cpf,contas)
+      if conta:
+          exibir_extrato(saldo,extrato=extrato)
+      else:
+          print('Nenhuma conta encontrada para o CPF informado. \nPor favor crie uma conta e um usuário.')
+          
     elif opcao == 'q':
         print('Encerrando o programa.')
         break
 
     elif opcao == 'nu':
+        
         criar_usuario()
+        
     elif opcao == 'nc':
+                
         agencia = '0001'
         numero_conta = f'{len(contas) + 1:06d}'
+        criar_conta(agencia,numero_conta,usuarios,contas)
 
     else:
         print('Operação inválida. Selecione a opção correta.')
