@@ -184,6 +184,7 @@ menu = '''
 [e] Extrato
 [nu] Novo Usuário
 [nc] Nova Conta
+[ld] Listar Dados do Correntista
 [q] Sair
 => '''
 
