@@ -1,3 +1,6 @@
+# Com validação de entrada para nova conta, função de validação CPF.
+# Versão 2.1:
+
 import re
 from datetime import datetime
 
