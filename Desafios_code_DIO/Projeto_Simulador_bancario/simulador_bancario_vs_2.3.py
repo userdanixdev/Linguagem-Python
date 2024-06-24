@@ -99,6 +99,12 @@ def verificar_conta(cpf,contas):
 def criar_conta(agencia,numero_conta,usuarios,contas):
     cpf = input('Informe o CPF do usuário: ')
     usuario =  filtrar_usuario(cpf, usuarios)
+    #Atualização: Verifica se já existe uma conta associada ao CPF:
+    conta_existente = verificar_conta(cpf,contas)
+    if conta_existente:
+        print('\n Já existe uma conta associada a este CPF. Não é possível criar uma conta.')
+        return None
+    
     if usuario:  # Adicionar inicializadores em na função criar conta saldo, extrato,numeros_saques, transacoes e saques
         nova_conta =  {'agencia':agencia,'numero_conta':numero_conta,'usuario':usuario,'saldo':0,'extrato':'','numeros_saques':0,'transacoes':0,'saques':0}
         contas.append(nova_conta)
