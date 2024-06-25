@@ -85,7 +85,9 @@ def extraindo_dados_4():
 
 def menu():
 
-    menu= '''\n
+    while True:
+            try:
+                menu= '''\n
         +++++ MENU +++++
 
         [1] -\tExtraindo Dados
@@ -96,8 +98,10 @@ def menu():
         [6] -\tSair
 
         ===> '''
-
-    return int(input(menu))
+                opcao = int(input(menu))
+                return opcao
+            except ValueError:
+                print('Opção inválida. Insira somente números.')
 
 def main():
 
