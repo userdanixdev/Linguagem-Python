@@ -77,8 +77,9 @@ class ExtratorDados:
               f'\nNúmeros pares:{[y for y in lista if y % 2 == 0]}')
 
     def menu(self):
-
-        menu= '''\n
+        while True:
+            try:
+                menu= '''\n
             +++++ MENU +++++
 
             [1] -\tExtraindo Dados
@@ -89,8 +90,12 @@ class ExtratorDados:
             [6] -\tSair
 
             ===> '''
+                opcao = int(input(menu))
+                return opcao 
+            except ValueError:
+                print('Opção Inválida. Insira o número inteiro.')
 
-        return int(input(menu))
+        
 
     def main(self):
 
