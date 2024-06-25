@@ -32,10 +32,20 @@ def extraindo_dados_2():
     pares = list()
     impares = list()
     while True:
-        numero.append(int(input('Digite um número: ')))
-        resp = input('Quer continuar? [S/N] ')
-        if resp in 'Nn':
-            break
+            try:
+                numero.append(int(input('Digite um número: ')))
+                while True:
+                    resp = input('Quer continuar? [S/N] ')
+                    if resp in 'Nn':
+                        break
+                    elif resp in 'Ss':
+                        break
+                    else:
+                        print('Somente S para SIM e N para NÃO.')
+                if resp in 'Nn':
+                    break
+            except ValueError:
+                print('Somente valores inteiros.')
     for indice,valor in enumerate(numero):
         if valor % 2  == 0:
             pares.append(valor)
