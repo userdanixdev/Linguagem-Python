@@ -6,17 +6,26 @@ class ExtratorDados:
 
         valores = []
         while True:
-            valores.append(int(input('Digite um valor: ')))
-            resposta = input('Quer continuar? [S/N] ')
-            if resposta in 'Nn':
-                break
-        print(f'Você digitou {len(valores)} elementos.')
-        valores.sort(reverse=True)
-        print(f'Os valores em ordem descrescente {valores}.')
-        if 5 in valores:
-            print('O valor 5 não faz parte da lista.')
-        else:
-            print('O valor 5 não foi encontrado.')
+            try:
+                valores.append(int(input('Digite um valor: ')))
+                while True:
+                 resposta = input('Quer continuar? [S/N] ')
+                 if resposta in 'Nn':
+                     break
+                 elif resposta in 'Ss':
+                     break
+                 else:
+                     print('Somente S para Sim e N para não.')
+                     
+                print(f'Você digitou {len(valores)} elementos.')
+                valores.sort(reverse=True)
+                print(f'Os valores em ordem descrescente {valores}.')
+                if 5 in valores:
+                    print('O valor 5 não faz parte da lista.')
+                else:
+                    print('O valor 5 não foi encontrado.')
+            except ValueError:
+                print('Somente valores inteiros.')
 
         
     def extraindo_dados_2(self):
