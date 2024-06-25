@@ -60,25 +60,48 @@ def extraindo_dados_3():
     lista_1 = []
     lista_pares = []
     lista_impares = []
-    r = 's'
-    while r == 's':
-        x = int(input('Digite um número: '))
-        if x % 2 == 0 and x!=0:
-            lista_pares.append(x)
-        elif x % 2 == 0 and x!= 0:
-            lista_impares.append(x)
-        lista_1.append(x)
-        r = input('Quer continuar? [S/N]').strip()
-        while r not in 'SsNn':
-            r=input('Digite S ou N: ')
+    
+    while True:
+        try:
+            x = int(input('Digite um número: '))
+            lista_1.append(x)
+            if x % 2 == 0 and x!=0:
+                lista_pares.append(x)
+            elif x % 2 != 0:
+                lista_impares.append(x)
+        except ValueError:
+            print('Somente números inteiros.')
+            continue
+            while True:
+                r = input ('Quer continuar? [S/N]').strip()
+                if r in 'Nn':
+                    break
+                elif r in 'Ss':
+                    break
+                else:
+                    print('Somente S para SIM e N para não.')
+            if r in 'Nn':
+                break
     print(f'A lista com todos os valores é: {lista_1}\n'
           f'\nA lista com os valores pares:{lista_pares}\n'
           f'\nA lista com os valores impares:{lista_impares}')
 
 def extraindo_dados_4():
+    while True:
+        try:            
+            q = int(input('Quantidade de números a inserir: '))
+            break  # sair do loop se a entrada for válida
+        except ValueError:
+            print('Somente números inteiros.')
+    def input_numero (i):
+        while True:
+            try:
+                return int(input(f'Digite um número {i}: '))
+            except ValueError:
+                print('Somente números inteiros.')
 
-    q = int(input('Quantidade de números a inserir: '))
-    lista = sorted([int(input(f'Digite o número {i}:'))for i in range(1,q+1)])
+    lista = sorted([input_umero(i) for i in range(1,q+1)])
+    #lista = sorted([int(input(f'Digite o número {i}:'))for i in range(1,q+1)])
     print(f'\nLista:{lista}'
           f'\nNúmeros impares:{[x for x in lista if x % 2 != 0]}'
           f'\nNúmeros pares:{[y for y in lista if y % 2 == 0]}')
