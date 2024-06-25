@@ -1,10 +1,10 @@
 def extraindo_dados():
 
     valores = []
-            while True:
-                try:
-                    valores.append(int(input('Digite um valor: ')))
-                    while True:
+    while True:
+               try:
+                   valores.append(int(input('Digite um valor: ')))
+                   while True:
                          resposta = input('Quer continuar? [S/N] ')
                          if resposta in 'Nn':
                              break
@@ -17,13 +17,13 @@ def extraindo_dados():
                 except ValueError:
                     print('Somente valores inteiros.')
             
-            print(f'\nVocê digitou {len(valores)} elementos.')
-            valores.sort(reverse=True)
-            print(f'Os valores em ordem descrescente {valores}.')
-            if 5 in valores:
-                print('O valor 5 não faz parte da lista.')
-            else:
-                print('O valor 5 não foi encontrado.')
+    print(f'\nVocê digitou {len(valores)} elementos.')
+    valores.sort(reverse=True)
+    print(f'Os valores em ordem descrescente {valores}.')
+    if 5 in valores:
+    print('O valor 5 não faz parte da lista.')
+    else:
+    print('O valor 5 não foi encontrado.')
 
     
 def extraindo_dados_2():
