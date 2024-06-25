@@ -12,18 +12,18 @@ def extraindo_dados():
                              break
                          else:
                              print('Somente S para Sim e N para não.')
-                    if resposta in 'Nn':
-                        break
-                except ValueError:
+                   if resposta in 'Nn':
+                       break
+               except ValueError:
                     print('Somente valores inteiros.')
             
     print(f'\nVocê digitou {len(valores)} elementos.')
     valores.sort(reverse=True)
     print(f'Os valores em ordem descrescente {valores}.')
     if 5 in valores:
-    print('O valor 5 não faz parte da lista.')
+        print('O valor 5 não faz parte da lista.')
     else:
-    print('O valor 5 não foi encontrado.')
+        print('O valor 5 não foi encontrado.')
 
     
 def extraindo_dados_2():
