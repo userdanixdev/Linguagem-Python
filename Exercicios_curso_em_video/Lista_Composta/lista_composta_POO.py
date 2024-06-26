@@ -108,7 +108,7 @@ class ListaComposta:
                 break
         self.lista_composta_3_exibicao(pesados,leves,pesados)
 
-    def lista_composta_3_processamento(self,pessoas_temp,pessoas,nome,peso,leves,pesados)                        
+    def lista_composta_3_processamento(self,pessoas_temp,pessoas,nome,peso,leves,pesados):                        
         pessoas_temp.append(nome)
         pessoas_temp.append(peso)
         pessoas.append(pessoas_temp.copy())
@@ -191,6 +191,6 @@ class ListaComposta:
                 print('Somente números inteiros são permitidos.')
 
 if __name__ == '__main__':
-    lista.ListaComposta()
+    lista=ListaComposta()
     lista.main()
 
