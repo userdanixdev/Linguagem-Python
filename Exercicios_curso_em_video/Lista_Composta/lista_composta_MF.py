@@ -170,15 +170,15 @@ def main():
             opcoes = menu()
             if opcoes == 1:
                 lista_composta_1()
-            if opcoes == 2:
+            elif opcoes == 2:
                 lista_prin,maior_peso,menor_peso = lista_composta_2()
                 lista_composta_2_exibicao(lista_prin,maior_peso,menor_peso)
-            if opcoes == 3:
+            elif opcoes == 3:
                  lista_composta_3()              
                     
-            if opcoes == 4:
+            elif opcoes == 4:
                  pass
-            if opcoes == 5:
+            elif opcoes == 5:
                  break       
             else:
                  print('Opção inválida.')          
