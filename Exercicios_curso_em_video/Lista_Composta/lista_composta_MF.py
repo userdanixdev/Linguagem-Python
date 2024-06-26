@@ -90,7 +90,7 @@ def lista_composta_2_exibicao(lista_prin,maior_peso,menor_peso):
           if p[1] == menor_peso:
                print(f'[{p[0]}]')                
 
-def lista_composta_3_variaveis(pessoas_temp,pessoas,nome,peso,leves,pesados):
+def lista_composta_3():
      
     pessoas_temp = []
     pessoas = []
@@ -108,8 +108,11 @@ def lista_composta_3_variaveis(pessoas_temp,pessoas,nome,peso,leves,pesados):
                    break
               except ValueError:
                    print('Peso deve ser um número válido.')
-    
-    return pessoas_temp,pessoas,nome,peso,leves,pesados                   
+         lista_composta_3_processamento(pessoas_temp, pessoas, nome, peso, leves, pesados)
+         if not lista_composta_3_saida():
+              break
+    lista_composta_3_exibicao(pesados,leves,pessoas)              
+                  
 
 def lista_composta_3_processamento(pessoas_temp,pessoas,nome,peso,pesados,leves):
 
@@ -128,12 +131,14 @@ def lista_composta_3_saida():
 
      while True:
           resposta = input('Quer continuar? [S/N]').strip().lower()
-          if resposta in 'SN':
-               return resposta == 'S'
+          if resposta == 's':
+               return True
+          elif resposta == 'n':
+               return False
           else:
-               print('Respota inválida. Digite S para SIM e N para NÃO')
+               print('Resposta inválida. Digite S para SIM  e N para não.')
      
-def lista_composta_3_exibicao(pesados,leves):
+def lista_composta_3_exibicao(pesados,leves,pessoas):
 
      print(f'Quantidade de pessoas cadastradas: {len(pessoas)}')
      print(f'Pessoas acima de 100KG: {pesados}')
@@ -165,17 +170,14 @@ def main():
                 lista_prin,maior_peso,menor_peso = lista_composta_2
                 lista_composta_2_exibicao(lista_prin,maior_peso,menor_peso)
             if opcoes == 3:
-                 pessoas_temp,pessoas,nome,peso,leves,pesados = lista_composta_3_variaveis
-                 while True:
-                    lista_composta_3_processamento(pessoas_temp,pessoas,nome,peso,leves,pesados)
-                    if not lista_composta_3_saida():
-                         break
-                 lista_composta_3_exibicao(pesados,leves)
-                 
+                 lista_composta_3()              
+                    
             if opcoes == 4:
                  pass
             if opcoes == 5:
-                 break                 
+                 break       
+            else:
+                 print('Opção inválida.')          
          except ValueError:
               print('Somente números inteiros são permitidos.')
                                                 
