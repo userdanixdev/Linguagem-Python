@@ -12,6 +12,6 @@ for c in range(1,8):
     else:
         lista[1].append(valor) # Para valores impares
 print('='*30)
-lista[0].sort()
-lista[1].sort()
-print(f'Os valores pares são: {lista[0]}\nOs valores impares: {lista[1]}')
+#lista[0].sort()
+#lista[1].sort()
+print(f'Os valores pares são: {sorted(lista[0])}\nOs valores impares: {sorted(lista[1])}')
