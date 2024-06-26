@@ -173,11 +173,14 @@ def main():
          try:                    
             opcoes = menu()
             if opcoes == 1:
+                print(f'{"+"*30}\n{"Lista Composta":^28}\n{"+"*30}')
                 lista_composta_1()
             elif opcoes == 2:
+                print(f'{"+"*30}\n{"Lista Composta - 2":^28}\n{"+"*30}')
                 lista_prin,maior_peso,menor_peso = lista_composta_2()
                 lista_composta_2_exibicao(lista_prin,maior_peso,menor_peso)
             elif opcoes == 3:
+                 print(f'{"+"*30}\n{"Lista Composta - 3":^28}\n{"+"*30}')
                  lista_composta_3()              
                    
             elif opcoes == 4:
