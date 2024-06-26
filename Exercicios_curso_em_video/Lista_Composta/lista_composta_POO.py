@@ -113,10 +113,10 @@ class ListaComposta:
         pessoas_temp.append(peso)
         pessoas.append(pessoas_temp.copy())
 
-        if peso <= 100:
-            leves.append(nome)
-        if peso >= 70:
+        if peso >= 100:
             pesados.append(nome)
+        if peso <= 70:
+            leves.append(nome)
 
         pessoas_temp.clear()                        
 
