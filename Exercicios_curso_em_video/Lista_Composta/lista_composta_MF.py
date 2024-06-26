@@ -55,7 +55,7 @@ def lista_composta_2():
           lista_temp.append(input_nome())
           lista_temp.append(input_peso())
           if len(lista_prin) == 0:
-               maior_peso = menor_peso = lista_prin[1]
+               maior_peso = menor_peso = lista_temp[1]
           else:
                if lista_temp[1] > maior_peso:
                    maior_peso = lista_temp[1]
@@ -187,3 +187,4 @@ def main():
                                                 
 
 
+main()
