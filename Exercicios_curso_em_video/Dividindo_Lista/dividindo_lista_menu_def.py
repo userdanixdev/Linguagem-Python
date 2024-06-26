@@ -100,7 +100,7 @@ def extraindo_dados_4():
             except ValueError:
                 print('Somente números inteiros.')
 
-    lista = sorted([input_umero(i) for i in range(1,q+1)])
+    lista = sorted([input_numero(i) for i in range(1,q+1)])
     #lista = sorted([int(input(f'Digite o número {i}:'))for i in range(1,q+1)])
     print(f'\nLista:{lista}'
           f'\nNúmeros impares:{[x for x in lista if x % 2 != 0]}'
