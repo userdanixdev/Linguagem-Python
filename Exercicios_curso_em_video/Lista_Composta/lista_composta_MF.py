@@ -1,7 +1,5 @@
 # Modelo funcional de todas as versões da pasta:
 
-pessoas = []
-
 def input_nome():
 
     while True:
