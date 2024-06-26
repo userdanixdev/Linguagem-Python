@@ -156,6 +156,10 @@ def menu():
     [5] -\tSair
      \nEscolha:    '''
             opcao = int(input(menu))
+            if opcao in [1,2,3,4,5]:
+                 return opcao
+            else:
+                 print('Opção inválida. Escolha um número entre 1 e 5.')
         except ValueError:
             print('Opção inválida.Insira somente números inteiros.')    
 
