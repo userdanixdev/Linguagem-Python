@@ -122,7 +122,7 @@ def lista_composta_3_processamento(pessoas_temp,pessoas,nome,peso,pesados,leves)
 
     if peso <= 100:
         pesados.append(nome)
-    elif peso <= 70:
+    elif peso >= 70:
         leves.append(nome)            
 
     pessoas_temp.clear()
