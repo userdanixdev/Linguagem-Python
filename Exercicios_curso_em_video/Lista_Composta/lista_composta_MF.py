@@ -44,7 +44,7 @@ def lista_composta_1():
     print(f'O menor peso foi de {menor_peso:.1f}KG.',end='')
     print(f'Peso de {[n for n,p in pessoas if p == menor_peso]}')
 
-def lista_composta_2(lista_prin,maior_peso,menor_peso):
+def lista_composta_2():
 
      lista_temp = []
      lista_prin = []
@@ -61,9 +61,9 @@ def lista_composta_2(lista_prin,maior_peso,menor_peso):
                    maior_peso = lista_temp[1]
                if lista_temp[1] < menor_peso:
                    menor_peso = lista_temp[1]                   
-               lista_prin.append(lista_temp[:])
-               lista_temp.clear()
-               while True:
+          lista_prin.append(lista_temp[:])
+          lista_temp.clear()
+          while True:
                     resposta = input('Quer continuar? [S/N]')
                     if resposta in 'Nn':
                          break
@@ -71,7 +71,7 @@ def lista_composta_2(lista_prin,maior_peso,menor_peso):
                          break
                     else:
                          print('Somente S para Continuar ou N para parar.')
-               if resposta in 'Nn':
+          if resposta in 'Nn':
                 break       
      return lista_prin,maior_peso,menor_peso                                    
 
@@ -171,7 +171,7 @@ def main():
             if opcoes == 1:
                 lista_composta_1()
             if opcoes == 2:
-                lista_prin,maior_peso,menor_peso = lista_composta_2
+                lista_prin,maior_peso,menor_peso = lista_composta_2()
                 lista_composta_2_exibicao(lista_prin,maior_peso,menor_peso)
             if opcoes == 3:
                  lista_composta_3()              
