@@ -163,6 +163,10 @@ def menu():
         except ValueError:
             print('Opção inválida.Insira somente números inteiros.')    
 
+def sair():
+     import sys
+     exit()
+
 def main():
 
      while True:
@@ -175,11 +179,17 @@ def main():
                 lista_composta_2_exibicao(lista_prin,maior_peso,menor_peso)
             elif opcoes == 3:
                  lista_composta_3()              
-                    
+                   
             elif opcoes == 4:
-                 pass
+                 print(f'{"+"*30}\n{"Lista Composta":^28}\n{"+"*30}')
+                 lista_composta_1()
+                 print(f'{"+"*30}\n{"Lista Composta - 2":^28}\n{"+"*30}')
+                 lista_prin,maior_peso,menor_peso = lista_composta_2()
+                 lista_composta_2_exibicao(lista_prin,maior_peso,menor_peso)
+                 print(f'{"+"*30}\n{"Lista Composta - 3":^28}\n{"+"*30}')
+                 lista_composta_3()
             elif opcoes == 5:
-                 break       
+                 sair()       
             else:
                  print('Opção inválida.')          
          except ValueError:
