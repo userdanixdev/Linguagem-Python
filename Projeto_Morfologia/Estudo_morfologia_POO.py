@@ -28,6 +28,25 @@ c) Ela se pôs a olhar carinhosamente para o amado.[a = preposição de ligaçã
 d) Esse teu olhar quando encontra o meu fala te tantas coisas [TEU=PRONOME,acompanha o substantivo, portanto é subs][CORRETO]
 e) QUando você olhar para mim serei a pessoa mais feliz do mundo..[ERRADO]
 '''
+
+    def subs_exemplos(self):
+
+        return '''Exemplos:\n\nMuitos livros,muitas revistas.\nSubs:'livros'\nSubs:'revistas',\n'muitas/muitos':Pronome Indefinido(quantidade indefinida) e não Advérbio.
+Livros muitos novos,revistas muito velhas\n'livros':substantivo,\n'muito':advérbio de intensidade para reforçar o adjetivo de livros que são 'novos'
+Assim como 'revistas':substantivo,\n'muito':advérbio de intensidade para reforçar o adjetivo de 'revistas' que são 'velhas'.
+Tenho livros demais\n\nVerbo:'tenho',\n'livros':Substantivo,\n'demais':Pronome Indefinido pq a palavra 'demais' se relaciona com 'livros' que é substantivo
+Eram bastantes ideias interessantes\n\nVerbo:'Eram',\nSubstantivo:'ideias',\nAdjetivo:'interessantes' que qualifica o nome 'ideias',\n'bastantes':Pronome Indefinido
+A quantidade é indefinida de idéias e além disso ela possui sua relação com idéias que é substantivo e não com 'eram', o verbo.
+Eram idéias bastante interessantes\n\nVerbo:'eram'\nSubstantivo:'ideias',\nAdjetivo:'interessantes' está qualificando idéias que é substantivo porem a palavra 'bastante'
+mudou de forma e relação, agora é com o adjetivo 'interessantes' e não mais com 'idéias', portanto,virou um advérbio de intensidade.'''
+
+    def chamada(self):
+        return ''' A GRAMÁTICA É A FORMA COMO É ESCRITA, SEU SENTIDO E RELAÇÃO '''
+
+    def verbos_exemplos(self):
+        return '''Exemplos:\n\nEstudei demais\n\nVerbo:'estudei',\n'demais':Advérbio de intensidade\n\nTenho livros demais\n\nVerbo:'tenho',\n'livros':substantivos,
+'demais':Pronome Indefinido por que a palavra 'demais' se relaciona com o substantivo 'livros' e não com o verbo 'ter' de 'tenho'.'''
+
     def classes_gramaticais(self):
         return  '''Em torno dos verbos e substantivos outras classes gramaticais aparecem relacionadas a eles.'''
 
@@ -42,12 +61,13 @@ Locuções Adjetivas para substantivos: São grupos de duas ou mais palavras com
     def exemplo_locucao_adjetiva_adverbial(self):
         return '''Exemplo de locução adverbial:\n\nOs meus dois muito jovens amigos de Goiás chegaram bem cedo de bicicleta.\nSubstantivo:'amigos',\nNumeral:'dois',\nArtigo:'os',
 Adjetivo:'jovens',\nAdvérbio:'muito'\nLocução Adjetiva:'de Goiás', a palavra 'de Goiás' estás associada a 'amigos' substantivo e núcleo da oração.
-A parti de ...chegaram bem cedo de bicicleta:\nVerbo:'chegaram',\nAdvérbio:'cedo',\nAdvérbio:'bem',\nLocução Adverbial:'de bicicleta'''
-
+A parti de ...chegaram bem cedo de bicicleta:\nVerbo:'chegaram',\nAdvérbio:'cedo',\nAdvérbio:'bem',\nLocução Adverbial:'de bicicleta
+O passeio com amigos é agradável.\n\nSubstantivo:'O passeio' ao lado do artigo 'o'.\n'com 'amigos':Locução Adjetiva(preposição + substantivo)'''
 
     def ex_loc_adv(self):
 
         return ''' Exemplo:\n\nOs meus amigos chegaram cedo de Goiânia.\nNesse sentido,a relação 'de Goiânia' é com o verbo 'chegaram', portanto é uma locução Adverbial.
+Passear com amigos é mais agradável.\n\nVerbo:'passear',\n'com amigos':Locução Adverbial pois está acompanhando o verbo passear.
 '''
     def classes_gramaticais_verbo(self):
         return ''' Advérbio: Pode ser o satélite do verbo, ou seja, sempre o acompanha. Além disso pode ser satélite de outro satélite'''
@@ -130,6 +150,7 @@ Devido a isso a palavra 'bem' é de advérbio de intensidade por reforçar outro
                     self.print_slow(self.substantivo())
                     self.print_slow(self.exemplo_1())
                     self.print_slow(self.exemplo_2())
+                    self.print_slow(self.subs_exemplos())
                     self.print_slow(self.dica_1())
                     self.print_slow(self.tripe())
                 elif indice == 4:
