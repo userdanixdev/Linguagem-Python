@@ -78,7 +78,7 @@ class Morfologia():
 Em volte deles, existem as classes gramaticais que sempre o acompanham: artigo,pronome,adjetivo,numeral e locução adjetiva.\nAssim como o verbo é acompanhado pelo advérbio.  
                 NOTA: O ADJETIVO É A PALAVRA QUE CARACTERIZA O SUBSTANTIVO, ATRIBUINDO-LHES QUALIDADE E DEFEITOS\n
 Exemplos:\n\nEle é [bg_white]triste[reset] <- [bg_white]Triste[reset] é um [bg_white]adjetivo[reset] dele\n\nEle tem [bg_white]tristeza[reset] <- [bg_white]Tristeza[reset] é um sentimento de estado, um [bg_red]substantivo.[reset]
-Ela é [bg_white]alegre[reset] <- [bg_white]Alegre[reset] é [bg_green]adjetivo[resert] dela\n\nEla tem [bg_white]alegria[reset] <-- Um sentimento de [bg_white]alegria[reset], um sentimento de estado, um [bg_red]substantivo.[reset]\n
+Ela é [bg_white]alegre[reset] <- [bg_white]Alegre[reset] é [bg_green]adjetivo[reset] dela\n\nEla tem [bg_white]alegria[reset] <-- Um sentimento de [bg_white]alegria[reset], um sentimento de estado, um [bg_red]substantivo.[reset]\n
 Outro Exemplo importante:\n\n[bg_green]O jovem brasileiro conta com o Estado da Criança e do Adolescente.[reset]\n\n[blue]Pelo contexto da oração o brasileiro é uma qualidade do brasileiro que tem o benefício do Estado.[reset]
 [bg_blue]Jovem é o substantivo na oração.[reset][blue] Nem todos os jovem contam com o benefício.[reset]\n\n[bg_green]Entre os turistas havia um jovem brasileiro e um velho japonês, os dois jovens encantados com a paisagem.[reset]\n\n
 [red]Substantivos:[reset][blue]'turistas','jovem','velho','jovens'[reset] <- O numeral dois ao lado da palavra 'jovens' ajuda a identificar os substantivos\n
@@ -166,8 +166,7 @@ Assim como [bg_white]'revistas':[reset][red]substantivo[reset],\n[bg_white]'muit
 
     def exemplo_2(self):
 
-        exemplo_2 = print('Exemplo 2:\n\n [blue]Os meus dois muito jovens amigos goianos chegaram bem cedo.[reset]')
-        return '''
+        return ''''Exemplo 2:\n\n [blue]Os meus dois muito jovens amigos goianos chegaram bem cedo.[reset]'
 [red]Substantivo:[reset][yellow] Amigos[red]\n [blue]Seus satélites são:[reset]\n[red]Artigo:[reset][bg_white]'os'[reset],\n[red]Pronome:[reset][bg_white]'meus'[reset],\n[red]Numeral:[reset][bg_white]'dois'[reset],\n[red]Adjetivo:[reset][bg_white]'Jovens'[reset],\n[red]Adjetivo:[reset][bg_white]'goianos'[reset]
 [yellow]A palavra 'muito' está associada com jovens. Note que 'jovens'(adjetivo) já é satélite associado com o nome amigos (substantivo).
 Portanto 'muito' é um advérbio. Para reforçar o adjetivo 'jovens'. O advérbio é de intensidade.
