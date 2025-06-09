@@ -1,3 +1,44 @@
+
+	Esse arquivo contem esses dados : untitled 2 conta com os estudos da morfologia parte II:
+
+
+
+Bem Vindo aos estudos da Morfologia para concursos com o professor Márcio Wesley...
+
+                Estudos da Morfologia II:     
+
+                [0] - Preposições
+                [1] - Adjetivo
+                [2] - Locução Adjetiva        
+                                [3] - Artigo  
+                                [4] - Pronomes
+                                [5] - Pronomes Pessoais
+                                [6] - Colocações Pronominais
+                                [7] - Pronome Possessivo
+                                [8] - Pronome Indefinido
+                                [9] - Pronome Interrogativo
+                                [10]- Pronome Relativo
+                                [11]- Pronome Demonstrativo
+                                [12]- Verbo
+                                [13]- Modo Imperativo (do verbo)
+                                [14]- Formas nominais do verbo
+                [15]- Verbo II
+                                [16]- Vozes Verbais
+                                [17]- Ortografia
+                                [18]- Porque/Porquê/Por que/Por quê
+                                [19]- Estruturação das palavras ( Formação )
+                                [20]- Questões ( formação de palavras e emprego dos 'porques' )
+                                [21]- Mas/Mais
+                                [22]- Há/a
+                                [23]- 'afim de...'
+                                [24]- Mal/Mau
+                                [25]- Emprego do hífen - Marcio Wesley
+                                [26]- 51 exercícios de Pronomes
+                                [27]- 66 exercícios de verbos
+                                [28]- 56 exercícios de ortografia
+                                [29]- 170 exercícios de conjunções
+
+
 from colorama import Fore, Style, Back, init
 from time import sleep
 import sys
