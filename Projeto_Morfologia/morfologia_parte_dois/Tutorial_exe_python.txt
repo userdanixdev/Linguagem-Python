@@ -1,0 +1,26 @@
+Aqui apresento em como deixar seu programa de forma executável dentro do windows.
+
+No visual studio code:
+
+	1. pip install pyinstaller
+
+	2. Salve o arquivo em uma pasta específica.
+
+3. No terminal digite:
+
+		cd -> cd é o comando 'chanced directory'
+			
+
+			Sendo assim, escolha o caminho até onde vai o programa em python.
+
+
+			pyinstaller --onefile 'Untitled-3.py' <- nome do arquivo a se tornar executável.
+
+
+Após rodar o comando, o PyInstaller criará algumas pastas:
+
+dist/ → É onde está o seu .exe final.
+
+build/ → Arquivos temporários da compilação.
+
+seu_script.spec → Configuração da build (caso queira personalizar depo
