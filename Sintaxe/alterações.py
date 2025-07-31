@@ -18,4 +18,8 @@ def go_back():
                     sys.stdout.flush()
 
 
+Se você realmente quiser usar rich para melhorar a visualização, a única forma funcional é substituir a exibição por uma tela redesenhada,
+como com Live. Mas isso requer alterar o código de exibição, não apenas go_back().
+
+
 
