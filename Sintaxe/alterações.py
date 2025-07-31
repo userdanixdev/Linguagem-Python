@@ -8,5 +8,14 @@ O que você vê no terminal é um buffer fixo de visualização, e esse buffer s
 
 A rich simula rolagem e atualizações dentro do seu próprio sistema de renderização, mas isso exige usar o Live, Console.clear() ou atualizar o conteúdo dinamicamente.
 
+def go_back():
+                nonlocal current_index, rewind_requested
+                if current_index > 0:
+                    current_index -= 1
+                    rewind_requested = True # Sinaliza para interromper a linha atual
+                    sys.stdout.write("\033[F") # Move o cursor para a linha anterior
+                    sys.stdout.write("\033[K")  # Limpa a linha
+                    sys.stdout.flush()
+
 
 
