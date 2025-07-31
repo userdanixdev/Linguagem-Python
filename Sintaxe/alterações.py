@@ -22,4 +22,8 @@ Se você realmente quiser usar rich para melhorar a visualização, a única for
 como com Live. Mas isso requer alterar o código de exibição, não apenas go_back().
 
 
+Para melhorar o efeito da sua função go_back() usando a biblioteca rich e tentar simular uma “subida da barra de rolagem” de forma mais
+visual e limpa, você vai precisar trocar o controle manual dos códigos ANSI pelo controle do conteúdo via rich.live.Live.
+
+
 
