@@ -2,4 +2,11 @@ Importante: O terminal padrão não permite manipular a barra de rolagem diretam
 O que podemos fazer é controlar a saída exibida, atualizando o conteúdo para dar a sensação de “subida” da tela.
 
 
+A função go_back() apaga a linha com códigos ANSI (\033[F, \033[K), mas o terminal padrão do Windows não "sobe" a tela visível quando o cursor atinge o topo.
+
+O que você vê no terminal é um buffer fixo de visualização, e esse buffer só rola quando linhas são adicionadas, não quando são apagadas.
+
+A rich simula rolagem e atualizações dentro do seu próprio sistema de renderização, mas isso exige usar o Live, Console.clear() ou atualizar o conteúdo dinamicamente.
+
+
 
