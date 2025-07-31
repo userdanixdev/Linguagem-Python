@@ -26,4 +26,7 @@ Para melhorar o efeito da sua função go_back() usando a biblioteca rich e tent
 visual e limpa, você vai precisar trocar o controle manual dos códigos ANSI pelo controle do conteúdo via rich.live.Live.
 
 
+31/07/2025 -> Decidir por não alterar nada ainda, usando o 'rich', por falta de tempo e paciência.
+
+
 
