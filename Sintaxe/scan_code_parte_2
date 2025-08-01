@@ -1,7 +1,0 @@
-O que é o "monitoramento de teclas"?
-O monitoramento de teclas (também chamado de key listening ou event hook) serve para que o seu programa responda a eventos do teclado 
-em tempo real, ou seja:
-
-"Quando o usuário apertar uma determinada tecla, o programa deve executar uma ação automaticamente."
-
-O monitoramento é o coração da interação em tempo real com o teclado. Sem ele, o programa não "reage" ao que o usuário faz.
