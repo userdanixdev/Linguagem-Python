@@ -53,3 +53,12 @@ def on_key_event(e):
 print("\n🎮 Programa ativo. Pressione ESC para sair.\n")
 keyboard.on_press(on_key_event)
 keyboard.wait("esc")
+
+O que esse código faz?
+Pede para o usuário configurar as teclas, com ou sem Ctrl, Shift, Alt.
+
+Detecta automaticamente se um modificador estava pressionado.
+
+Guarda o scan_code + modificador numa tabela (actions).
+
+Durante a execução, verifica se o scan_code e o modificador estão corretos antes de executar a função.
