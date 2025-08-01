@@ -62,3 +62,6 @@ Detecta automaticamente se um modificador estava pressionado.
 Guarda o scan_code + modificador numa tabela (actions).
 
 Durante a execução, verifica se o scan_code e o modificador estão corretos antes de executar a função.
+
+
+Deixar isso visualmente mais bonito no terminal com rich.
