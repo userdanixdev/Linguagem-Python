@@ -59,3 +59,9 @@ keyboard.wait("esc")
 Porque configurar as teclas é só a primeira parte. Isso apenas informa ao programa quais scan_codes ele deve observar.
 Mas o monitoramento em tempo real é o que permite que o programa reaja quando essas teclas forem realmente pressionadas.
 
+esumo objetivo:
+Etapa	O que faz	Quando acontece
+capturar_tecla()	Descobre qual tecla o usuário quer usar	No início do programa
+keyboard.on_press()	Escuta o teclado o tempo todo	Durante a execução do programa
+on_key_event()	    Reage quando uma tecla específica é pressionada	Sempre que uma tecla for pressionada
+
