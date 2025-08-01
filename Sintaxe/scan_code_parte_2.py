@@ -52,5 +52,10 @@ print("\n🎮 Teclas prontas! Agora o programa está ativo. Pressione ESC para s
 
 # Inicia o monitoramento
 keyboard.on_press(on_key_event)
-keyboard.wait("esc")  # O programa ficará ativo até que o usuário pressione ESC
+keyboard.wait("esc") 
+# O programa ficará ativo até que o usuário pressione ESC
+
+“Se as teclas já foram configuradas... por que continuar monitorando?”
+Porque configurar as teclas é só a primeira parte. Isso apenas informa ao programa quais scan_codes ele deve observar.
+Mas o monitoramento em tempo real é o que permite que o programa reaja quando essas teclas forem realmente pressionadas.
 
