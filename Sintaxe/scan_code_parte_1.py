@@ -31,4 +31,12 @@ for acao, code in scan_codes.items():
     print(f"{acao}: scan_code = {code}")
 
 
+O que esse código faz?
+Solicita que o usuário pressione uma tecla para cada função.
+
+Mostra o scan_code correspondente.
+
+Você pode armazenar isso em um arquivo JSON, para salvar e reutilizar depois — se quiser, te mostro isso no próximo passo.
+
+
 
