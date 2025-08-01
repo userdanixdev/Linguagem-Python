@@ -1,3 +1,5 @@
+ERRO CALL BACK TECLADO:
+
 Se o programa "trava" ou para de responder ao mudar o teclado (ex: de ABNT para US), 
 isso pode acontecer porque a biblioteca keyboard depende diretamente do layout físico e do mapeamento de teclas do sistema operacional. 
 Alterar o layout do teclado pode causar problemas de mapeamento de scan_code ou name das teclas — 
