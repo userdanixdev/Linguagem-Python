@@ -4,7 +4,7 @@ from time import sleep
 import sys
 import keyboard
 
-class sintaxe_dois_:     
+class geoprocessamento:     
     def __init__(self):
         # Inicializa o Colorama
         init(autoreset=True)
@@ -45,9 +45,9 @@ class sintaxe_dois_:
         i = 0
         while i < len(text):
             if text[i] == '[':
-                end_index = text.find(']',i + 1 )
-                if end_index != -1 and text [i+1:end_index] in color_codes:
-                    current_line += text [i:end_index +1]
+                end_index = text.find(']', i + 1)
+                if end_index != -1 and text[i+1:end_index] in color_codes:
+                    current_line += text[i:end_index + 1]
                     i = end_index + 1
                     continue
             current_line += text[i]
@@ -67,19 +67,18 @@ class sintaxe_dois_:
             nonlocal paused
             paused = not paused
 
-
         def go_back():
-                nonlocal current_index, rewind_requested
-                if current_index > 0:
-                    current_index -= 1
-                    rewind_requested = True # Sinaliza para interromper a linha atual
-                    sys.stdout.write("\033[F") # Move o cursor para a linha anterior
-                    sys.stdout.write("\033[K")  # Limpa a linha
-                    sys.stdout.flush()
+            nonlocal current_index, rewind_requested
+            if current_index > 0:
+                current_index -= 1
+                rewind_requested = True  # Sinaliza para interromper a linha atual
+                sys.stdout.write("\033[F")  # Move o cursor para a linha anterior
+                sys.stdout.write("\033[K")  # Limpa a linha
+                sys.stdout.flush()
 
         def increase_speed():
             nonlocal speed
-            speed = max(0.005, speed - 0.01) # 
+            speed = max(0.005, speed - 0.01)
 
         def decrease_speed():
             nonlocal speed
@@ -98,31 +97,30 @@ class sintaxe_dois_:
             rewind_requested = False # Reseta o sinal de retorno antes de começar
             while i < len(line):
                     if paused:
-                        sleep (0.1)
+                        sleep(0.1)
                         continue
                     if rewind_requested:
                         break # Interrompe a linha se voltar foi pedido
 
                     if line[i] == '[':
-                            end_index = line.find(']', i + 1)
-                            if end_index != -1:
-                                color_code = line [i + 1:end_index]
-                                if color_code in color_codes:
-                                    current_color = color_codes[color_code]
-                                    i = end_index + 1
-                                    continue
+                        end_index = line.find(']', i + 1)
+                        if end_index != -1:
+                            color_code = line[i + 1:end_index]
+                            if color_code in color_codes:
+                                current_color = color_codes[color_code]
+                                i = end_index + 1
+                                continue
                     sys.stdout.write(current_color + line[i])
                     sys.stdout.flush()
                     sleep(speed)
                     i += 1
             if not rewind_requested:
-                current_index += 1 # Só avança se não foi pedido para voltar                    
-            
+                current_index += 1  # Só avança se não foi pedido para voltar
 
         print(Style.RESET_ALL)
         
     def cartografia(self):
-            return '''
+        return '''
             [blue]Aqui vai o conteúdo dos exercícios 1.[reset]
 Cartografia faz parte da ciência geográfica.
 'carto' -> Mapas / 'grafia' -> Escrita
@@ -213,7 +211,7 @@ que você identifique rapidamente a direção em relação aos pontos cardeais, 
             '''
 
     def exercicios_cart(self):
-            return '''
+        return '''
             [blue]Aqui vai o conteúdo dos exercícios 1.[reset]
  Q1. Qual das seguintes afirmações está de acordo com o conceito de cartografia e a importância do estudos mapas?
 
@@ -425,7 +423,7 @@ Então, temos o OESTE com o Sol se pondo e os polos ficam invertidos. A direçã
 
 
     def coordenadas_geograficas(self):
-            return '''
+        return '''
             [blue]Aqui vai o conteúdo dos exercícios 2.[reset]
 COORDENADAS GEOGRÁFICAS:
 
@@ -485,7 +483,7 @@ construção e turismo.
 
             '''
     def exercicios_coordenadas(self):
-            return '''
+        return '''
             [blue]Aqui vai o conteúdo dos exercícios 2.[reset]
 Q1. (FGV-2022/IBGE) As coordenadas geográficas consistem em um dos métodos mais eficientes de localização, pois permitem identifcar qualquer ponto da superfície
 da Terra por meio de dois valores:
@@ -814,8 +812,8 @@ Alternativa 'B'.
             
             
             '''            
-    def projecoes_cartograficas (self):
-            return '''
+    def projecoes_cartograficas(self):
+        return '''
             [blue]Aqui vai o conteúdo dos exercícios 3.[reset]
             Projeções cartográficas são métodos utilizados para representar a superfície curva da Terra em um plano bidimensional, como um mapa.
 PROJEÇÕES CARTOGRÁFICAS
@@ -1102,7 +1100,7 @@ CURVAS de nível: ISOÍPSA
 São linhas que unem pontos de mesma altitude.
 '''
     def exercicios_proj_car(self):
-        return'''
+        return '''
 
 Q1 (IBADE-2020-SEE-AC) Leia e analise as afirmativas a seguir.
 
@@ -1426,7 +1424,7 @@ e. ERRADO. A de Robinson é uma projeção de compromisso, nem conforme e nem eq
 
             '''            
     def geodesia(self):
-            return '''
+        return '''
             [blue]Aqui vai o conteúdo dos exercícios 4.[reset]
             Geodésia é a ciência que estuda a forma e as dimensões da Terra, bem como a determinação precisa das posições na superfície terrestre.
 
@@ -1916,7 +1914,7 @@ D) SIRGAS95
 '''
 
     def geoprocessamento(self):
-            return '''
+        return '''
 
 GEOPROCESSAMENTO 
 	
