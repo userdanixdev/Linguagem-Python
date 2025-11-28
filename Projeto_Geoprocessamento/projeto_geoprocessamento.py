@@ -3740,6 +3740,7 @@ Resposta correta: A – parte da radiação incidente consegue atravessar o obje
 
 if __name__=='__main__':
      
-    sintaxe = sintaxe_dois_()
-    sintaxe.menu()
+    Geoprocessamento = geoprocessamento()
+    Geoprocessamento.menu()
+
                 
