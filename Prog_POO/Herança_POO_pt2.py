@@ -2,7 +2,7 @@
 # Aqui na parte II , exibe os métodos '__str__' e o 'super().__init__()' para herdar atributos da classe pai
 #### Com o método '__str__' podemos verificar os dados que estão na classe sem a necessidade de imprimi-los. #####
 ##### Além disso, o método '__str__' só é possível executá-lo quando chamar o método especial 'super().__init__()' ####
-
+### Outro ponto importante: Na herança, as classes 'motocicleta' e 'carro' herdaram os atributos da classe pai. ###
 class veiculo:
     def __init__(self, cor, placa, rodas):
      self.cor = cor      # Definições de atributos da classe veiculo
