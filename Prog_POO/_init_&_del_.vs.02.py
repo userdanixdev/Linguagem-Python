@@ -57,11 +57,38 @@ print("\n--- Cachorro cadastrado ---")
 print(f"Nome: {c.nome}")
 print(f"Raça: {c.raca}")
 print(f"Idade: {c.idade} anos")
-
+print(f"Acordado: {'Sim' if c.acordado else 'Não'}")  ## Adicionado o cadastro do comportamento do cachorro
 print("\n--- Testando comportamentos ---")
 c.latir()
 c.sentar()
 c.correr()
 print(c)
 dog_novo()
+
+#Resultados na tela abaixo:
+
+Digite o nome do dog: Star
+Digite a raça do dog: Pitbull
+Digite a idade do dog: 10
+O dog está acordado? (s/n): n
+Inicializando dados do cachorro...
+
+--- Cachorro cadastrado ---
+Nome: Star
+Raça: Pitbull
+Idade: 10 anos
+Acordado: Não
+
+--- Testando comportamentos ---
+Zzzzz... O cachorro está dormindo.
+Cachorro sentado.
+Correndo devagarinho!!
+cachorro: ['nome=Star', 'raca=Pitbull', 'idade=10', 'acordado=False']
+Inicializando dados do cachorro...
+cachorro: ['nome=Rex', 'raca=Pastor Alemão', 'idade=5', 'acordado=True']
+O cachorro Rex foi deletado da memória.
+O cachorro Star foi deletado da memória.
+
+
+
 
