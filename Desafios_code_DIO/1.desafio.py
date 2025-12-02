@@ -48,6 +48,8 @@ class bicicleta:
 	    print('Bicicleta: PARADA.')
     def correr (self):
         print('VRUMMMMM!!')
+	def __str__(self): #<- Método especial para representar o objeto como strings
+		return f"{self.__class__.__name__}:{[f'{chave}={valor}'for chave, valor in self.__dict__.items()]}'
 
 # Os comportamentos da classe bicicleta são definidos por métodos. Para definir o método usamos em Python a palavra reservada 'def'
 # e pelo menos dentro do comportamento, entre parênteses, um argumento, obrigatoriamente, chamado 'self'
@@ -69,5 +71,6 @@ print("\n--- Testando comportamentos ---")
 b1.buzinar()
 b1.correr()
 b1.parar()
+print(b1) # O método '__str__' irá retornar todos os valores em 'strings' da classe
 
 
