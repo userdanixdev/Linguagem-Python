@@ -1,34 +1,33 @@
-Conhecer o paradigma de programação orientada a objeto (POO)
+#Conhecer o paradigma de programação orientada a objeto (POO)
 
-	É a forma como você soluciona os problemas através do código.
+#	É a forma como você soluciona os problemas através do código.
 
-Alguns paradigmas em Python
+#Alguns paradigmas em Python
 
-	Imperativo ou procedural
-	Funcional
-	Orientado a eventos
-	Orienta a objetos
+#	Imperativo ou procedural
+##	Orientado a eventos
+#	Orienta a objetos
 
-O paradigma de programação orientado a objetos estrutura o código abstraindo problemas em objetos do mundo real,
-facilitando o entendimento do código e tornando-o mais modular e extensível. Os dois conceitos chaves para aprender são: classes e objetos
+#O paradigma de programação orientado a objetos estrutura o código abstraindo problemas em objetos do mundo real,
+#facilitando o entendimento do código e tornando-o mais modular e extensível. Os dois conceitos chaves para aprender são: classes e objetos
 
-Exemplo: Produtos que foram vendidos em um supermercado
-Com a orientação a objetos eu consigo criar classes e objetos que vão mapear os produtos dentro do sistema que irão se parecer muito com
-os objetos da vida real.
+#Exemplo: Produtos que foram vendidos em um supermercado
+#Com a orientação a objetos eu consigo criar classes e objetos que vão mapear os produtos dentro do sistema que irão se parecer muito com
+#os objetos da vida real.
 
-Criando uma classe eu posso descrever as caracaterísticas desses produtos de supermercado.
-O produto tem um preço, um nome, fabricante, data de validade. Tudo isso vai na especificação de uma classe.
-Mas são diversos produtos como uma farinha, bolacha, sal, açucar. Podemos trazer esses produtos para a programação orientada a objeto.
+#Criando uma classe eu posso descrever as caracaterísticas desses produtos de supermercado.
+#O produto tem um preço, um nome, fabricante, data de validade. Tudo isso vai na especificação de uma classe.
+#Mas são diversos produtos como uma farinha, bolacha, sal, açucar. Podemos trazer esses produtos para a programação orientada a objeto.
 
-CLASSES E OBJETOS:
-	Uma classe define as características e comportamentos de um objeto. Os objetos podemos usá-los e eles possuem características
-e comportamentos que foram definidos nas classes. A 'instância' deles (objetos) eu consigo utilizar.
-Imagine uma classe 'casa' onde podemos colocar 'números de quartos', 'caragem', 'cor das paredes'. Assim podemos instânciar várias 'casas'
-com diversas características. A ideia da programação orientada a objetos, a partir da planta de uma casa, construir outras casas.
+#CLASSES E OBJETOS:
+#	Uma classe define as características e comportamentos de um objeto. Os objetos podemos usá-los e eles possuem características
+#e comportamentos que foram definidos nas classes. A 'instância' deles (objetos) eu consigo utilizar.
+#Imagine uma classe 'casa' onde podemos colocar 'números de quartos', 'caragem', 'cor das paredes'. Assim podemos instânciar várias 'casas'
+#com diversas características. A ideia da programação orientada a objetos, a partir da planta de uma casa, construir outras casas.
 
-Desafio
-	Crie um programa onde joão informe: cor, modelo, ano e valor da bicicleta vendida. Uma bicicleta pode: buzinar, parar e correr.
-Adicione esses comportamentos.
+#Desafio
+#	Crie um programa onde joão informe: cor, modelo, ano e valor da bicicleta vendida. Uma bicicleta pode: buzinar, parar e correr.
+#Adicione esses comportamentos.
 
 #Desafio
 #	Crie um programa onde joão informe: cor, modelo, ano e valor da bicicleta vendida. Uma bicicleta pode: buzinar, parar e correr.
@@ -70,4 +69,5 @@ print("\n--- Testando comportamentos ---")
 b1.buzinar()
 b1.correr()
 b1.parar()
+
 
