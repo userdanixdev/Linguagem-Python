@@ -1,7 +1,8 @@
 # Desafio:
 #	Crie um programa onde o usuário informa: nome, raça, idade do cachorro.
 	# Um cachorro pode: latir, correr e sentar
-#   Adicione esses comportamentos.
+#####   Adicionado + comportamentos com controle de condicionais. ###
+#### Métodos construtores e destrutores #####
 
 # O Objetivo desse estudo é além de mostrar o comportamento do objeto. Como também mostrar os métodos especiais '__init__'
 # mostrando uma mensagem inicializando. E o método '__del__' que deleta os comportamentos do objeto, no final do programa.
@@ -16,7 +17,7 @@ class cachorro:
      
     def __del__(self):				#<- Método destrutor, executado no final do programa
      print(f'O cachorro {self.nome} foi deletado da memória.')
-# Agora preciso colocar 3 comportamentos para a bicicleta. Os métodos são bem parecidos com funções que estão dentro de uma classe.
+# Agora preciso colocar 3 comportamentos para o cachorro. Os métodos são bem parecidos com funções que estão dentro de uma classe.
     def latir (self):
         if self.acordado:
             print('AU AU AU!!')  
