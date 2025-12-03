@@ -1,4 +1,4 @@
-# Simulador Bancário Básico:
+# Simulador Bancário Básico 1.0
 # 1. Menu simples
 # 2. Variáveis contadoras e limitadas
 # 3. Estruturas de repetição e condicionais simples, sem tratamento de erros.
