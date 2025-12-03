@@ -3,8 +3,9 @@
  # Data: 2024-06-15 15:45h
  # Descrição: Este código simula um sistema bancário mais complexo.
  # Permite depósitos, saques e exibição de extratos comum nas versões anteriores.
- # Possui um método de criação de novo usuário, com validação do CPF. 
- # Versão com listagem de cadastro de usuários.
+ # Possui um método de cadastro usuário, com validação do CPF. 
+ # Essa versão possui listagem de cadastro de usuários como opção no MENU.
+
 import re
 from datetime import datetime
 
