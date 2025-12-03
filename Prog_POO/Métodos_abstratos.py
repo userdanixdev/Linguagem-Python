@@ -14,20 +14,53 @@
 
 #Exemplo de controle remoto:
 
-from abc import ABC  #
+from abc import ABC  
+from abc import abstractmethod
+
 
 # O controle remoto terá dois métodos padrões:
-	class ControleRemoto(ABC):
-	        @abstractmethod
-		      def ligar(self):    # 1º método seria ligar
-			        pass
-	        @abstractmethod
-		      def desligar(self): # 2º método seria desligar
-		        	pass
-	class ControleTV(ControleRemoto):
-			pass
+class ControleRemoto(ABC):
+    @abstractmethod
+    def ligar(self):    # 1º método seria ligar
+        pass
+    @abstractmethod
+    def desligar(self): # 2º método seria desligar
+       	pass
+    @property
+    #@abstractproperty     # 3º método comum para todas as classes filhas, método abstrato de propriedade obrigatório;
+    def marca(self):      
+        print("Marca: Generic")
+class ControleTV(ControleRemoto):
+    def ligar(self):
+        print("A TV está ligada.")
+    def desligar(self):
+        print("A TV está desligada.")
+    @property
+    def marca(self):
+        print("Marca: Samsung")        
+
+class ControleArCondicionado(ControleRemoto):
+    def ligar(self):
+        print("O ar condicionado está ligado.")
+    def desligar(self):
+        print("O ar condicionado está desligado.")       
+    @property
+    def marca(self):
+        print("Marca: LG")         
+        
+        
 
 	
-controle =  ControleTV()   # Foi instânciado a classe 'ControleTV' mas o sistema não deixará, porque foi criado uma 'abstractmethod'
+controle = ControleTV()   # Foi instânciado a classe 'ControleTV' mas o sistema não deixará, porque foi criado uma 'abstractmethod',       
+controle.ligar()            # Eles são agora métodos abstratos. Sendo obrigado a implementar os dois métodos na classe filha.
+controle.desligar()
+print(controle.marca)
+
+controle = ControleArCondicionado()
 controle.ligar()
 controle.desligar()
+print(controle.marca)
+# Sendo assim, por padronização, todas as classes que herdam de 'ControleRemoto' serão obrigadas a implementar os métodos 'ligar' e 'desligar'.
+# No qual são métodos abstratos. Fornecendo segurança maior para o polimorfismo. Garantindo que todas as classes filhas terão esses métodos.
+# Sendo forçado as classes filhas a implementar esses métodos.
+
