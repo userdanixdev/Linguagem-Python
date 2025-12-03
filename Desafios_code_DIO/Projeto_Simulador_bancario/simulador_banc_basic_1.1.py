@@ -1,5 +1,5 @@
 # Simulador Bancário Básico
-# Versão 1.0
+# Versão 1.1
 # 1. Menu Simples
 # 2. Insere estrutura de repetição e condicionais com tratamento de erros.
 # 3. Validações de entrada e novas variáveis com regras para o sistema.
