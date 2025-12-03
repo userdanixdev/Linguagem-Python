@@ -2,7 +2,7 @@
 # Versão 1.1
 # 1. Menu Simples
 # 2. Insere estrutura de repetição e condicionais com tratamento de erros.
-# 3. Validações de entrada e novas variáveis com regras para o sistema.
+# 3. Novas validações de entrada, robustes nas opções e novas variáveis com regras para o sistema.
 
 menu = '''
         [d] Depositar
@@ -16,10 +16,10 @@ limite = 500
 extrato = ''
 numero_saques = 0
 LIMITE_SAQUES = 3
-
+# Na versão 1.1, o código foi ajustado para incluir a funcionalidade de depósito.
 while True:
     opcao = input(menu).strip().lower() # Converter para minúsculo e remover espaços extras
-
+    # Melhoramento da função de depósito
     if opcao == 'd':
         while True:
             try:
@@ -34,7 +34,7 @@ while True:
             except ValuerError:
                 print('Operação falhou. O formato do valor inválido.')
         
-    elif opcao == 's':
+    elif opcao == 's': # A função de converter os caracteres para minusculo e remover espaços já estão no input do menu.
         while True:
             try:
                 valor = float(input('Informe o valor do saque: '))
@@ -63,7 +63,7 @@ while True:
         
         print('Sacar')
     elif opcao == 'e':
-
+# Criação da função de extrato mais robusta
         print(f'{"+"*50}\n{"Extrato":^48}\n{"+"*50}')
         print('Não foram realizadas movimentações...'if not extrato else extrato)
         print(f'\nSaldo: R$ {saldo:.2f}')
