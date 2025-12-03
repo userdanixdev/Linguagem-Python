@@ -1,5 +1,7 @@
-# Simulador Bancário:
-# Versão 02: Inserindo condicionais, validações de entrada e novas variáveis.
+# Simulador Bancário Básico
+# Versão 1.0
+# 1. Insere estrutura de repetição e condicionais com tratamento de erros.
+# 2. Validações de entrada e novas variáveis com regras para o sistema.
 
 menu = '''
         [d] Depositar
