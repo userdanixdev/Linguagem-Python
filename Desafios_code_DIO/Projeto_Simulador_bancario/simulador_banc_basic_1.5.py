@@ -1,6 +1,6 @@
 # Simulador Bancário Básico - Versão 1.5 - Modelo Funcional 
  # Autor: Daniel
- # Data: 2024-06-15 15:45h
+ # Data: 2024-06-15 20:45h
  # Descrição: Este código simula um sistema bancário mais complexo.
  # Permite depósitos, saques e exibição de extratos comum nas versões anteriores.
  # Possui um método de cadastro usuário, com validação do CPF. 
