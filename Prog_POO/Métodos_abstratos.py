@@ -64,3 +64,5 @@ print(controle.marca)
 # No qual são métodos abstratos. Fornecendo segurança maior para o polimorfismo. Garantindo que todas as classes filhas terão esses métodos.
 # Sendo forçado as classes filhas a implementar esses métodos.
 
+https://docs.python.org/pt-br/3/library/abc.html
+
