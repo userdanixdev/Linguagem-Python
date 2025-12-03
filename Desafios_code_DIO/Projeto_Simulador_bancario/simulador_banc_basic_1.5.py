@@ -6,8 +6,8 @@
  # Possui um método de cadastro usuário, com validação do CPF. 
  # Essa versão possui listagem de cadastro de usuários na opção no MENU.
  # Obs: Essa versão diminui a complexidade e extensibilidade da função 'criar_usuario()'. Para isso foi criada a função 'filtrar_usuario()'
- # A versão 1.5 possui o serviço de 'nova conta'.
- # A listagem do usuário está mais completa com dados da conta e agência.
+ # A versão 1.5 possui o serviço de 'novo_usuario' para abrir 'nova conta'.
+ # A listagem do usuário cadastrado está mais completa como dados da conta e dados de agência.
 
 import re
 from datetime import datetime
