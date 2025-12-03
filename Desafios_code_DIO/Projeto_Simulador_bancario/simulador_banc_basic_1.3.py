@@ -214,9 +214,7 @@ while True:
             print("="*30)
     elif opcao == 'nu':
         criar_usuario()  # Função adicionada a versão
-    else:
-        print('Operação inválida. Selecione a opção correta.')       
-    if opcao == 'lu':
+    elif opcao == 'lu':
         if not usuarios:
             print('Nenhum usuário cadastrado.')        
         else:
