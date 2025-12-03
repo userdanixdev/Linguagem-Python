@@ -259,43 +259,7 @@ limite = 500
 extrato = ''
 n_saques = 0
 LIMITE_SAQUES = 3
-# Listas de mensagens (personalize como quiser):
-mensagens_valores_invalidos = [
-    'Operação falhou! O valor informado é inválido. Somente valores positivos são aceitos.',
-    'Valor inválido! Tente um número maior que zero.',
-    'Esse número não é aceitável para saque. Por favor, insira um valor positivo.',
-    'Cuidado! Digite um valor válido para continuar a operação.'
-]
 
-mensagens_saldo_insuficiente = [
-    'Operação falhou! Você não tem saldo suficiente,',
-    'Saldo insuficiente! Verifique seu saldo antes de tentar novamente.',
-    'Você não possui fundos suficientes para essa operação.',
-    'Saldo negativo detectado! Por favor, deposite fundos antes de tentar novamente.'
-]
-
-mensagens_limite_excedido = [
-    'Operação falhou! O valor do saque excede o limite.',
-    'Limite de saque ultrapassado! Tente um valor menor.',
-    'Valor acima do limite diário permitido para saques.',
-    'Saque negado - ultrapassou o limite estabelecido.'
-]
-
-mensagens_excede_saques = [
-    'Operação falhou! Número máximo de saques diários excedido.',
-    'Limite de saques diários atingido! Tente novamente amanhã.',
-    'Você já realizou o número máximo de saques permitidos para hoje.',
-    'Saque não autorizado - limite diário de saques alcançado.',
-    'Tente amanhã, quem sabe você tenha mais sorte!'
-]
-
-# Contadores que registram tentativas de cada tipo de tentativas:
-
-contador_valores_invalidos = 0
-contador_saldo_insuficiente = 0
-contador_limite_excedido = 0
-contador_excede_saques = 0
-# Na versão 1.1, o código foi ajustado para incluir a funcionalidade de depósito.
 while True:
     opcao = input(menu).strip().lower() # Converter para minusculo e remover espaços
     if opcao == 'd': # Melhoramento da função de depósito, a partir da versão 1.5
