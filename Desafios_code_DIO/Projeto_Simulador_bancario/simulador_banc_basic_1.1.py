@@ -1,7 +1,8 @@
 # Simulador Bancário Básico
 # Versão 1.0
-# 1. Insere estrutura de repetição e condicionais com tratamento de erros.
-# 2. Validações de entrada e novas variáveis com regras para o sistema.
+# 1. Menu Simples
+# 2. Insere estrutura de repetição e condicionais com tratamento de erros.
+# 3. Validações de entrada e novas variáveis com regras para o sistema.
 
 menu = '''
         [d] Depositar
