@@ -225,12 +225,12 @@ while True:
                 print(f"\nNome: {usuario['nome']}\nCPF: {usuario['cpf']}\nData de Nascimento: {usuario['data_nascimento']}\n"
                     f"Cidade: {usuario['endereco']['cidade']} - {usuario['endereco']['estado']}\nBairro: {usuario['endereco']['bairro']}\n"
                     f"Rua: {usuario['endereco']['rua']}\nNúmero da casa: {usuario['endereco']['numero_casa']}")
-    if opcao == 'q':
+    elif opcao == 'q':
         break
         import os
         exit()
     else:
-        print('Operacao inválida. Selecione a opção correta.')
+        print('Operação inválida. Selecione a opção correta.')
                         
 
      
