@@ -1,13 +1,13 @@
 # Simulador Bancário Básico - Versão 1.5 - Modelo Funcional 
  # Autor: Daniel
- # Data: 2024-06-15 20:45h
+ # Data: 2024-06-15 15:45h
  # Descrição: Este código simula um sistema bancário mais complexo.
  # Permite depósitos, saques e exibição de extratos comum nas versões anteriores.
  # Possui um método de cadastro usuário, com validação do CPF. 
  # Essa versão possui listagem de cadastro de usuários na opção no MENU.
  # Obs: Essa versão diminui a complexidade e extensibilidade da função 'criar_usuario()'. Para isso foi criada a função 'filtrar_usuario()'
- # A versão 1.5 possui o serviço de 'novo_usuario' para abrir 'nova conta'.
- # A listagem do usuário cadastrado está mais completa como dados da conta e dados de agência.
+ # A versão 1.5 possui o serviço de 'nova conta'.
+ # A listagem do usuário está mais completa com dados da conta e agência.
 
 import re
 from datetime import datetime
@@ -18,6 +18,38 @@ contas = []
 # Funcionalidade nova para a versão 1.5, realização de saque funcional.
 def realizar_saque(conta, limite,LIMITE_SAQUES ):
 
+    contador_valores_invalidos = 0
+    contador_saldo_insuficiente = 0
+    contador_limite_excedido = 0
+    contador_excede_saques = 0
+    mensagens_valores_invalidos = [
+        'Operação falhou! O valor informado é inválido. Somente valores positivos são aceitos.',
+        'Valor inválido! Tente um número maior que zero.',
+        'Esse número não é aceitável para saque. Por favor, insira um valor positivo.',
+        'Cuidado! Digite um valor válido para continuar a operação.'
+    ]
+
+    mensagens_saldo_insuficiente = [
+        'Operação falhou! Você não tem saldo suficiente,',
+        'Saldo insuficiente! Verifique seu saldo antes de tentar novamente.',
+        'Você não possui fundos suficientes para essa operação.',
+        'Saldo negativo detectado! Por favor, deposite fundos antes de tentar novamente.'
+    ]
+
+    mensagens_limite_excedido = [
+        'Operação falhou! O valor do saque excede o limite.',
+        'Limite de saque ultrapassado! Tente um valor menor.',
+        'Valor acima do limite diário permitido para saques.',
+        'Saque negado - ultrapassou o limite estabelecido.'
+    ]
+
+    mensagens_excede_saques = [
+        'Operação falhou! Número máximo de saques diários excedido.',
+        'Limite de saques diários atingido! Tente novamente amanhã.',
+        'Você já realizou o número máximo de saques permitidos para hoje.',
+        'Saque não autorizado - limite diário de saques alcançado.',
+        'Tente amanhã, quem sabe você tenha mais sorte!'
+    ]
     saldo = conta['saldo']
     extrato = conta['extrato']
     n_saques = conta['n_saques']
@@ -259,6 +291,7 @@ limite = 500
 extrato = ''
 n_saques = 0
 LIMITE_SAQUES = 3
+
 
 while True:
     opcao = input(menu).strip().lower() # Converter para minusculo e remover espaços
