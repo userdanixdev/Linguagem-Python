@@ -1,12 +1,15 @@
-# simulador_poo.py
+# Simualdor Bancário Versão Orientada a Objeto 1.1
+# Autor: Daniel / Data: 04/12/2025 10:50h
+# Nesse versão, foi atualizado o menu. Isolado das opções.
+# Foram realizadas pequenas alterações.
+
 import re
 from abc import ABC, abstractmethod
 from datetime import datetime
 import textwrap
 
-# -------------------------
+
 # Classes do modelo (UML)
-# -------------------------
 
 class Cliente:
     def __init__(self, endereco: dict):
@@ -207,9 +210,7 @@ def validar_cpf(cpf: str) -> bool:
     return cpf[-2:] == f"{primeiro}{segundo}"
 
 
-# -------------------------
 # "Banco" - gerencia usuários e contas (mantém listas, mas usa classes UML)
-# -------------------------
 
 class Banco:
     def __init__(self):
@@ -459,11 +460,6 @@ class Banco:
             conta.gerar_extrato()
         else:
             print('Nenhuma conta encontrada para o CPF informado.\nPor favor crie uma conta e um novo usuário.')
-
-
-# -------------------------
-# Menu interativo (mantém a experiência funcional)
-# -------------------------
 
 def menu():
     menu = """\n
