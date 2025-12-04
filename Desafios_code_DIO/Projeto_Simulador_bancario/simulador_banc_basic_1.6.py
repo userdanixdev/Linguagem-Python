@@ -1,4 +1,4 @@
-# Simulador Bancário Básico - Versão 1.7 - Modelo Funcional 
+# Simulador Bancário Básico - Versão 1.6 - Modelo Funcional 
  # Autor: Daniel
  # Data: 2024-06-15 21:19h
  # Descrição: Este código simula um sistema bancário mais complexo.
