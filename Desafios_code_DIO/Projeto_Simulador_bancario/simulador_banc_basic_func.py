@@ -1,5 +1,6 @@
-# Simulador Bancário:
-# Versão 03: Funções
+# Simulador Bancário versão funcional
+# Feita pelo tutor Guilherme Carvalho - Analista de Sistemas - CEO - OAK Solutions
+
 
 import textwrap
 
