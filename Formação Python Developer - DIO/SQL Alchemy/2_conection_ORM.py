@@ -59,6 +59,12 @@ User (id=2, first_name=Daniel, full_name:Martins)
 Address (id=None, e-mail=daniel@gmail.com)
 Address (id=None, e-mail=thiago@gmail.com)
 
+
 # O ID está saindo 'None' porque não há um banco de dados. Somente tabelas.
+# O SQLAlchemy não coloca os IDs, o banco é quem cria o ID autoincrement;
+# Logo o id=None é devido ser antes do commit;
+# O banco de dados cria o ID e o SQLAlchemy preenche somente depois do commit.
+# Somente após o commit, o banco devolve o ID gerado, e aí o SQLAlchemy preenche o atributo.
+# Será necessário criar um engine, criar uma Session. Logo, o objeto criado não irá mais aparecer 'None'
 
 
