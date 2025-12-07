@@ -1,3 +1,6 @@
+# Conexão com SQL Alchemy via Python.
+# Essa 1° versão será instanciada via argumentos nomeados.
+
 # pip install sqlalchemy
 import sqlalchemy #as sqlalchemy
 from sqlalchemy.orm import declarative_base
