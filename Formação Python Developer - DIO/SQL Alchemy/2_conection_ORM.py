@@ -59,4 +59,6 @@ User (id=2, first_name=Daniel, full_name:Martins)
 Address (id=None, e-mail=daniel@gmail.com)
 Address (id=None, e-mail=thiago@gmail.com)
 
+# O ID está saindo 'None' porque não há um banco de dados. Somente tabelas.
+
 
