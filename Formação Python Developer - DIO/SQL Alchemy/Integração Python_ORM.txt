@@ -1,0 +1,43 @@
+Formação Python Developer
+Integrando Python com BDs relacional e NoSQL
+Tech Education : Juliana Mascarenhas
+
+Trabalhar com a principal biblioteca ORM de integração de SGBDs com Python - SQL Alchemy.
+Além disso, utilizaremos o PyMONGO para banco de dados NoSQL.
+
+O foco é na integração com a biblioteca ORM.(Object Relational Mapping)
+
+O SQLAlchemy é um framework, open source, licença MIT - 2019 e é orientada a objetos relacionais.
+Trazer os dados estruturados de banco de dados relacionais para a orientação a objetos.
+Compatível com MySQL, SQLite, Oracle, Microsoft SQL Server e PostgreSQL com integração.
+O SQLAlchemy vem integrado por default o SQLite. Sem instalação de nada e integração com instâncias.
+
+Além disso, o framework é robusto, tem conexões com armazenamento e processamento distribuido como Amazon Redshift ( em nuvem )
+Elastic Search ( logs ), Apache Solr, Druid, Drill, Avalanche, entre outros.
+ORM  -> flexível.
+CORE -> Statements 
+Suporte a dialetos
+Manipulação de BD por meio de Transações
+Suporte a Queries complexas via ORM
+Configurações de relações e relacionamentos, sessões e eventos através do SQL ALchemy
+
+Vantagens:
+
+- Menos códigos
+- Melhor manuntenção
+- Utilização de conectores ( dialects )
+- Indicado para CRUDs ( cenários mais simples como consultas e algumas QUERIES complexas )
+
+Para mapear banco de dados legados é uma desvantagem.
+Pouca eficiência na construção de QUERIES
+
+Para que o uso do ORM?
+	Troca de SGBD mais facilitada
+Não é tarefa fácil trocar de BDR. Por exemplo: Está usando MySQL, mapea para o ORM, e a migração para PostgreSQL.
+Modelo MVC
+Diminuição do DRY: Dont Repeat Your Self
+Evita problemas de segurança com SGBDs
+
+Uso de views. ( encapsulamento de uma recuperação específica )
+
+www.dbdesign.net <- Modelagem Relacional , bem intuitivo. Para iniciantes. ( Construção de tabelas )
