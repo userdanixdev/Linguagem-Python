@@ -40,3 +40,6 @@ class Address(data_base):
 candidato_1 = User(id=1,ft_name="Daniel",fl_name="Martins")
 print(candidato_1)        
 
+# Retorno na tela:
+
+User (id=1, first_name=Daniel, full_name:Martins)
