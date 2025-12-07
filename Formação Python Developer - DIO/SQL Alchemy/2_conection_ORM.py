@@ -47,6 +47,16 @@ class Address(data_base):
 # SQL Alchemy permite parâmetros posicionais
 candidato_2 = User(2,"Daniel","Martins")
 print(candidato_2)
+candidato_1= Address(1,"daniel@gmail.com")
+candidato_2= Address(2,"thiago@gmail.com")
+print(candidato_1)
+print(candidato_2)
 
+# Resultados da tela:
+
+User (id=1, first_name=Daniel, full_name:Martins)
+User (id=2, first_name=Daniel, full_name:Martins)
+Address (id=None, e-mail=daniel@gmail.com)
+Address (id=None, e-mail=thiago@gmail.com)
 
 
