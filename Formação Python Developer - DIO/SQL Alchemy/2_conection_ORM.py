@@ -1,7 +1,7 @@
 # 2º Conexão com SQL Alchemy via Python.
 # A 2º versão será instanciada via argumentos posicionais
 # Para isso os parâmetros serão alterados.
-# ATENÇÃO! Podemos instanciar um objeto SQLAlchemy usando apenas argumentos posicionais, 
+# ATENÇÃO! Podemos instanciar um objeto SQLAlchemy usando argumentos posicionais, 
 # sem precisar nomear cada atributo feita pela 1º conexão.
 
 # pip install sqlalchemy
