@@ -45,7 +45,7 @@ class Usuario(Base):
 
     contas = relationship("Conta", back_populates="usuario")
 
-class Contas(Base):
+class Conta(Base):
     __tablename__ = "contas"
     id = Column(Integer, primary_key=True, autoincrement = True)
     tipo = Column(String(20)) # Diferenciar os tipos de contas
@@ -105,6 +105,15 @@ class ContaCorrente(Conta):
           raise ValueError('Saldo insuficente')
         self.saldo -= valor
       # Cada tipo de conta sobrescreve pode_sacar.
+class ContaPoupança(Conta):
+  __tablename__ = "conta_poupança"
+  id = Column (Integer, ForeignKey('contas.id), primary_key= True)
+  rendimento_mensal = Column(Float, default = 0.005)
+  __mapper_args__ = {
+  "polymorfic_identity" : "poupanca"
+  }
+  def render(self):
+    self.saldo += self.saldo * self.rendimento_mensal
 
 
 
