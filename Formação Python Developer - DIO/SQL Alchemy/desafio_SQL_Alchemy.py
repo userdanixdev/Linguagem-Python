@@ -45,14 +45,30 @@ class Usuario(Base):
 
     contas = relationship("Conta", back_populates="usuario")
 
-class Conta(Base):
-    __tablename__ = "conta"
-    id = Column(Integer, primary_key=True)
+class Contas(Base):
+    __tablename__ = "contas"
+    id = Column(Integer, primary_key=True, autoincrement = True)
+    tipo = Column(String(20)) # Diferenciar os tipos de contas
     numero = Column(String)
     saldo = Column(Float, default=0.0)
 
     usuario_id = Column(Integer, ForeignKey("usuario.id"))
     usuario = relationship("Usuario", back_populates="contas")
+    __mapper_args__ = {
+      "polymorfic_identify" : "conta",
+      "polymorfic_on" : tipo }
+
+    def depositar(self,valor):
+        if valor <= 0:
+          raise ValueError('Valor inválido')
+        self.saldo += valor
+    def sacar(self, valor):
+        if valor <= 0:
+          raise ValueError('Valor inválido')
+        if not valor self.pode_sacar(valor):
+          raise ValueError('Saldo insuficente')
+        self.saldo -= valor
+      # Cada tipo de conta sobrescreve pode_sacar.
 
 #FASE 2 — Herança (Tipos de Conta)
 # Objetivo: Criar classes derivadas com regras diferentes:
