@@ -76,17 +76,23 @@ class Contas(Base):
   # ContaPoupanca
   # ContaInvestimento
 
-class ContaCorrente(Conta):
-    __tablename__ = "conta_corrente"
-    id = Column(Integer, ForeignKey("conta.id"), primary_key=True)
-    limite_especial = Column(Float, default=0.0)
-
 # Regras Fase 2:
     # Corrente → pode ficar negativo até o limite especial
     # Poupança → limite de saques diários
     # Investimento → aplicar taxa de rendimento
 
     # Adicionar métodos “inteligentes” na entidade Conta:
+
+class ContaCorrente(Conta):
+    __tablename__ = "conta_corrente"
+    id = Column(Integer, ForeignKey("conta.id"), primary_key=True)
+    limite_especial = Column(Float, default=0.0)
+
+    __mapper_args__ = {
+      "polymorfic_identify" : 'corrente'
+    }
+
+    # Adicionar métodos “inteligentes” na entidade ContaCorrente:
 
     def depositar(self,valor):
         if valor <= 0:
@@ -99,6 +105,8 @@ class ContaCorrente(Conta):
           raise ValueError('Saldo insuficente')
         self.saldo -= valor
       # Cada tipo de conta sobrescreve pode_sacar.
+
+
 
 # FASE 3 — Auditoria (Histórico de Operações)
     # Objetivo: Registrar cada operação na tabela HistoricoOperacao.
