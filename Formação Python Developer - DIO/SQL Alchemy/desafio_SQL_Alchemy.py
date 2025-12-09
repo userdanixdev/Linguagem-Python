@@ -113,10 +113,56 @@ class Historico_operacoes(Base):
 
       session.add(origem.registrar_operacao('Transferência saída', valor, 'ok', 'transferido')
       session.add(destino.registrar_operacao(' Transferência saída',valor, 'ok', ' recebido')
-                  #Se der erro → rollback automático.
+                  # Se der erro → rollback automático.
+
+# Permitir consultas avançadas na classe 'Historico_operacoes(Base)':
+# Total movimentado por cliente: 1
+    stmt = (
+      select (Usuario.nome, func.sum(Historico_operacoes.valor))
+      .join(Usuario.contas)
+      .join(Conta.historico)
+      .group_by(Usuario.id)
+    )
+
+# Ranking : 2
+      select (Usuario.nome, func.sum(Historico_operacoes.valor).label("total"))
+        .order_by(func.sum(Historico_operacoes.valor).desc())
+
+# Cartões do Cliente
+# Objetivo: Criar nova entidade 1:N (um cliente pode ter vários cartões).     
+# Métodos: bloquear(), gerar_numero(), alterar_limite()        
+
+class Cartao(Base):
+      __tablename__ = 'cartão'
+
+      id = Column (Integer, primary_key=True)
+      numero = Column (Integer)
+      cvv = Column (String)
+      limite = Column ( Float )
+      conta_id = Column(Integer, ForeignKey("conta.id")
+      conta = relationship('Conta')
 
 
+# Deverá Segurança e Login
+# Objetivo: Adicionar autenticação, Hash de senha com bcrypt e Verificação (Usuário acessa apenas suas contas)
 
+# Deverá ter Relatórios (CSV ou PDF)
+Gerar arquivos com : Extrato detalhado , Ranking, Movimentação mensal
+Treina: pandas, reportlab, csv, xlsx.
+
+Desafio Final (Sistema Completo)
+
+Montar uma mini API bancária usando:
+
+FastAPI,SQLAlchemy, Rotas:
+/login
+/depositar
+/sacar
+/transferir
+/criar_conta
+/extrato
+
+Aí você terá um sistema bancário OO+SQLAlchemy completamente funcional.
 
 
                   
