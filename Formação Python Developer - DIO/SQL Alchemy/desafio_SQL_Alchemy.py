@@ -3,18 +3,16 @@
 # Cada desafio é pensado para treinar classes, métodos, relacionamentos, validações, transações, consultas mais avançadas e
 # regras de negócio reais.
 
-# DESAFIO 1 — Criar novos tipos de conta
-# jetivo: Ampliar o modelo OO com classes derivadas e regras específicas.
+# DESAFIO — Criar novos tipos de conta
+  # Sugestões de classes:
+  # ContaCorrente(Conta)
+  # ContaPoupanca(Conta)
+  # ContaInvestimento(Conta)
 
-# Sugestões de classes:
-# ContaCorrente(Conta)
-# ContaPoupanca(Conta)
-# ContaInvestimento(Conta)
-
-# Regras sugeridas:
-  # ContaPoupança não permite mais de 3 saques/dia.
-  # ContaCorrente permite limite especial (cheque especial).
-  # ContaInvestimento aplica rentabilidade diária.
+      # Regras sugeridas:
+        # ContaPoupança não permite mais de 3 saques/dia.
+        # ContaCorrente permite limite especial (cheque especial).
+        # ContaInvestimento aplica rentabilidade diária.
 
 # Conceitos usados:
   # Herança
@@ -26,7 +24,7 @@
    # Estrutura inicial
    # Criar as entidades principais:
       # Usuario
-      # Conta (abstrata)
+      # Contas (abstrata)
       # Endereco
       # HistoricoOperacao
 
@@ -70,7 +68,7 @@ class Conta(Base):
         self.saldo -= valor
       # Cada tipo de conta sobrescreve pode_sacar.
 
-#FASE 2 — Herança (Tipos de Conta)
+# Herança (Tipos de Conta)
 # Objetivo: Criar classes derivadas com regras diferentes:
   # ContaCorrente
   # ContaPoupanca
@@ -80,7 +78,6 @@ class Conta(Base):
     # Corrente → pode ficar negativo até o limite especial
     # Poupança → limite de saques diários
     # Investimento → aplicar taxa de rendimento
-
     # Adicionar métodos “inteligentes” na entidade Conta:
 
 class ContaCorrente(Conta):
@@ -137,10 +134,9 @@ class Conta_Investimento(self):
         return valor            
     
 
-
-
 # FASE 3 — Auditoria (Histórico de Operações)
     # Objetivo: Registrar cada operação na tabela HistoricoOperacao.
+    
 class Historico_operacoes(Base):
   __tablename__ = 'historico_operacao'
   id = Column (Integer, primary_key= True)
@@ -159,8 +155,9 @@ class Historico_operacoes(Base):
       status=status,
       mensagem=mensagem )
 
-# FASE 5 — Transações Atômicas (Transferências)
+# FASE 4 — Transações Atômicas (Transferências)
     # Objetivo: Garantir atomicidade.
+    
   def transferir(origem, destino, valor, session):
     with session.begin():
       origem.sacar(valor)
