@@ -1,12 +1,6 @@
-# CONSULTAS.
-# No processo de conexão com o banco devemos criar um banco de dados para persistir com o processo. Assim usamos o 'engine'
-# O método construtor '__init__' foi excluído no processo.
-# As sessões vão dar preferência ao construtor '__init__' que é opcional.
-# As classes criadas deverão se tornar tabelas dentro de um banco, para isso usamos o 'metadata'
-# Devemos em seguida, abrir uma sessão para persistência ao banco de dados.
+# CONSULTAS SIMPLES de recuperação:
 # Atenção aos importa ORM, deverão ser chamados também.
 # IMPORTAR NA SESSÃO A CLÁUSULA SELECT
-
 
 import sqlalchemy #as sqlalchemy
 from sqlalchemy.orm import declarative_base, relationship, Session
