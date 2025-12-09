@@ -1,6 +1,6 @@
 # FASE 1 — Fundamentos e Modelagem:
    # Estrutura inicial
-   # Criar as entidades principais:
+   # Criar as entidades principais e os atributos de dados:
       # Usuario
       # Contas (abstrata)
       # Endereco
