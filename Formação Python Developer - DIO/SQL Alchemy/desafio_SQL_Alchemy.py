@@ -119,6 +119,24 @@ class ContaPoupança(Conta):
   def render(self):
     self.saldo += self.saldo * self.rendimento_mensal
 
+# Criação da Conta Investimento. 
+# Regras sugeridas: Rendimento depende de risco, Paga taxa para resgatar (ex.: 2%) e Aplicação e resgate com regras.
+
+class Conta_Investimento(self):
+    __tablename__= 'Conta_invest'
+    id = Column (Integer, ForeignKey('contas.id'), primary_key=True)
+    taxa_resgate = Column(Float, default=0.02)
+    __mapper_args__ = {
+        "polymorfic_identify": "investimento"
+    }
+    def resgatar(self, valor):
+        valor_taxa = valor + (valor * self.taxa_resgate)        
+        if valor_taxa > self.saldo:
+            raise ValueError('Saldo insuficiente para resgate.')
+        self.saldo -= valor_taxa
+        return valor            
+    
+
 
 
 # FASE 3 — Auditoria (Histórico de Operações)
