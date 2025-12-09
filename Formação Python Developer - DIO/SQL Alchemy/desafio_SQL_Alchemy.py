@@ -105,6 +105,10 @@ class ContaCorrente(Conta):
           raise ValueError('Saldo insuficente')
         self.saldo -= valor
       # Cada tipo de conta sobrescreve pode_sacar.
+
+# Classe de conta poupança regras:
+# Regras sugeridas: Não tem limite especial, Tem rendimento mensal, Saque normal (mas pode ter carência opcional)
+
 class ContaPoupança(Conta):
   __tablename__ = "conta_poupança"
   id = Column (Integer, ForeignKey('contas.id), primary_key= True)
