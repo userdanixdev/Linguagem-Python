@@ -16,16 +16,16 @@ class Usuario(Base):
     __tablename__ = "usuarios"
 
     id = Column(Integer, primary_key=True)
-    nome = Column(String, nullalbe=True)
-    email = Column(String,nullalbe=True)
-    senha_hash = Column(String, nullalbe=True)
-    data_nascimento = Column(String, nullalbe=True)
-    endereco = Column(String,nullalbe=True)
-    telefone = Column(String, nullalbe=True)
+    nome = Column(String, nullable=False)
+    email = Column(String,nullable=False,unique=True)
+    senha_hash = Column(String, nullable=False)
+    data_nascimento = Column(String, nullable=False)
+    endereco = Column(String,nullable=False)
+    telefone = Column(String, nullable=False)
 
     # Um usuário pode ter várias contas e vários endereços (relação 1:N -> contas)
     contas = relationship("Conta", back_populates="usuario")
-    endereco = relationship("Endereço", back_populates="usuario", cascade= "all, delete-orphan")
+    endereco = relationship("Enderecos", back_populates="usuario", cascade= "all, delete-orphan")
 
 # 1° Passo: Criação das entidades Usuário e Contas ( 3 tipos de contas):
 
@@ -36,11 +36,11 @@ class Conta(Base):
     numero_conta = Column(String)
     saldo = Column(Float, default=0.0)
 
-    usuario_id = Column(Integer, ForeignKey("usuario.id"))
+    usuario_id = Column(Integer, ForeignKey("usuarios.id"))
     usuario = relationship("Usuario", back_populates="contas")
     __mapper_args__ = {
-      "polymorfic_identity" : "conta",
-      "polymorfic_on" : tipo_conta }
+      "polymorphic_identity" : "conta",
+      "polymorphic_on" : tipo_conta }
     
 # Herança (Tipos de Conta)
 # Objetivo: Criar classes derivadas com regras diferentes:
@@ -56,11 +56,11 @@ class Conta(Base):
 
 class ContaCorrente(Conta):
     __tablename__ = "conta_corrente"
-    id = Column(Integer, ForeignKey("conta.id"), primary_key=True)
+    id = Column(Integer, ForeignKey("contas.id"), primary_key=True)
     limite_especial = Column(Float, default=0.0)
 
     __mapper_args__ = {
-      "polymorfic_identity" : 'corrente'
+      "polymorphic_identity" : 'corrente'
     }
 
     # Adicionar métodos “inteligentes” na entidade ContaCorrente:
@@ -83,12 +83,12 @@ class ContaPoupança(Conta):
 # Criação da Conta Investimento. 
 # Regras sugeridas: Rendimento depende de risco, Paga taxa para resgatar (ex.: 2%) e Aplicação e resgate com regras.
 
-class Conta_Investimento(self):
+class ContaInvestimento(self):
     __tablename__= 'Conta_invest'
     id = Column (Integer, ForeignKey('contas.id'), primary_key=True)
     taxa_resgate = Column(Float, default=0.02)
     __mapper_args__ = {
-        "polymorfic_identify": "investimento"
+        "polymorphic_identify": "investimento"
     }
     def resgatar(self, valor):
         valor_taxa = valor + (valor * self.taxa_resgate)        
@@ -107,7 +107,7 @@ class Historico_operacoes(Base):
   status = Column (String)
   mensagem = Column(String)     
 
-    def registrar_operacao(self, tipo, valor, status, mensagem):
+  def registrar_operacao(self, tipo, valor, status, mensagem):
         return Historico_operacoes(
             conta_id = self.id,
             tipo = tipo,
@@ -117,10 +117,10 @@ class Historico_operacoes(Base):
         )    
 # Transações Atômicas (Transferências) Objetivo: Garantir atomicidade.        
 
-    def transferir(origem, destino, valor, session):
+  def transferir(origem, destino, valor, session):
         with session.begin():
             origem.sacar(valor)
-            destino.depositar(valor):
+            destino.depositar(valor)
 
             session.add(origem.registrar_operacao("Transferência saída", valor, "ok", "transferido"))
             session.add(destino.registrar_operacao("Transferência saída", valor, "ok", "Recebido"))
@@ -137,13 +137,10 @@ class Cartao(Base):
       conta_id = Column(Integer, ForeignKey("conta.id"))
       conta = relationship('Conta')
 
-      conta_id = Column(Integer, ForeignKey("contas.id"))
-      conta = relationship("Conta")
-
-
+      
 # Entidade endereço dos clientes. Um cliente pode ter mais de um endereço e cada endereço pertence a somente 1 usuário:
 
-class Endereco:
+class Endereco(Base):
     __tablename__= "enderecos"
     id = Column (Integer, primary_key=True)
     rua = Column(String(120), nullable=False)
@@ -171,7 +168,7 @@ class RelatoriosFinanceiros:
     def ranking_cliente(session):
         stmt = (select(Usuario.nome, func.sum(Historico_operacoes.valor).label("total"))
         .join(Usuario.contas)
-        .join(Conta.historico)
+        .join(Conta.Historico_operacoes)
         .group_by(Usuario.id)
         .order_by(func.sum(Historico_operacoes.valor).desc()))
         return session.execute(stmt).all()

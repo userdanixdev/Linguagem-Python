@@ -11,4 +11,5 @@ def test_criar_usuario(session):
     session.commit()
 
     assert u.id is not None
+    assert u.nome == "Daniel"
 
