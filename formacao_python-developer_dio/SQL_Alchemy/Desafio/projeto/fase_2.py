@@ -11,7 +11,7 @@
 
 # 1° Passo: Criação das entidades Usuário e Contas
 from sqlalchemy.orm import relationship, declarative_base
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime, func
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime, func,select
 
 Base = declarative_base()
 
