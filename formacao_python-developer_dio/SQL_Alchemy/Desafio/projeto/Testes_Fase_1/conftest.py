@@ -8,7 +8,10 @@ def session():
     engine = create_engine("sqlite:///:memory:", echo = False)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    return Session()
+    s = Session()
+    yield s
+    s.close()
+    #return Session()
 
 # Isso cria um banco limpo a cada teste.    
 # Os testes da fase 1 servem para verificar as dependências, instâncias,
