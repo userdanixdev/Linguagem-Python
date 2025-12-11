@@ -1,3 +1,5 @@
+===== RELATÓRIO DO ARQUIVO: test_001_model_base.py =====
+
 ===== RESUMO DO TESTE =====
 Testes passados: 0
 Testes falhados: 1
@@ -5,23 +7,26 @@ Erros estruturais (pytest): 0
 Warnings: 0
 
 ===== TIPOS DE ERROS PYTHON =====
-• TypeError: 5 ocorrência(s)
-• StatementError: 2 ocorrência(s)
+• TypeError: SQLite Date type only accepts Python date objects as input.
+• StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+
+===== DETALHES DOS ERROS (TRACEBACKS) =====
+Nenhum traceback encontrado.
 
 ===== SAÍDA COMPLETA DO PYTEST =====
 F                                                                                                                             [100%]
 ============================================================= FAILURES =============================================================
 ________________________________________________________ test_criar_usuario ________________________________________________________
 
-self = <sqlalchemy.engine.base.Connection object at 0x000001FF738C5E50>
-dialect = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001FF738A5A90>
+self = <sqlalchemy.engine.base.Connection object at 0x00000146A250DE50>
+dialect = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x00000146A24E5BE0>
 constructor = <bound method DefaultExecutionContext._init_compiled of <class 'sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext'>>
-statement = <sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x000001FF73B5C830>
+statement = <sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x00000146A25C0980>
 parameters = [{'data_nascimento': '1990-01-01', 'email': 'daniel@gmail.com', 'nome': 'Daniel', 'senha_hash': 'abc123'}]
-execution_options = immutabledict({'compiled_cache': <sqlalchemy.util._collections.LRUCache object at 0x000001FF73B5AED0>})
-args = (<sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x000001FF73B5C830>, [{'data_nascimento': '1990-01-01', 'em...l@gmail.com', 'nome': 'Daniel', 'senha_hash': 'abc123'}], <sqlalchemy.sql.dml.Insert object at 0x000001FF73B5C6E0>, [])
+execution_options = immutabledict({'compiled_cache': <sqlalchemy.util._collections.LRUCache object at 0x00000146A25BACF0>})
+args = (<sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x00000146A25C0980>, [{'data_nascimento': '1990-01-01', 'em...l@gmail.com', 'nome': 'Daniel', 'senha_hash': 'abc123'}], <sqlalchemy.sql.dml.Insert object at 0x00000146A25C0830>, [])
 kw = {'cache_hit': <CacheStats.CACHE_MISS: 1>}, yp = None
-conn = <sqlalchemy.pool.base._ConnectionFairy object at 0x000001FF739597F0>
+conn = <sqlalchemy.pool.base._ConnectionFairy object at 0x00000146A25954F0>
 
     def _execute_context(
         self,
@@ -79,7 +84,7 @@ E           TypeError: SQLite Date type only accepts Python date objects as inpu
 
 The above exception was the direct cause of the following exception:
 
-session = <sqlalchemy.orm.session.Session object at 0x000001FF738A7230>
+session = <sqlalchemy.orm.session.Session object at 0x00000146A24E7380>
 
     def test_criar_usuario(session):
         from src.models import Usuario
@@ -93,7 +98,7 @@ session = <sqlalchemy.orm.session.Session object at 0x000001FF738A7230>
         session.add(u)
 >       session.commit()
 
-formacao_python-developer_dio\SQL_Alchemy\Desafio\projeto\Testes_Fase_1\test_01_model_base.py:11: 
+formacao_python-developer_dio\SQL_Alchemy\Desafio\projeto\Testes_Fase_1\test_001_model_base.py:11: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 ..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:2030: in commit
     trans.commit(_to_root=True)
@@ -162,9 +167,9 @@ value = '1990-01-01'
             )
 E           sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
 E           [SQL: INSERT INTO usuarios (nome, email, senha_hash, data_nascimento) VALUES (?, ?, ?, ?)]
-E           [parameters: [{'senha_hash': 'abc123', 'nome': 'Daniel', 'data_nascimento': '1990-01-01', 'email': 'daniel@gmail.com'}]]
+E           [parameters: [{'senha_hash': 'abc123', 'email': 'daniel@gmail.com', 'nome': 'Daniel', 'data_nascimento': '1990-01-01'}]]
 
 ..\..\miniconda3\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py:1287: StatementError
 ===================================================== short test summary info ======================================================
-FAILED formacao_python-developer_dio/SQL_Alchemy/Desafio/projeto/Testes_Fase_1/test_01_model_base.py::test_criar_usuario - sqlalch...
-1 failed in 1.69s
+FAILED formacao_python-developer_dio/SQL_Alchemy/Desafio/projeto/Testes_Fase_1/test_001_model_base.py::test_criar_usuario - sqlalc...
+1 failed in 1.74s

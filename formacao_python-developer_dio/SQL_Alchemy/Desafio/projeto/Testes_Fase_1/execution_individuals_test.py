@@ -1,24 +1,3 @@
-def test_criar_usuario(session):
-    from src.models import Usuario
-
-    u = Usuario(
-        nome = "Daniel",
-        email = "daniel@gmail.com",
-        senha_hash = "abc123",
-        data_nascimento = "1990-01-01"
-    )
-    session.add(u)
-    session.commit()
-
-    assert u.id is not None
-    assert u.nome == "Daniel"
-
-
-# ============================
-#   EXECUÇÃO INDIVIDUAL DO TESTE
-#   RELATÓRIO = NOME DO ARQUIVO
-# ============================
-
 if __name__ == "__main__":
     import pytest
     import io
