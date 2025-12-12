@@ -1,0 +1,115 @@
+===== RELATÓRIO DO ARQUIVO: test_04_transferencias.py =====
+
+===== RESUMO DO TESTE =====
+Testes passados: 0
+Testes falhados: 1
+Erros estruturais (pytest): 0
+Warnings: 0
+
+===== TIPOS DE ERROS PYTHON =====
+• InvalidRequestError: A transaction is already begun on this Session.
+
+===== DETALHES DOS ERROS (TRACEBACKS) =====
+Nenhum traceback encontrado.
+
+===== SAÍDA COMPLETA DO PYTEST =====
+F                                                                                                                             [100%]
+============================================================= FAILURES =============================================================
+____________________________________________________ test_transferencia_atomic _____________________________________________________
+
+session = <Session bind=Engine(sqlite:///:memory:) | dirty(modified)=[] |
+ new(newly added)=[<src.models.Usuario object at 0x000...1CF1FF606E0>, <src.models.ContaCorrente object at 0x000001CF201782D0>] | 
+deleted=[] | 
+identity_count=0 |
+objects=[]
+>
+
+    def test_transferencia_atomic(session):
+        from src.models import Usuario, ContaCorrente, Historico_operacoes
+    
+        u1 = Usuario(nome="Daniel")
+        u2 = Usuario(nome = "Marisa")
+        session.add_all([u1,u2])
+        session.commit
+    
+        c1=ContaCorrente(saldo=200, usuario_id=u1.id)
+        c2=ContaCorrente(saldo=100, usuario_id=u2.id)
+    
+        session.add_all([c1,c2])
+        session.commit
+    
+>       Historico_operacoes.transferir(c1,c2,50, session)
+
+formacao_python-developer_dio\SQL_Alchemy\Desafio\projeto\Testes_Fase_1\test_04_transferencias.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+formacao_python-developer_dio\SQL_Alchemy\Desafio\projeto\src\models.py:77: in transferir
+    with session.begin():
+         ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Session bind=Engine(sqlite:///:memory:) | dirty(modified)=[] |
+ new(newly added)=[<src.models.Usuario object at 0x000...1CF1FF606E0>, <src.models.ContaCorrente object at 0x000001CF201782D0>] | 
+deleted=[] | 
+identity_count=0 |
+objects=[]
+>
+nested = False
+
+    def begin(self, nested: bool = False) -> SessionTransaction:
+        """Begin a transaction, or nested transaction,
+        on this :class:`.Session`, if one is not already begun.
+    
+        The :class:`_orm.Session` object features **autobegin** behavior,
+        so that normally it is not necessary to call the
+        :meth:`_orm.Session.begin`
+        method explicitly. However, it may be used in order to control
+        the scope of when the transactional state is begun.
+    
+        When used to begin the outermost transaction, an error is raised
+        if this :class:`.Session` is already inside of a transaction.
+    
+        :param nested: if True, begins a SAVEPOINT transaction and is
+         equivalent to calling :meth:`~.Session.begin_nested`. For
+         documentation on SAVEPOINT transactions, please see
+         :ref:`session_begin_nested`.
+    
+        :return: the :class:`.SessionTransaction` object.  Note that
+         :class:`.SessionTransaction`
+         acts as a Python context manager, allowing :meth:`.Session.begin`
+         to be used in a "with" block.  See :ref:`session_explicit_begin` for
+         an example.
+    
+        .. seealso::
+    
+            :ref:`session_autobegin`
+    
+            :ref:`unitofwork_transaction`
+    
+            :meth:`.Session.begin_nested`
+    
+    
+        """
+    
+        trans = self._transaction
+        if trans is None:
+            trans = self._autobegin_t(begin=True)
+    
+            if not nested:
+                return trans
+    
+        assert trans is not None
+    
+        if nested:
+            trans = trans._begin(nested=nested)
+            assert self._transaction is trans
+            self._nested_transaction = trans
+        else:
+>           raise sa_exc.InvalidRequestError(
+                "A transaction is already begun on this Session."
+            )
+E           sqlalchemy.exc.InvalidRequestError: A transaction is already begun on this Session.
+
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:1941: InvalidRequestError
+===================================================== short test summary info ======================================================
+FAILED formacao_python-developer_dio/SQL_Alchemy/Desafio/projeto/Testes_Fase_1/test_04_transferencias.py::test_transferencia_atomic
+1 failed in 0.66s

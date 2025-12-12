@@ -1,0 +1,17 @@
+===== RELATÓRIO DO ARQUIVO: test_03_operacoes.py =====
+
+===== RESUMO DO TESTE =====
+Testes passados: 1
+Testes falhados: 0
+Erros estruturais (pytest): 0
+Warnings: 0
+
+===== TIPOS DE ERROS PYTHON =====
+Nenhum erro Python encontrado.
+
+===== DETALHES DOS ERROS (TRACEBACKS) =====
+Nenhum traceback encontrado.
+
+===== SAÍDA COMPLETA DO PYTEST =====
+.                                                                                                                             [100%]
+1 passed in 0.41s

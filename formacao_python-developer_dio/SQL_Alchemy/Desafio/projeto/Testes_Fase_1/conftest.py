@@ -1,7 +1,30 @@
 import pytest
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, Session as SQLASession
 from src.database import Base
+
+# Adiciona a representação legível ao usuário no objeto 'Session', versão básica:
+#def _session_repr(self):
+#    return f"<Session dirty={list(self.dirty)} new={list(self.new)} deleted={list(self.deleted)}>"
+#SQLASession.__repr__=_session_repr
+
+# Versão robusta:
+def _session_repr(self):
+    return (
+        f"<Session "
+        f"bind={self.bind} | "
+        f"dirty(modified)={list(self.dirty)} |\n "
+        f"new(newly added)={list(self.new)} | \n"
+        f"deleted={list(self.deleted)} | \n"
+        f"identity_count={len(self.identity_map)} |\n"
+        f"objects={list(self.identity_map.values())}\n"
+        f">"
+    )
+SQLASession.__repr__=_session_repr
+SQLASession.__str__ = _session_repr
+
+   
+# Fixture de sessão (session)
 
 @pytest.fixture
 def session():
