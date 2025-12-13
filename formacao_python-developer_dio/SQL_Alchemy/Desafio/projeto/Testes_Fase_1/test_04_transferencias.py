@@ -6,13 +6,13 @@ def test_transferencia_atomic(session):
     u1 = Usuario(nome="Daniel")
     u2 = Usuario(nome = "Marisa")
     session.add_all([u1,u2])
-    session.commit
+    session.commit()
 
     c1=ContaCorrente(saldo=200, usuario_id=u1.id)
     c2=ContaCorrente(saldo=100, usuario_id=u2.id)
 
     session.add_all([c1,c2])
-    session.commit
+    session.commit()
 
     Historico_operacoes.transferir(c1,c2,50, session)
 
@@ -43,8 +43,8 @@ if __name__ == "__main__":
     import os
 
     # Nome do arquivo atual
-    nome_arquivo = os.path.basename(__file__)                 # test_criar_usuario.py
-    nome_base = os.path.splitext(nome_arquivo)[0]             # test_criar_usuario
+    nome_arquivo = os.path.basename(__file__)                 
+    nome_base = os.path.splitext(nome_arquivo)[0]             
 
     # Nome final do relatório
     txt_file = f"{nome_base}.txt"

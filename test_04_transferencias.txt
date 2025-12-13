@@ -7,18 +7,179 @@ Erros estruturais (pytest): 0
 Warnings: 0
 
 ===== TIPOS DE ERROS PYTHON =====
-• InvalidRequestError: A transaction is already begun on this Session.
+• OperationalError: no such table: usuarios
+• OperationalError: (sqlite3.OperationalError) no such table: usuarios
 
 ===== DETALHES DOS ERROS (TRACEBACKS) =====
 Nenhum traceback encontrado.
 
 ===== SAÍDA COMPLETA DO PYTEST =====
-F                                                                                                                             [100%]
-============================================================= FAILURES =============================================================
-____________________________________________________ test_transferencia_atomic _____________________________________________________
+F                                                                                                                                              [100%]
+===================================================================== FAILURES ======================================================================
+_____________________________________________________________ test_transferencia_atomic _____________________________________________________________
+
+self = <sqlalchemy.engine.base.Connection object at 0x000001C3222B8190>
+dialect = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001C321FB9BE0>
+context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x000001C32209DA90>
+
+    def _exec_insertmany_context(
+        self,
+        dialect: Dialect,
+        context: ExecutionContext,
+    ) -> CursorResult[Any]:
+        """continue the _execute_context() method for an "insertmanyvalues"
+        operation, which will invoke DBAPI
+        cursor.execute() one or more times with individual log and
+        event hook calls.
+    
+        """
+    
+        if dialect.bind_typing is BindTyping.SETINPUTSIZES:
+            generic_setinputsizes = context._prepare_set_input_sizes()
+        else:
+            generic_setinputsizes = None
+    
+        cursor, str_statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        effective_parameters = parameters
+    
+        engine_events = self._has_events or self.engine._has_events
+        if self.dialect._has_events:
+            do_execute_dispatch: Iterable[Any] = (
+                self.dialect.dispatch.do_execute
+            )
+        else:
+            do_execute_dispatch = ()
+    
+        if engine_events:
+            _WORKAROUND_ISSUE_13018 = getattr(
+                self, "_WORKAROUND_ISSUE_13018", False
+            )
+        else:
+            _WORKAROUND_ISSUE_13018 = False
+    
+        if self._echo:
+            stats = context._get_cache_stats() + " (insertmanyvalues)"
+    
+        preserve_rowcount = context.execution_options.get(
+            "preserve_rowcount", False
+        )
+        rowcount = 0
+    
+        for imv_batch in dialect._deliver_insertmanyvalues_batches(
+            self,
+            cursor,
+            str_statement,
+            effective_parameters,
+            generic_setinputsizes,
+            context,
+        ):
+            if imv_batch.processed_setinputsizes:
+                try:
+                    dialect.do_set_input_sizes(
+                        context.cursor,
+                        imv_batch.processed_setinputsizes,
+                        context,
+                    )
+                except BaseException as e:
+                    self._handle_dbapi_exception(
+                        e,
+                        sql_util._long_statement(imv_batch.replaced_statement),
+                        imv_batch.replaced_parameters,
+                        None,
+                        context,
+                        is_sub_exec=True,
+                    )
+    
+            sub_stmt = imv_batch.replaced_statement
+            sub_params = imv_batch.replaced_parameters
+    
+            if engine_events:
+                for fn in self.dispatch.before_cursor_execute:
+                    sub_stmt, sub_params = fn(
+                        self,
+                        cursor,
+                        sub_stmt,
+                        sub_params,
+                        context,
+                        True,
+                    )
+    
+            if self._echo:
+                self._log_info(sql_util._long_statement(sub_stmt))
+    
+                imv_stats = f""" {imv_batch.batchnum}/{
+                            imv_batch.total_batches
+                } ({
+                    'ordered'
+                    if imv_batch.rows_sorted else 'unordered'
+                }{
+                    '; batch not supported'
+                    if imv_batch.is_downgraded
+                    else ''
+                })"""
+    
+                if imv_batch.batchnum == 1:
+                    stats += imv_stats
+                else:
+                    stats = f"insertmanyvalues{imv_stats}"
+    
+                if not self.engine.hide_parameters:
+                    self._log_info(
+                        "[%s] %r",
+                        stats,
+                        sql_util._repr_params(
+                            sub_params,
+                            batches=10,
+                            ismulti=False,
+                        ),
+                    )
+                else:
+                    self._log_info(
+                        "[%s] [SQL parameters hidden due to "
+                        "hide_parameters=True]",
+                        stats,
+                    )
+    
+            try:
+                for fn in do_execute_dispatch:
+                    if fn(
+                        cursor,
+                        sub_stmt,
+                        sub_params,
+                        context,
+                    ):
+                        break
+                else:
+>                   dialect.do_execute(
+                        cursor,
+                        sub_stmt,
+                        sub_params,
+                        context,
+                    )
+
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:2125: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001C321FB9BE0>
+cursor = <sqlite3.Cursor object at 0x000001C3222C83C0>
+statement = 'INSERT INTO usuarios (nome, email, senha_hash, data_nascimento) VALUES (?, ?, ?, ?) RETURNING id'
+parameters = ('Daniel', None, None, None), context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x000001C32209DA90>
+
+    def do_execute(self, cursor, statement, parameters, context=None):
+>       cursor.execute(statement, parameters)
+E       sqlite3.OperationalError: no such table: usuarios
+
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\default.py:952: OperationalError
+
+The above exception was the direct cause of the following exception:
 
 session = <Session bind=Engine(sqlite:///:memory:) | dirty(modified)=[] |
- new(newly added)=[<src.models.Usuario object at 0x000...1CF1FF606E0>, <src.models.ContaCorrente object at 0x000001CF201782D0>] | 
+ new(newly added)=[] | 
 deleted=[] | 
 identity_count=0 |
 objects=[]
@@ -30,86 +191,73 @@ objects=[]
         u1 = Usuario(nome="Daniel")
         u2 = Usuario(nome = "Marisa")
         session.add_all([u1,u2])
-        session.commit
-    
-        c1=ContaCorrente(saldo=200, usuario_id=u1.id)
-        c2=ContaCorrente(saldo=100, usuario_id=u2.id)
-    
-        session.add_all([c1,c2])
-        session.commit
-    
->       Historico_operacoes.transferir(c1,c2,50, session)
+>       session.commit()
 
-formacao_python-developer_dio\SQL_Alchemy\Desafio\projeto\Testes_Fase_1\test_04_transferencias.py:17: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-formacao_python-developer_dio\SQL_Alchemy\Desafio\projeto\src\models.py:77: in transferir
-    with session.begin():
-         ^^^^^^^^^^^^^^^
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+formacao_python-developer_dio\SQL_Alchemy\Desafio\projeto\Testes_Fase_1\test_04_transferencias.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:2030: in commit
+    trans.commit(_to_root=True)
+<string>:2: in commit
+    ???
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:1311: in commit
+    self._prepare_impl()
+<string>:2: in _prepare_impl
+    ???
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:1286: in _prepare_impl
+    self.session.flush()
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:4331: in flush
+    self._flush(objects)
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:4466: in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+..\..\miniconda3\Lib\site-packages\sqlalchemy\util\langhelpers.py:224: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:4427: in _flush
+    flush_context.execute()
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\unitofwork.py:466: in execute
+    rec.execute(self)
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\unitofwork.py:642: in execute
+    util.preloaded.orm_persistence.save_obj(
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\persistence.py:93: in save_obj
+    _emit_insert_statements(
+..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\persistence.py:1143: in _emit_insert_statements
+    result = connection.execute(
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:1419: in execute
+    return meth(
+..\..\miniconda3\Lib\site-packages\sqlalchemy\sql\elements.py:527: in _execute_on_connection
+    return connection._execute_clauseelement(
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:1641: in _execute_clauseelement
+    ret = self._execute_context(
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:1844: in _execute_context
+    return self._exec_insertmany_context(dialect, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:2133: in _exec_insertmany_context
+    self._handle_dbapi_exception(
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:2363: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:2125: in _exec_insertmany_context
+    dialect.do_execute(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = <Session bind=Engine(sqlite:///:memory:) | dirty(modified)=[] |
- new(newly added)=[<src.models.Usuario object at 0x000...1CF1FF606E0>, <src.models.ContaCorrente object at 0x000001CF201782D0>] | 
-deleted=[] | 
-identity_count=0 |
-objects=[]
->
-nested = False
+self = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001C321FB9BE0>
+cursor = <sqlite3.Cursor object at 0x000001C3222C83C0>
+statement = 'INSERT INTO usuarios (nome, email, senha_hash, data_nascimento) VALUES (?, ?, ?, ?) RETURNING id'
+parameters = ('Daniel', None, None, None), context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x000001C32209DA90>
 
-    def begin(self, nested: bool = False) -> SessionTransaction:
-        """Begin a transaction, or nested transaction,
-        on this :class:`.Session`, if one is not already begun.
-    
-        The :class:`_orm.Session` object features **autobegin** behavior,
-        so that normally it is not necessary to call the
-        :meth:`_orm.Session.begin`
-        method explicitly. However, it may be used in order to control
-        the scope of when the transactional state is begun.
-    
-        When used to begin the outermost transaction, an error is raised
-        if this :class:`.Session` is already inside of a transaction.
-    
-        :param nested: if True, begins a SAVEPOINT transaction and is
-         equivalent to calling :meth:`~.Session.begin_nested`. For
-         documentation on SAVEPOINT transactions, please see
-         :ref:`session_begin_nested`.
-    
-        :return: the :class:`.SessionTransaction` object.  Note that
-         :class:`.SessionTransaction`
-         acts as a Python context manager, allowing :meth:`.Session.begin`
-         to be used in a "with" block.  See :ref:`session_explicit_begin` for
-         an example.
-    
-        .. seealso::
-    
-            :ref:`session_autobegin`
-    
-            :ref:`unitofwork_transaction`
-    
-            :meth:`.Session.begin_nested`
-    
-    
-        """
-    
-        trans = self._transaction
-        if trans is None:
-            trans = self._autobegin_t(begin=True)
-    
-            if not nested:
-                return trans
-    
-        assert trans is not None
-    
-        if nested:
-            trans = trans._begin(nested=nested)
-            assert self._transaction is trans
-            self._nested_transaction = trans
-        else:
->           raise sa_exc.InvalidRequestError(
-                "A transaction is already begun on this Session."
-            )
-E           sqlalchemy.exc.InvalidRequestError: A transaction is already begun on this Session.
+    def do_execute(self, cursor, statement, parameters, context=None):
+>       cursor.execute(statement, parameters)
+E       sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: usuarios
+E       [SQL: INSERT INTO usuarios (nome, email, senha_hash, data_nascimento) VALUES (?, ?, ?, ?) RETURNING id]
+E       [parameters: ('Daniel', None, None, None)]
+E       (Background on this error at: https://sqlalche.me/e/20/e3q8)
 
-..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:1941: InvalidRequestError
-===================================================== short test summary info ======================================================
-FAILED formacao_python-developer_dio/SQL_Alchemy/Desafio/projeto/Testes_Fase_1/test_04_transferencias.py::test_transferencia_atomic
-1 failed in 0.66s
+..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\default.py:952: OperationalError
+============================================================== short test summary info ==============================================================
+FAILED formacao_python-developer_dio/SQL_Alchemy/Desafio/projeto/Testes_Fase_1/test_04_transferencias.py::test_transferencia_atomic - sqlalchemy.ex...
+1 failed in 1.70s

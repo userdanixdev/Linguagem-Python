@@ -14,14 +14,14 @@ Warnings: 0
 Nenhum traceback encontrado.
 
 ===== SAÍDA COMPLETA DO PYTEST =====
-F                                                                                                                             [100%]
-============================================================= FAILURES =============================================================
-_______________________________________________________ test_conta_corrente ________________________________________________________
+F                                                                                                                                              [100%]
+===================================================================== FAILURES ======================================================================
+________________________________________________________________ test_conta_corrente ________________________________________________________________
 
-self = <sqlalchemy.engine.base.Connection object at 0x0000024C3F177ED0>
-dialect = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x0000024C3F235BE0>
-context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x0000024C3F319010>
-statement = <sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x0000024C3F3186E0>, parameters = [('João', None, None, None)]
+self = <sqlalchemy.engine.base.Connection object at 0x00000187F9BF0050>
+dialect = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x00000187F98D9BE0>
+context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x00000187F99B9A90>
+statement = <sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x00000187F99B97F0>, parameters = [('João', None, None, None)]
 
     def _exec_single_context(
         self,
@@ -145,13 +145,12 @@ statement = <sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x0000024C
                     )
 
 ..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:1967: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x0000024C3F235BE0>
-cursor = <sqlite3.Cursor object at 0x0000024C3F331140>
-statement = 'INSERT INTO usuarios (nome, email, senha_hash, data_nascimento) VALUES (?, ?, ?, ?)'
-parameters = ('João', None, None, None)
-context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x0000024C3F319010>
+self = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x00000187F98D9BE0>
+cursor = <sqlite3.Cursor object at 0x00000187F9BF8040>
+statement = 'INSERT INTO usuarios (nome, email, senha_hash, data_nascimento) VALUES (?, ?, ?, ?)', parameters = ('João', None, None, None)
+context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x00000187F99B9A90>
 
     def do_execute(self, cursor, statement, parameters, context=None):
 >       cursor.execute(statement, parameters)
@@ -161,7 +160,12 @@ E       sqlite3.OperationalError: no such table: usuarios
 
 The above exception was the direct cause of the following exception:
 
-session = <sqlalchemy.orm.session.Session object at 0x0000024C3F237380>
+session = <Session bind=Engine(sqlite:///:memory:) | dirty(modified)=[] |
+ new(newly added)=[] | 
+deleted=[] | 
+identity_count=0 |
+objects=[]
+>
 
     def test_conta_corrente(session):
         from src.models import Usuario, ContaCorrente
@@ -171,7 +175,7 @@ session = <sqlalchemy.orm.session.Session object at 0x0000024C3F237380>
 >       session.commit()
 
 formacao_python-developer_dio\SQL_Alchemy\Desafio\projeto\Testes_Fase_1\test_02_heranca_contas.py:8: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ..\..\miniconda3\Lib\site-packages\sqlalchemy\orm\session.py:2030: in commit
     trans.commit(_to_root=True)
 <string>:2: in commit
@@ -219,13 +223,12 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
 ..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\base.py:1967: in _exec_single_context
     self.dialect.do_execute(
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x0000024C3F235BE0>
-cursor = <sqlite3.Cursor object at 0x0000024C3F331140>
-statement = 'INSERT INTO usuarios (nome, email, senha_hash, data_nascimento) VALUES (?, ?, ?, ?)'
-parameters = ('João', None, None, None)
-context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x0000024C3F319010>
+self = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x00000187F98D9BE0>
+cursor = <sqlite3.Cursor object at 0x00000187F9BF8040>
+statement = 'INSERT INTO usuarios (nome, email, senha_hash, data_nascimento) VALUES (?, ?, ?, ?)', parameters = ('João', None, None, None)
+context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x00000187F99B9A90>
 
     def do_execute(self, cursor, statement, parameters, context=None):
 >       cursor.execute(statement, parameters)
@@ -235,6 +238,6 @@ E       [parameters: ('João', None, None, None)]
 E       (Background on this error at: https://sqlalche.me/e/20/e3q8)
 
 ..\..\miniconda3\Lib\site-packages\sqlalchemy\engine\default.py:952: OperationalError
-===================================================== short test summary info ======================================================
-FAILED formacao_python-developer_dio/SQL_Alchemy/Desafio/projeto/Testes_Fase_1/test_02_heranca_contas.py::test_conta_corrente - sq...
-1 failed in 1.73s
+============================================================== short test summary info ==============================================================
+FAILED formacao_python-developer_dio/SQL_Alchemy/Desafio/projeto/Testes_Fase_1/test_02_heranca_contas.py::test_conta_corrente - sqlalchemy.exc.Oper...
+1 failed in 1.54s

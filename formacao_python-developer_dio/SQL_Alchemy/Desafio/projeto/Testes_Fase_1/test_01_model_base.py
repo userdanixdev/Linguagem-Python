@@ -10,6 +10,14 @@ def test_criar_usuario(session):
     session.add(u)
     session.commit()
 
+    # Captura consciente (final do teste)
+    print("\n[FINAL STATE]")
+    print(session)
+    print(session.connection())
+    conn = session.connection()
+    print("\nFinal teste:")
+    print(conn.dialect)
+
     assert u.id is not None
     assert u.nome == "Daniel"
 
@@ -26,24 +34,21 @@ if __name__ == "__main__":
     import re
     import os
 
-    # Nome do arquivo atual
-    nome_arquivo = os.path.basename(__file__)                 # test_criar_usuario.py
-    nome_base = os.path.splitext(nome_arquivo)[0]             # test_criar_usuario
+    
 
-    # Nome final do relatório
+    # Nome do arquivo atual
+    nome_arquivo = os.path.basename(__file__)
+    nome_base = os.path.splitext(nome_arquivo)[0]
     txt_file = f"{nome_base}.txt"
 
     # Captura saída do pytest
     buffer_out = io.StringIO()
     buffer_err = io.StringIO()
-
     stdout_original = sys.stdout
     stderr_original = sys.stderr
-
     sys.stdout = buffer_out
     sys.stderr = buffer_err
 
-    # Executa pytest neste arquivo
     retorno = pytest.main([__file__, "-q"])
 
     sys.stdout = stdout_original
@@ -58,13 +63,11 @@ if __name__ == "__main__":
     warnings = len(re.findall(r"\bwarning\b", saida, re.IGNORECASE))
 
     tipos_erros = re.findall(r"(\w+Error):\s(.+)", saida)
-
     tracebacks = re.split(r"=+.*=+", saida)
     tracebacks = [tb.strip() for tb in tracebacks if "Traceback" in tb]
 
     # ================= GERAR TXT ======================
     with open(txt_file, "w", encoding="utf-8") as f:
-
         f.write(f"===== RELATÓRIO DO ARQUIVO: {nome_arquivo} =====\n\n")
 
         f.write("===== RESUMO DO TESTE =====\n")
